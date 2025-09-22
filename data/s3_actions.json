@@ -1,0 +1,662 @@
+[
+  {
+    "action": "AbortMultipartUpload",
+    "description": "Grants permission to abort a multipart upload"
+  },
+  {
+    "action": "AssociateAccessGrantsIdentityCenter",
+    "description": "Grants permission to associate Access Grants identity center"
+  },
+  {
+    "action": "BypassGovernanceRetention",
+    "description": "Grants permission to allow circumvention of governance-mode object retention settings"
+  },
+  {
+    "action": "CreateAccessGrant",
+    "description": "Grants permission to create Access Grant"
+  },
+  {
+    "action": "CreateAccessGrantsInstance",
+    "description": "Grants permission to Create Access Grants Instance"
+  },
+  {
+    "action": "CreateAccessGrantsLocation",
+    "description": "Grants permission to create Access Grants location"
+  },
+  {
+    "action": "CreateAccessPoint",
+    "description": "Grants permission to create a new access point"
+  },
+  {
+    "action": "CreateAccessPointForObjectLambda",
+    "description": "Grants permission to create an object lambda enabled accesspoint"
+  },
+  {
+    "action": "CreateBucket",
+    "description": "Grants permission to create a new bucket"
+  },
+  {
+    "action": "CreateBucketMetadataTableConfiguration",
+    "description": "Grants permission to create a new S3 Metadata configuration for a specified general purpose bucket"
+  },
+  {
+    "action": "CreateJob",
+    "description": "Grants permission to create a new Amazon S3 Batch Operations job"
+  },
+  {
+    "action": "CreateMultiRegionAccessPoint",
+    "description": "Grants permission to create a new Multi-Region Access Point"
+  },
+  {
+    "action": "CreateStorageLensGroup",
+    "description": "Grants permission to create an Amazon S3 Storage Lens group"
+  },
+  {
+    "action": "DeleteAccessGrant",
+    "description": "Grants permission to delete Access Grant"
+  },
+  {
+    "action": "DeleteAccessGrantsInstance",
+    "description": "Grants permission to Delete Access Grants Instance"
+  },
+  {
+    "action": "DeleteAccessGrantsInstanceResourcePolicy",
+    "description": "Grants permission to read Access grants instance resource policy"
+  },
+  {
+    "action": "DeleteAccessGrantsLocation",
+    "description": "Grants permission to delete Access Grants location"
+  },
+  {
+    "action": "DeleteAccessPoint",
+    "description": "Grants permission to delete the access point named in the URI"
+  },
+  {
+    "action": "DeleteAccessPointForObjectLambda",
+    "description": "Grants permission to delete the object lambda enabled access point named in the URI"
+  },
+  {
+    "action": "DeleteAccessPointPolicy",
+    "description": "Grants permission to delete the policy on a specified access point"
+  },
+  {
+    "action": "DeleteAccessPointPolicyForObjectLambda",
+    "description": "Grants permission to delete the policy on a specified object lambda enabled access point"
+  },
+  {
+    "action": "DeleteBucket",
+    "description": "Grants permission to delete the bucket named in the URI"
+  },
+  {
+    "action": "DeleteBucketMetadataTableConfiguration",
+    "description": "Grants permission to delete the S3 Metadata configuration for a specified general purpose bucket"
+  },
+  {
+    "action": "DeleteBucketPolicy",
+    "description": "Grants permission to delete the policy on a specified bucket"
+  },
+  {
+    "action": "DeleteBucketWebsite",
+    "description": "Grants permission to remove the website configuration for a bucket"
+  },
+  {
+    "action": "DeleteJobTagging",
+    "description": "Grants permission to remove tags from an existing Amazon S3 Batch Operations job"
+  },
+  {
+    "action": "DeleteMultiRegionAccessPoint",
+    "description": "Grants permission to delete the Multi-Region Access Point named in the URI"
+  },
+  {
+    "action": "DeleteObject",
+    "description": "Grants permission to remove the null version of an object and insert a delete marker, which becomes the current version of the object"
+  },
+  {
+    "action": "DeleteObjectTagging",
+    "description": "Grants permission to use the tagging subresource to remove the entire tag set from the specified object"
+  },
+  {
+    "action": "DeleteObjectVersion",
+    "description": "Grants permission to remove a specific version of an object"
+  },
+  {
+    "action": "DeleteObjectVersionTagging",
+    "description": "Grants permission to remove the entire tag set for a specific version of the object"
+  },
+  {
+    "action": "DeleteStorageLensConfiguration",
+    "description": "Grants permission to delete an existing Amazon S3 Storage Lens configuration"
+  },
+  {
+    "action": "DeleteStorageLensConfigurationTagging",
+    "description": "Grants permission to remove tags from an existing Amazon S3 Storage Lens configuration"
+  },
+  {
+    "action": "DeleteStorageLensGroup",
+    "description": "Grants permission to delete an existing S3 Storage Lens group"
+  },
+  {
+    "action": "DescribeJob",
+    "description": "Grants permission to retrieve the configuration parameters and status for a batch operations job"
+  },
+  {
+    "action": "DescribeMultiRegionAccessPointOperation",
+    "description": "Grants permission to retrieve the configurations for a Multi-Region Access Point"
+  },
+  {
+    "action": "DissociateAccessGrantsIdentityCenter",
+    "description": "Grants permission to disassociate Access Grants identity center"
+  },
+  {
+    "action": "GetAccelerateConfiguration",
+    "description": "Grants permission to uses the accelerate subresource to return the Transfer Acceleration state of a bucket, which is either Enabled or Suspended"
+  },
+  {
+    "action": "GetAccessGrant",
+    "description": "Grants permission to read Access Grant"
+  },
+  {
+    "action": "GetAccessGrantsInstance",
+    "description": "Grants permission to Read Access Grants Instance"
+  },
+  {
+    "action": "GetAccessGrantsInstanceForPrefix",
+    "description": "Grants permission to Read Access Grants Instance by prefix"
+  },
+  {
+    "action": "GetAccessGrantsInstanceResourcePolicy",
+    "description": "Grants permission to read Access grants instance resource policy"
+  },
+  {
+    "action": "GetAccessGrantsLocation",
+    "description": "Grants permission to read Access Grants location"
+  },
+  {
+    "action": "GetAccessPoint",
+    "description": "Grants permission to return configuration information about the specified access point"
+  },
+  {
+    "action": "GetAccessPointConfigurationForObjectLambda",
+    "description": "Grants permission to retrieve the configuration of the object lambda enabled access point"
+  },
+  {
+    "action": "GetAccessPointForObjectLambda",
+    "description": "Grants permission to create an object lambda enabled accesspoint"
+  },
+  {
+    "action": "GetAccessPointPolicy",
+    "description": "Grants permission to return the access point policy associated with the specified access point"
+  },
+  {
+    "action": "GetAccessPointPolicyForObjectLambda",
+    "description": "Grants permission to return the access point policy associated with the specified object lambda enabled access point"
+  },
+  {
+    "action": "GetAccessPointPolicyStatus",
+    "description": "Grants permission to return the policy status for a specific access point policy"
+  },
+  {
+    "action": "GetAccessPointPolicyStatusForObjectLambda",
+    "description": "Grants permission to return the policy status for a specific object lambda access point policy"
+  },
+  {
+    "action": "GetAccountPublicAccessBlock",
+    "description": "Grants permission to retrieve the PublicAccessBlock configuration for an AWS account"
+  },
+  {
+    "action": "GetAnalyticsConfiguration",
+    "description": "Grants permission to get an analytics configuration from an Amazon S3 bucket, identified by the analytics configuration ID"
+  },
+  {
+    "action": "GetBucketAcl",
+    "description": "Grants permission to use the acl subresource to return the access control list (ACL) of an Amazon S3 bucket"
+  },
+  {
+    "action": "GetBucketCORS",
+    "description": "Grants permission to return the CORS configuration information set for an Amazon S3 bucket"
+  },
+  {
+    "action": "GetBucketLocation",
+    "description": "Grants permission to return the Region that an Amazon S3 bucket resides in"
+  },
+  {
+    "action": "GetBucketLogging",
+    "description": "Grants permission to return the logging status of an Amazon S3 bucket and the permissions users have to view or modify that status"
+  },
+  {
+    "action": "GetBucketMetadataTableConfiguration",
+    "description": "Grants permission to return the S3 Metadata configuration for a specified general purpose bucket"
+  },
+  {
+    "action": "GetBucketNotification",
+    "description": "Grants permission to get the notification configuration of an Amazon S3 bucket"
+  },
+  {
+    "action": "GetBucketObjectLockConfiguration",
+    "description": "Grants permission to get the Object Lock configuration of an Amazon S3 bucket"
+  },
+  {
+    "action": "GetBucketOwnershipControls",
+    "description": "Grants permission to retrieve ownership controls on a bucket"
+  },
+  {
+    "action": "GetBucketPolicy",
+    "description": "Grants permission to return the policy of the specified bucket"
+  },
+  {
+    "action": "GetBucketPolicyStatus",
+    "description": "Grants permission to retrieve the policy status for a specific Amazon S3 bucket, which indicates whether the bucket is public"
+  },
+  {
+    "action": "GetBucketPublicAccessBlock",
+    "description": "Grants permission to retrieve the PublicAccessBlock configuration for an Amazon S3 bucket"
+  },
+  {
+    "action": "GetBucketRequestPayment",
+    "description": "Grants permission to return the request payment configuration for an Amazon S3 bucket"
+  },
+  {
+    "action": "GetBucketTagging",
+    "description": "Grants permission to return the tag set associated with an Amazon S3 bucket"
+  },
+  {
+    "action": "GetBucketVersioning",
+    "description": "Grants permission to return the versioning state of an Amazon S3 bucket"
+  },
+  {
+    "action": "GetBucketWebsite",
+    "description": "Grants permission to return the website configuration for an Amazon S3 bucket"
+  },
+  {
+    "action": "GetDataAccess",
+    "description": "Grants permission to get Access"
+  },
+  {
+    "action": "GetEncryptionConfiguration",
+    "description": "Grants permission to return the default encryption configuration an Amazon S3 bucket"
+  },
+  {
+    "action": "GetIntelligentTieringConfiguration",
+    "description": "Grants permission to get an or list all Amazon S3 Intelligent Tiering configuration in a S3 Bucket"
+  },
+  {
+    "action": "GetInventoryConfiguration",
+    "description": "Grants permission to return an inventory configuration from an Amazon S3 bucket, identified by the inventory configuration ID"
+  },
+  {
+    "action": "GetJobTagging",
+    "description": "Grants permission to return the tag set of an existing Amazon S3 Batch Operations job"
+  },
+  {
+    "action": "GetLifecycleConfiguration",
+    "description": "Grants permission to return the lifecycle configuration information set on an Amazon S3 bucket"
+  },
+  {
+    "action": "GetMetricsConfiguration",
+    "description": "Grants permission to get a metrics configuration from an Amazon S3 bucket"
+  },
+  {
+    "action": "GetMultiRegionAccessPoint",
+    "description": "Grants permission to return configuration information about the specified Multi-Region Access Point"
+  },
+  {
+    "action": "GetMultiRegionAccessPointPolicy",
+    "description": "Grants permission to return the access point policy associated with the specified Multi-Region Access Point"
+  },
+  {
+    "action": "GetMultiRegionAccessPointPolicyStatus",
+    "description": "Grants permission to return the policy status for a specific Multi-Region Access Point policy"
+  },
+  {
+    "action": "GetMultiRegionAccessPointRoutes",
+    "description": "Grants permission to return the route configuration for a Multi-Region Access Point"
+  },
+  {
+    "action": "GetObject",
+    "description": "Grants permission to retrieve objects from Amazon S3"
+  },
+  {
+    "action": "GetObjectAcl",
+    "description": "Grants permission to return the access control list (ACL) of an object"
+  },
+  {
+    "action": "GetObjectAttributes",
+    "description": "Grants permission to retrieve attributes related to a specific object"
+  },
+  {
+    "action": "GetObjectLegalHold",
+    "description": "Grants permission to get an object's current Legal Hold status"
+  },
+  {
+    "action": "GetObjectRetention",
+    "description": "Grants permission to retrieve the retention settings for an object"
+  },
+  {
+    "action": "GetObjectTagging",
+    "description": "Grants permission to return the tag set of an object"
+  },
+  {
+    "action": "GetObjectTorrent",
+    "description": "Grants permission to return torrent files from an Amazon S3 bucket"
+  },
+  {
+    "action": "GetObjectVersion",
+    "description": "Grants permission to retrieve a specific version of an object"
+  },
+  {
+    "action": "GetObjectVersionAcl",
+    "description": "Grants permission to return the access control list (ACL) of a specific object version"
+  },
+  {
+    "action": "GetObjectVersionAttributes",
+    "description": "Grants permission to retrieve attributes related to a specific version of an object"
+  },
+  {
+    "action": "GetObjectVersionForReplication",
+    "description": "Grants permission to replicate both unencrypted objects and objects encrypted with SSE-S3 or SSE-KMS"
+  },
+  {
+    "action": "GetObjectVersionTagging",
+    "description": "Grants permission to return the tag set for a specific version of the object"
+  },
+  {
+    "action": "GetObjectVersionTorrent",
+    "description": "Grants permission to get Torrent files about a different version using the versionId subresource"
+  },
+  {
+    "action": "GetReplicationConfiguration",
+    "description": "Grants permission to get the replication configuration information set on an Amazon S3 bucket"
+  },
+  {
+    "action": "GetStorageLensConfiguration",
+    "description": "Grants permission to get an Amazon S3 Storage Lens configuration"
+  },
+  {
+    "action": "GetStorageLensConfigurationTagging",
+    "description": "Grants permission to get the tag set of an existing Amazon S3 Storage Lens configuration"
+  },
+  {
+    "action": "GetStorageLensDashboard",
+    "description": "Grants permission to get an Amazon S3 Storage Lens dashboard"
+  },
+  {
+    "action": "GetStorageLensGroup",
+    "description": "Grants permission to get an Amazon S3 Storage Lens group"
+  },
+  {
+    "action": "InitiateReplication[permission only]",
+    "description": "Grants permission to initiate the replication process by setting replication status of an object to pending"
+  },
+  {
+    "action": "ListAccessGrants",
+    "description": "Grants permission to list Access Grant"
+  },
+  {
+    "action": "ListAccessGrantsInstances",
+    "description": "Grants permission to List Access Grants Instances"
+  },
+  {
+    "action": "ListAccessGrantsLocations",
+    "description": "Grants permission to list Access Grants locations"
+  },
+  {
+    "action": "ListAccessPoints",
+    "description": "Grants permission to list access points"
+  },
+  {
+    "action": "ListAccessPointsForObjectLambda",
+    "description": "Grants permission to list object lambda enabled accesspoints"
+  },
+  {
+    "action": "ListAllMyBuckets",
+    "description": "Grants permission to list all buckets owned by the authenticated sender of the request"
+  },
+  {
+    "action": "ListBucket",
+    "description": "Grants permission to list some or all of the objects in an Amazon S3 bucket (up to 1000)"
+  },
+  {
+    "action": "ListBucketMultipartUploads",
+    "description": "Grants permission to list in-progress multipart uploads"
+  },
+  {
+    "action": "ListBucketVersions",
+    "description": "Grants permission to list metadata about all the versions of objects in an Amazon S3 bucket"
+  },
+  {
+    "action": "ListCallerAccessGrants",
+    "description": "Grants permission to list caller's Access Grant"
+  },
+  {
+    "action": "ListJobs",
+    "description": "Grants permission to list current jobs and jobs that have ended recently"
+  },
+  {
+    "action": "ListMultiRegionAccessPoints",
+    "description": "Grants permission to list Multi-Region Access Points"
+  },
+  {
+    "action": "ListMultipartUploadParts",
+    "description": "Grants permission to list the parts that have been uploaded for a specific multipart upload"
+  },
+  {
+    "action": "ListStorageLensConfigurations",
+    "description": "Grants permission to list Amazon S3 Storage Lens configurations"
+  },
+  {
+    "action": "ListStorageLensGroups",
+    "description": "Grants permission to list S3 Storage Lens groups"
+  },
+  {
+    "action": "ListTagsForResource",
+    "description": "Grants permission to list the tags attached to the specified resource"
+  },
+  {
+    "action": "ObjectOwnerOverrideToBucketOwner",
+    "description": "Grants permission to change replica ownership"
+  },
+  {
+    "action": "PauseReplication[permission only]",
+    "description": "Grants permission to pause S3 Replication from target source buckets to destination buckets"
+  },
+  {
+    "action": "PutAccelerateConfiguration",
+    "description": "Grants permission to use the accelerate subresource to set the Transfer Acceleration state of an existing S3 bucket"
+  },
+  {
+    "action": "PutAccessGrantsInstanceResourcePolicy",
+    "description": "Grants permission to put Access grants instance resource policy"
+  },
+  {
+    "action": "PutAccessPointConfigurationForObjectLambda",
+    "description": "Grants permission to set the configuration of the object lambda enabled access point"
+  },
+  {
+    "action": "PutAccessPointPolicy",
+    "description": "Grants permission to associate an access policy with a specified access point"
+  },
+  {
+    "action": "PutAccessPointPolicyForObjectLambda",
+    "description": "Grants permission to associate an access policy with a specified object lambda enabled access point"
+  },
+  {
+    "action": "PutAccessPointPublicAccessBlock",
+    "description": "Grants permission to associate public access block configurations with a specified access point, while creating a access point"
+  },
+  {
+    "action": "PutAccountPublicAccessBlock",
+    "description": "Grants permission to create or modify the PublicAccessBlock configuration for an AWS account"
+  },
+  {
+    "action": "PutAnalyticsConfiguration",
+    "description": "Grants permission to set an analytics configuration for the bucket, specified by the analytics configuration ID"
+  },
+  {
+    "action": "PutBucketAcl",
+    "description": "Grants permission to set the permissions on an existing bucket using access control lists (ACLs)"
+  },
+  {
+    "action": "PutBucketCORS",
+    "description": "Grants permission to set the CORS configuration for an Amazon S3 bucket"
+  },
+  {
+    "action": "PutBucketLogging",
+    "description": "Grants permission to set the logging parameters for an Amazon S3 bucket"
+  },
+  {
+    "action": "PutBucketNotification",
+    "description": "Grants permission to receive notifications when certain events happen in an Amazon S3 bucket"
+  },
+  {
+    "action": "PutBucketObjectLockConfiguration",
+    "description": "Grants permission to put Object Lock configuration on a specific bucket"
+  },
+  {
+    "action": "PutBucketOwnershipControls",
+    "description": "Grants permission to add, replace or delete ownership controls on a bucket"
+  },
+  {
+    "action": "PutBucketPolicy",
+    "description": "Grants permission to add or replace a bucket policy on a bucket"
+  },
+  {
+    "action": "PutBucketPublicAccessBlock",
+    "description": "Grants permission to create or modify the PublicAccessBlock configuration for a specific Amazon S3 bucket"
+  },
+  {
+    "action": "PutBucketRequestPayment",
+    "description": "Grants permission to set the request payment configuration of a bucket"
+  },
+  {
+    "action": "PutBucketTagging",
+    "description": "Grants permission to add a set of tags to an existing Amazon S3 bucket"
+  },
+  {
+    "action": "PutBucketVersioning",
+    "description": "Grants permission to set the versioning state of an existing Amazon S3 bucket"
+  },
+  {
+    "action": "PutBucketWebsite",
+    "description": "Grants permission to set the configuration of the website that is specified in the website subresource"
+  },
+  {
+    "action": "PutEncryptionConfiguration",
+    "description": "Grants permission to set the encryption configuration for an Amazon S3 bucket"
+  },
+  {
+    "action": "PutIntelligentTieringConfiguration",
+    "description": "Grants permission to create new or update or delete an existing Amazon S3 Intelligent Tiering configuration"
+  },
+  {
+    "action": "PutInventoryConfiguration",
+    "description": "Grants permission to add an inventory configuration to the bucket, identified by the inventory ID"
+  },
+  {
+    "action": "PutJobTagging",
+    "description": "Grants permission to replace tags on an existing Amazon S3 Batch Operations job"
+  },
+  {
+    "action": "PutLifecycleConfiguration",
+    "description": "Grants permission to create a new lifecycle configuration for the bucket or replace an existing lifecycle configuration"
+  },
+  {
+    "action": "PutMetricsConfiguration",
+    "description": "Grants permission to set or update a metrics configuration for the CloudWatch request metrics from an Amazon S3 bucket"
+  },
+  {
+    "action": "PutMultiRegionAccessPointPolicy",
+    "description": "Grants permission to associate an access policy with a specified Multi-Region Access Point"
+  },
+  {
+    "action": "PutObject",
+    "description": "Grants permission to add an object to a bucket"
+  },
+  {
+    "action": "PutObjectAcl",
+    "description": "Grants permission to set the access control list (ACL) permissions for new or existing objects in an S3 bucket"
+  },
+  {
+    "action": "PutObjectLegalHold",
+    "description": "Grants permission to apply a Legal Hold configuration to the specified object"
+  },
+  {
+    "action": "PutObjectRetention",
+    "description": "Grants permission to place an Object Retention configuration on an object"
+  },
+  {
+    "action": "PutObjectTagging",
+    "description": "Grants permission to set the supplied tag-set to an object that already exists in a bucket"
+  },
+  {
+    "action": "PutObjectVersionAcl",
+    "description": "Grants permission to use the acl subresource to set the access control list (ACL) permissions for an object that already exists in a bucket"
+  },
+  {
+    "action": "PutObjectVersionTagging",
+    "description": "Grants permission to set the supplied tag-set for a specific version of an object"
+  },
+  {
+    "action": "PutReplicationConfiguration",
+    "description": "Grants permission to create a new replication configuration or replace an existing one"
+  },
+  {
+    "action": "PutStorageLensConfiguration",
+    "description": "Grants permission to create or update an Amazon S3 Storage Lens configuration"
+  },
+  {
+    "action": "PutStorageLensConfigurationTagging",
+    "description": "Grants permission to put or replace tags on an existing Amazon S3 Storage Lens configuration"
+  },
+  {
+    "action": "ReplicateDelete",
+    "description": "Grants permission to replicate delete markers to the destination bucket"
+  },
+  {
+    "action": "ReplicateObject",
+    "description": "Grants permission to replicate objects and object tags to the destination bucket"
+  },
+  {
+    "action": "ReplicateTags",
+    "description": "Grants permission to replicate object tags to the destination bucket"
+  },
+  {
+    "action": "RestoreObject",
+    "description": "Grants permission to restore an archived copy of an object back into Amazon S3"
+  },
+  {
+    "action": "SubmitMultiRegionAccessPointRoutes",
+    "description": "Grants permission to submit a route configuration update for a Multi-Region Access Point"
+  },
+  {
+    "action": "TagResource",
+    "description": "Grants permission to add tags to the specified resource"
+  },
+  {
+    "action": "UntagResource",
+    "description": "Grants permission to remove tags from the specified resource"
+  },
+  {
+    "action": "UpdateAccessGrantsLocation",
+    "description": "Grants permission to update Access Grants location"
+  },
+  {
+    "action": "UpdateBucketMetadataInventoryTableConfiguration",
+    "description": "Grants permission to update the inventory table configuration on an existing S3 Metadata configuration for a specified general purpose bucket"
+  },
+  {
+    "action": "UpdateBucketMetadataJournalTableConfiguration",
+    "description": "Grants permission to update the journal table configuration on an existing S3 Metadata configuration for a specified general purpose bucket"
+  },
+  {
+    "action": "UpdateJobPriority",
+    "description": "Grants permission to update the priority of an existing job"
+  },
+  {
+    "action": "UpdateJobStatus",
+    "description": "Grants permission to update the status for the specified job"
+  },
+  {
+    "action": "UpdateStorageLensGroup",
+    "description": "Grants permission to update an existing S3 Storage Lens group"
+  }
+]

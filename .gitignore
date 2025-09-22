@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+.pytest_cache/
+.coverage
+*.pyc
+
+# OS
+.DS_Store
+
+# Environments
+.env
+.venv/
+
+# Node / Web
+node_modules/
+webui/.next/
+webui/.vercel/
+webui/.env.local
+
+# Data caches and generated artifacts
+data/raw/
+data/build_reports/
+experiments/
+
+# Pinecone artifacts
+pinecone/*.pkl
+
+# Logs
+logs/
+*.log

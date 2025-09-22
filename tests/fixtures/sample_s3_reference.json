@@ -1,0 +1,83 @@
+{
+  "Version": "v1.3",
+  "Name": "s3",
+  "Actions": [
+    {
+      "Name": "PutObject",
+      "ActionConditionKeys": ["s3:x-amz-acl", "s3:x-amz-content-sha256"],
+      "Resources": [
+        {"Name": "object"},
+        {"Name": "accesspointobject"}
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsWrite": true,
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false
+        }
+      }
+    },
+    {
+      "Name": "GetObject",
+      "ActionConditionKeys": ["s3:ExistingObjectTag/<key>"],
+      "Resources": [
+        {"Name": "object"},
+        {"Name": "accesspointobject"}
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsWrite": false,
+          "IsList": false,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false
+        }
+      }
+    },
+    {
+      "Name": "ListBucket",
+      "ActionConditionKeys": ["s3:prefix", "s3:delimiter"],
+      "Resources": [
+        {"Name": "bucket"}
+      ],
+      "Annotations": {
+        "Properties": {
+          "IsWrite": false,
+          "IsList": true,
+          "IsPermissionManagement": false,
+          "IsTaggingOnly": false
+        }
+      }
+    }
+  ],
+  "Resources": [
+    {
+      "Name": "bucket",
+      "ARNFormats": [
+        "arn:${Partition}:s3:::${BucketName}"
+      ]
+    },
+    {
+      "Name": "object",
+      "ARNFormats": [
+        "arn:${Partition}:s3:::${BucketName}/${ObjectName}",
+        "arn:${Partition}:s3:::${BucketName}/*"
+      ]
+    },
+    {
+      "Name": "accesspointobject",
+      "ARNFormats": [
+        "arn:${Partition}:s3:${Region}:${Account}:accesspoint/${AccessPointName}/object/${ObjectName}"
+      ]
+    }
+  ],
+  "ConditionKeys": [
+    {"Name": "s3:x-amz-acl"},
+    {"Name": "s3:x-amz-content-sha256"},
+    {"Name": "s3:ExistingObjectTag/<key>"},
+    {"Name": "s3:prefix"},
+    {"Name": "s3:delimiter"},
+    {"Name": "aws:RequestTag/${TagKey}"},
+    {"Name": "aws:TagKeys"}
+  ]
+}

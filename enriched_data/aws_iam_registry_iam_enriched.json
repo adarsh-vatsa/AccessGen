@@ -1,0 +1,3996 @@
+{
+  "iam": {
+    "service_name": "AWS Identity and Access Management",
+    "service_prefix": "iam",
+    "page_url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+    "version": "v1.3",
+    "actions": [
+      {
+        "action": "AddClientIDToOpenIDConnectProvider",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "oidc-provider",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 0
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 0
+        },
+        "description": "Grants permission to add a new client ID (audience) to the list of registered IDs for the specified IAM OpenID Connect (OIDC) provider resource"
+      },
+      {
+        "action": "AddRoleToInstanceProfile",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "instance-profile",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 1
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 1
+        },
+        "description": "Grants permission to add an IAM role to the specified instance profile"
+      },
+      {
+        "action": "AddUserToGroup",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "group",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 2
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 2
+        },
+        "description": "Grants permission to add an IAM user to the specified IAM group"
+      },
+      {
+        "action": "AttachGroupPolicy",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "group",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 3
+            }
+          }
+        ],
+        "condition_keys": [
+          "iam:PolicyARN"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 3
+        },
+        "description": "Grants permission to attach a managed policy to the specified IAM group"
+      },
+      {
+        "action": "AttachRolePolicy",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 4
+            }
+          }
+        ],
+        "condition_keys": [
+          "iam:PermissionsBoundary",
+          "iam:PolicyARN"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 4
+        },
+        "description": "Grants permission to attach a managed policy to the specified IAM role"
+      },
+      {
+        "action": "AttachUserPolicy",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 5
+            }
+          }
+        ],
+        "condition_keys": [
+          "iam:PermissionsBoundary",
+          "iam:PolicyARN"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 5
+        },
+        "description": "Grants permission to attach a managed policy to the specified IAM user"
+      },
+      {
+        "action": "ChangePassword",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 6
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 6
+        },
+        "description": "Grants permission to an IAM user to change their own password"
+      },
+      {
+        "action": "CreateAccessKey",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 7
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 7
+        },
+        "description": "Grants permission to create access key and secret access key for the specified IAM user"
+      },
+      {
+        "action": "CreateAccountAlias",
+        "access_level": "Write",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 8
+        },
+        "description": "Grants permission to create an alias for your AWS account"
+      },
+      {
+        "action": "CreateGroup",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "group",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 9
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 9
+        },
+        "description": "Grants permission to create a new group"
+      },
+      {
+        "action": "CreateInstanceProfile",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "instance-profile",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 10
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 10
+        },
+        "description": "Grants permission to create a new instance profile"
+      },
+      {
+        "action": "CreateLoginProfile",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 11
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 11
+        },
+        "description": "Grants permission to create a password for the specified IAM user"
+      },
+      {
+        "action": "CreateOpenIDConnectProvider",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "oidc-provider",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 12
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 12
+        },
+        "description": "Grants permission to create an IAM resource that describes an identity provider (IdP) that supports OpenID Connect (OIDC)"
+      },
+      {
+        "action": "CreatePolicy",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "policy",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 13
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 13
+        },
+        "description": "Grants permission to create a new managed policy"
+      },
+      {
+        "action": "CreatePolicyVersion",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "policy",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 14
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 14
+        },
+        "description": "Grants permission to create a new version of the specified managed policy"
+      },
+      {
+        "action": "CreateRole",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 15
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "iam:PermissionsBoundary"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 15
+        },
+        "description": "Grants permission to create a new role"
+      },
+      {
+        "action": "CreateSAMLProvider",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "saml-provider",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 16
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 16
+        },
+        "description": "Grants permission to create an IAM resource that describes an identity provider (IdP) that supports SAML 2.0"
+      },
+      {
+        "action": "CreateServiceLinkedRole",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 17
+            }
+          }
+        ],
+        "condition_keys": [
+          "iam:AWSServiceName"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 17
+        },
+        "description": "Grants permission to create an IAM role that allows an AWS service to perform actions on your behalf"
+      },
+      {
+        "action": "CreateServiceSpecificCredential",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 18
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 18
+        },
+        "description": "Grants permission to create a new service-specific credential for an IAM user"
+      },
+      {
+        "action": "CreateUser",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 19
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "iam:PermissionsBoundary"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 19
+        },
+        "description": "Grants permission to create a new IAM user"
+      },
+      {
+        "action": "CreateVirtualMFADevice",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "mfa",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 20
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 20
+        },
+        "description": "Grants permission to create a new virtual MFA device"
+      },
+      {
+        "action": "DeactivateMFADevice",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 21
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 21
+        },
+        "description": "Grants permission to deactivate the specified MFA device and remove its association with the IAM user for which it was originally enabled"
+      },
+      {
+        "action": "DeleteAccessKey",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 22
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 22
+        },
+        "description": "Grants permission to delete the access key pair that is associated with the specified IAM user"
+      },
+      {
+        "action": "DeleteAccountAlias",
+        "access_level": "Write",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 23
+        },
+        "description": "Grants permission to delete the specified AWS account alias"
+      },
+      {
+        "action": "DeleteAccountPasswordPolicy",
+        "access_level": "Permissions management",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 24
+        },
+        "description": "Grants permission to delete the password policy for the AWS account"
+      },
+      {
+        "action": "DeleteCloudFrontPublicKey",
+        "access_level": "Write",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 25
+        },
+        "description": "Grants permission to delete an existing CloudFront public key"
+      },
+      {
+        "action": "DeleteGroup",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "group",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 26
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 26
+        },
+        "description": "Grants permission to delete the specified IAM group"
+      },
+      {
+        "action": "DeleteGroupPolicy",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "group",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 27
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 27
+        },
+        "description": "Grants permission to delete the specified inline policy from its group"
+      },
+      {
+        "action": "DeleteInstanceProfile",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "instance-profile",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 28
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 28
+        },
+        "description": "Grants permission to delete the specified instance profile"
+      },
+      {
+        "action": "DeleteLoginProfile",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 29
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 29
+        },
+        "description": "Grants permission to delete the password for the specified IAM user"
+      },
+      {
+        "action": "DeleteOpenIDConnectProvider",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "oidc-provider",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 30
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 30
+        },
+        "description": "Grants permission to delete an OpenID Connect identity provider (IdP) resource object in IAM"
+      },
+      {
+        "action": "DeletePolicy",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "policy",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 31
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 31
+        },
+        "description": "Grants permission to delete the specified managed policy and remove it from any IAM entities (users, groups, or roles) to which it is attached"
+      },
+      {
+        "action": "DeletePolicyVersion",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "policy",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 32
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 32
+        },
+        "description": "Grants permission to delete a version from the specified managed policy"
+      },
+      {
+        "action": "DeleteRole",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 33
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 33
+        },
+        "description": "Grants permission to delete the specified role"
+      },
+      {
+        "action": "DeleteRolePermissionsBoundary",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 34
+            }
+          }
+        ],
+        "condition_keys": [
+          "iam:PermissionsBoundary"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 34
+        },
+        "description": "Grants permission to remove the permissions boundary from a role"
+      },
+      {
+        "action": "DeleteRolePolicy",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 35
+            }
+          }
+        ],
+        "condition_keys": [
+          "iam:PermissionsBoundary"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 35
+        },
+        "description": "Grants permission to delete the specified inline policy from the specified role"
+      },
+      {
+        "action": "DeleteSAMLProvider",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "saml-provider",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 36
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 36
+        },
+        "description": "Grants permission to delete a SAML provider resource in IAM"
+      },
+      {
+        "action": "DeleteServerCertificate",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "server-certificate",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 38
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 38
+        },
+        "description": "Grants permission to delete the specified server certificate"
+      },
+      {
+        "action": "DeleteServiceLinkedRole",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 39
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 39
+        },
+        "description": "Grants permission to delete an IAM role that is linked to a specific AWS service, if the service is no longer using it"
+      },
+      {
+        "action": "DeleteServiceSpecificCredential",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 40
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 40
+        },
+        "description": "Grants permission to delete the specified service-specific credential for an IAM user"
+      },
+      {
+        "action": "DeleteSigningCertificate",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 41
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 41
+        },
+        "description": "Grants permission to delete a signing certificate that is associated with the specified IAM user"
+      },
+      {
+        "action": "DeleteSSHPublicKey",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 37
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 37
+        },
+        "description": "Grants permission to delete the specified SSH public key"
+      },
+      {
+        "action": "DeleteUser",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 42
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 42
+        },
+        "description": "Grants permission to delete the specified IAM user"
+      },
+      {
+        "action": "DeleteUserPermissionsBoundary",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 43
+            }
+          }
+        ],
+        "condition_keys": [
+          "iam:PermissionsBoundary"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 43
+        },
+        "description": "Grants permission to remove the permissions boundary from the specified IAM user"
+      },
+      {
+        "action": "DeleteUserPolicy",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 44
+            }
+          }
+        ],
+        "condition_keys": [
+          "iam:PermissionsBoundary"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 44
+        },
+        "description": "Grants permission to delete the specified inline policy from an IAM user"
+      },
+      {
+        "action": "DeleteVirtualMFADevice",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "mfa",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 45
+            }
+          },
+          {
+            "type": "sms-mfa",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 45
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 45
+        },
+        "description": "Grants permission to delete a virtual MFA device"
+      },
+      {
+        "action": "DetachGroupPolicy",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "group",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 46
+            }
+          }
+        ],
+        "condition_keys": [
+          "iam:PolicyARN"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 46
+        },
+        "description": "Grants permission to detach a managed policy from the specified IAM group"
+      },
+      {
+        "action": "DetachRolePolicy",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 47
+            }
+          }
+        ],
+        "condition_keys": [
+          "iam:PermissionsBoundary",
+          "iam:PolicyARN"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 47
+        },
+        "description": "Grants permission to detach a managed policy from the specified role"
+      },
+      {
+        "action": "DetachUserPolicy",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 48
+            }
+          }
+        ],
+        "condition_keys": [
+          "iam:PermissionsBoundary",
+          "iam:PolicyARN"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 48
+        },
+        "description": "Grants permission to detach a managed policy from the specified IAM user"
+      },
+      {
+        "action": "DisableOrganizationsRootCredentialsManagement",
+        "access_level": "Write",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 49
+        },
+        "description": "Grants permission to disable the management of member account root user credentials for an organization managed under the current account"
+      },
+      {
+        "action": "DisableOrganizationsRootSessions",
+        "access_level": "Write",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 50
+        },
+        "description": "Grants permission to disable privileged root actions in member accounts for an organization managed under the current account"
+      },
+      {
+        "action": "EnableMFADevice",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 51
+            }
+          }
+        ],
+        "condition_keys": [
+          "iam:FIDO-FIPS-140-2-certification",
+          "iam:FIDO-FIPS-140-3-certification",
+          "iam:FIDO-certification",
+          "iam:RegisterSecurityKey"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 51
+        },
+        "description": "Grants permission to enable an MFA device and associate it with the specified IAM user"
+      },
+      {
+        "action": "EnableOrganizationsRootCredentialsManagement",
+        "access_level": "Write",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 52
+        },
+        "description": "Grants permission to enable the management of member account root user credentials for an organization managed under the current account"
+      },
+      {
+        "action": "EnableOrganizationsRootSessions",
+        "access_level": "Write",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 53
+        },
+        "description": "Grants permission to enable privileged root actions in member accounts for an organization managed under the current account"
+      },
+      {
+        "action": "GenerateCredentialReport",
+        "access_level": "Read",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 54
+        },
+        "description": "Grants permission to generate a credential report for the AWS account"
+      },
+      {
+        "action": "GenerateOrganizationsAccessReport",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "access-report",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 55
+            }
+          }
+        ],
+        "condition_keys": [
+          "iam:OrganizationsPolicyId"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 55
+        },
+        "description": "Grants permission to generate an access report for an AWS Organizations entity"
+      },
+      {
+        "action": "GenerateServiceLastAccessedDetails",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "group",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 56
+            }
+          },
+          {
+            "type": "policy",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 56
+            }
+          },
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 56
+            }
+          },
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 56
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 56
+        },
+        "description": "Grants permission to generate a service last accessed data report for an IAM resource"
+      },
+      {
+        "action": "GetAccessKeyLastUsed",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 57
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 57
+        },
+        "description": "Grants permission to retrieve information about when the specified access key was last used"
+      },
+      {
+        "action": "GetAccountAuthorizationDetails",
+        "access_level": "Read",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 58
+        },
+        "description": "Grants permission to retrieve information about all IAM users, groups, roles, and policies in your AWS account, including their relationships to one another"
+      },
+      {
+        "action": "GetAccountEmailAddress",
+        "access_level": "Read",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 59
+        },
+        "description": "Grants permission to retrieve the email address that is associated with the account"
+      },
+      {
+        "action": "GetAccountName",
+        "access_level": "Read",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 60
+        },
+        "description": "Grants permission to retrieve the account name that is associated with the account"
+      },
+      {
+        "action": "GetAccountPasswordPolicy",
+        "access_level": "Read",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 61
+        },
+        "description": "Grants permission to retrieve the password policy for the AWS account"
+      },
+      {
+        "action": "GetAccountSummary",
+        "access_level": "List",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 62
+        },
+        "description": "Grants permission to retrieve information about IAM entity usage and IAM quotas in the AWS account"
+      },
+      {
+        "action": "GetCloudFrontPublicKey",
+        "access_level": "Read",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 63
+        },
+        "description": "Grants permission to retrieve information about the specified CloudFront public key"
+      },
+      {
+        "action": "GetContextKeysForCustomPolicy",
+        "access_level": "Read",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 64
+        },
+        "description": "Grants permission to retrieve a list of all of the context keys that are referenced in the specified policy"
+      },
+      {
+        "action": "GetContextKeysForPrincipalPolicy",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "group",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 65
+            }
+          },
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 65
+            }
+          },
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 65
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 65
+        },
+        "description": "Grants permission to retrieve a list of all context keys that are referenced in all IAM policies that are attached to the specified IAM identity (user, group, or role)"
+      },
+      {
+        "action": "GetCredentialReport",
+        "access_level": "Read",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 66
+        },
+        "description": "Grants permission to retrieve a credential report for the AWS account"
+      },
+      {
+        "action": "GetGroup",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "group",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 67
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 67
+        },
+        "description": "Grants permission to retrieve a list of IAM users in the specified IAM group"
+      },
+      {
+        "action": "GetGroupPolicy",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "group",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 68
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 68
+        },
+        "description": "Grants permission to retrieve an inline policy document that is embedded in the specified IAM group"
+      },
+      {
+        "action": "GetInstanceProfile",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "instance-profile",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 69
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 69
+        },
+        "description": "Grants permission to retrieve information about the specified instance profile, including the instance profile's path, GUID, ARN, and role"
+      },
+      {
+        "action": "GetLoginProfile",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 70
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 70
+        },
+        "description": "Grants permission to retrieve the user name and password creation date for the specified IAM user"
+      },
+      {
+        "action": "GetMFADevice",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 71
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 71
+        },
+        "description": "Grants permission to retrieve information about an MFA device for the specified user"
+      },
+      {
+        "action": "GetOpenIDConnectProvider",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "oidc-provider",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 72
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 72
+        },
+        "description": "Grants permission to retrieve information about the specified OpenID Connect (OIDC) provider resource in IAM"
+      },
+      {
+        "action": "GetOrganizationsAccessReport",
+        "access_level": "Read",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 73
+        },
+        "description": "Grants permission to retrieve an AWS Organizations access report"
+      },
+      {
+        "action": "GetPolicy",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "policy",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 74
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 74
+        },
+        "description": "Grants permission to retrieve information about the specified managed policy, including the policy's default version and the total number of identities to which the policy is attached"
+      },
+      {
+        "action": "GetPolicyVersion",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "policy",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 75
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 75
+        },
+        "description": "Grants permission to retrieve information about a version of the specified managed policy, including the policy document"
+      },
+      {
+        "action": "GetRole",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 76
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 76
+        },
+        "description": "Grants permission to retrieve information about the specified role, including the role's path, GUID, ARN, and the role's trust policy"
+      },
+      {
+        "action": "GetRolePolicy",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 77
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 77
+        },
+        "description": "Grants permission to retrieve an inline policy document that is embedded with the specified IAM role"
+      },
+      {
+        "action": "GetSAMLProvider",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "saml-provider",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 78
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 78
+        },
+        "description": "Grants permission to retrieve the SAML provider metadocument that was uploaded when the IAM SAML provider resource was created or updated"
+      },
+      {
+        "action": "GetServerCertificate",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "server-certificate",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 80
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 80
+        },
+        "description": "Grants permission to retrieve information about the specified server certificate stored in IAM"
+      },
+      {
+        "action": "GetServiceLastAccessedDetails",
+        "access_level": "Read",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 81
+        },
+        "description": "Grants permission to retrieve information about the service last accessed data report"
+      },
+      {
+        "action": "GetServiceLastAccessedDetailsWithEntities",
+        "access_level": "Read",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 82
+        },
+        "description": "Grants permission to retrieve information about the entities from the service last accessed data report"
+      },
+      {
+        "action": "GetServiceLinkedRoleDeletionStatus",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 83
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 83
+        },
+        "description": "Grants permission to retrieve an IAM service-linked role deletion status"
+      },
+      {
+        "action": "GetSSHPublicKey",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 79
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 79
+        },
+        "description": "Grants permission to retrieve the specified SSH public key, including metadata about the key"
+      },
+      {
+        "action": "GetUser",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 84
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 84
+        },
+        "description": "Grants permission to retrieve information about the specified IAM user, including the user's creation date, path, unique ID, and ARN"
+      },
+      {
+        "action": "GetUserPolicy",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 85
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 85
+        },
+        "description": "Grants permission to retrieve an inline policy document that is embedded in the specified IAM user"
+      },
+      {
+        "action": "ListAccessKeys",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 86
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 86
+        },
+        "description": "Grants permission to list information about the access key IDs that are associated with the specified IAM user"
+      },
+      {
+        "action": "ListAccountAliases",
+        "access_level": "List",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 87
+        },
+        "description": "Grants permission to list the account alias that is associated with the AWS account"
+      },
+      {
+        "action": "ListAttachedGroupPolicies",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "group",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 88
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 88
+        },
+        "description": "Grants permission to list all managed policies that are attached to the specified IAM group"
+      },
+      {
+        "action": "ListAttachedRolePolicies",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 89
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 89
+        },
+        "description": "Grants permission to list all managed policies that are attached to the specified IAM role"
+      },
+      {
+        "action": "ListAttachedUserPolicies",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 90
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 90
+        },
+        "description": "Grants permission to list all managed policies that are attached to the specified IAM user"
+      },
+      {
+        "action": "ListCloudFrontPublicKeys",
+        "access_level": "List",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 91
+        },
+        "description": "Grants permission to list all current CloudFront public keys for the account"
+      },
+      {
+        "action": "ListEntitiesForPolicy",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "policy",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 92
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 92
+        },
+        "description": "Grants permission to list all IAM identities to which the specified managed policy is attached"
+      },
+      {
+        "action": "ListGroupPolicies",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "group",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 93
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 93
+        },
+        "description": "Grants permission to list the names of the inline policies that are embedded in the specified IAM group"
+      },
+      {
+        "action": "ListGroups",
+        "access_level": "List",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 94
+        },
+        "description": "Grants permission to list the IAM groups that have the specified path prefix"
+      },
+      {
+        "action": "ListGroupsForUser",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 95
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 95
+        },
+        "description": "Grants permission to list the IAM groups that the specified IAM user belongs to"
+      },
+      {
+        "action": "ListInstanceProfiles",
+        "access_level": "List",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 97
+        },
+        "description": "Grants permission to list the instance profiles that have the specified path prefix"
+      },
+      {
+        "action": "ListInstanceProfilesForRole",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 98
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 98
+        },
+        "description": "Grants permission to list the instance profiles that have the specified associated IAM role"
+      },
+      {
+        "action": "ListInstanceProfileTags",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "instance-profile",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 96
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 96
+        },
+        "description": "Grants permission to list the tags that are attached to the specified instance profile"
+      },
+      {
+        "action": "ListMFADevices",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 100
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 100
+        },
+        "description": "Grants permission to list the MFA devices for an IAM user"
+      },
+      {
+        "action": "ListMFADeviceTags",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "mfa",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 99
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 99
+        },
+        "description": "Grants permission to list the tags that are attached to the specified virtual mfa device"
+      },
+      {
+        "action": "ListOpenIDConnectProviders",
+        "access_level": "List",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 102
+        },
+        "description": "Grants permission to list information about the IAM OpenID Connect (OIDC) provider resource objects that are defined in the AWS account"
+      },
+      {
+        "action": "ListOpenIDConnectProviderTags",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "oidc-provider",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 101
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 101
+        },
+        "description": "Grants permission to list the tags that are attached to the specified OpenID Connect provider"
+      },
+      {
+        "action": "ListOrganizationsFeatures",
+        "access_level": "List",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 103
+        },
+        "description": "Grants permission to list the centralized root access features enabled for your organization"
+      },
+      {
+        "action": "ListPolicies",
+        "access_level": "List",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 104
+        },
+        "description": "Grants permission to list all managed policies"
+      },
+      {
+        "action": "ListPoliciesGrantingServiceAccess",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "group",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 105
+            }
+          },
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 105
+            }
+          },
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 105
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 105
+        },
+        "description": "Grants permission to list information about the policies that grant an entity access to a specific service"
+      },
+      {
+        "action": "ListPolicyTags",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "policy",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 106
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 106
+        },
+        "description": "Grants permission to list the tags that are attached to the specified managed policy"
+      },
+      {
+        "action": "ListPolicyVersions",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "policy",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 107
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 107
+        },
+        "description": "Grants permission to list information about the versions of the specified managed policy, including the version that is currently set as the policy's default version"
+      },
+      {
+        "action": "ListRolePolicies",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 108
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 108
+        },
+        "description": "Grants permission to list the names of the inline policies that are embedded in the specified IAM role"
+      },
+      {
+        "action": "ListRoles",
+        "access_level": "List",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 110
+        },
+        "description": "Grants permission to list the IAM roles that have the specified path prefix"
+      },
+      {
+        "action": "ListRoleTags",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 109
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 109
+        },
+        "description": "Grants permission to list the tags that are attached to the specified IAM role"
+      },
+      {
+        "action": "ListSAMLProviders",
+        "access_level": "List",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 112
+        },
+        "description": "Grants permission to list the SAML provider resources in IAM"
+      },
+      {
+        "action": "ListSAMLProviderTags",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "saml-provider",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 111
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 111
+        },
+        "description": "Grants permission to list the tags that are attached to the specified SAML provider"
+      },
+      {
+        "action": "ListServerCertificates",
+        "access_level": "List",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 116
+        },
+        "description": "Grants permission to list the server certificates that have the specified path prefix"
+      },
+      {
+        "action": "ListServerCertificateTags",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "server-certificate",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 115
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 115
+        },
+        "description": "Grants permission to list the tags that are attached to the specified server certificate"
+      },
+      {
+        "action": "ListServiceSpecificCredentials",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 117
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 117
+        },
+        "description": "Grants permission to list the service-specific credentials that are associated with the specified IAM user"
+      },
+      {
+        "action": "ListSigningCertificates",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 118
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 118
+        },
+        "description": "Grants permission to list information about the signing certificates that are associated with the specified IAM user"
+      },
+      {
+        "action": "ListSSHPublicKeys",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 113
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 113
+        },
+        "description": "Grants permission to list information about the SSH public keys that are associated with the specified IAM user"
+      },
+      {
+        "action": "ListSTSRegionalEndpointsStatus",
+        "access_level": "List",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 114
+        },
+        "description": "Grants permission to list the status of all active STS regional endpoints"
+      },
+      {
+        "action": "ListUserPolicies",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 119
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 119
+        },
+        "description": "Grants permission to list the names of the inline policies that are embedded in the specified IAM user"
+      },
+      {
+        "action": "ListUsers",
+        "access_level": "List",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 121
+        },
+        "description": "Grants permission to list the IAM users that have the specified path prefix"
+      },
+      {
+        "action": "ListUserTags",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 120
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 120
+        },
+        "description": "Grants permission to list the tags that are attached to the specified IAM user"
+      },
+      {
+        "action": "ListVirtualMFADevices",
+        "access_level": "List",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 122
+        },
+        "description": "Grants permission to list virtual MFA devices by assignment status"
+      },
+      {
+        "action": "PassRole",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 123
+            }
+          }
+        ],
+        "condition_keys": [
+          "iam:AssociatedResourceArn",
+          "iam:PassedToService"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 123
+        },
+        "description": ""
+      },
+      {
+        "action": "PutGroupPolicy",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "group",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 124
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 124
+        },
+        "description": "Grants permission to create or update an inline policy document that is embedded in the specified IAM group"
+      },
+      {
+        "action": "PutRolePermissionsBoundary",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 125
+            }
+          }
+        ],
+        "condition_keys": [
+          "iam:PermissionsBoundary"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 125
+        },
+        "description": "Grants permission to set a managed policy as a permissions boundary for a role"
+      },
+      {
+        "action": "PutRolePolicy",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 126
+            }
+          }
+        ],
+        "condition_keys": [
+          "iam:PermissionsBoundary"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 126
+        },
+        "description": "Grants permission to create or update an inline policy document that is embedded in the specified IAM role"
+      },
+      {
+        "action": "PutUserPermissionsBoundary",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 127
+            }
+          }
+        ],
+        "condition_keys": [
+          "iam:PermissionsBoundary"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 127
+        },
+        "description": "Grants permission to set a managed policy as a permissions boundary for an IAM user"
+      },
+      {
+        "action": "PutUserPolicy",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 128
+            }
+          }
+        ],
+        "condition_keys": [
+          "iam:PermissionsBoundary"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 128
+        },
+        "description": "Grants permission to create or update an inline policy document that is embedded in the specified IAM user"
+      },
+      {
+        "action": "RemoveClientIDFromOpenIDConnectProvider",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "oidc-provider",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 129
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 129
+        },
+        "description": "Grants permission to remove the client ID (audience) from the list of client IDs in the specified IAM OpenID Connect (OIDC) provider resource"
+      },
+      {
+        "action": "RemoveRoleFromInstanceProfile",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "instance-profile",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 130
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 130
+        },
+        "description": "Grants permission to remove an IAM role from the specified EC2 instance profile"
+      },
+      {
+        "action": "RemoveUserFromGroup",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "group",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 131
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 131
+        },
+        "description": "Grants permission to remove an IAM user from the specified group"
+      },
+      {
+        "action": "ResetServiceSpecificCredential",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 132
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 132
+        },
+        "description": "Grants permission to reset the password for an existing service-specific credential for an IAM user"
+      },
+      {
+        "action": "ResyncMFADevice",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 133
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 133
+        },
+        "description": "Grants permission to synchronize the specified MFA device with its IAM entity (user or role)"
+      },
+      {
+        "action": "SetDefaultPolicyVersion",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "policy",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 134
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 134
+        },
+        "description": "Grants permission to set the version of the specified policy as the policy's default version"
+      },
+      {
+        "action": "SetSecurityTokenServicePreferences",
+        "access_level": "Write",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 136
+        },
+        "description": "Grants permission to set the STS global endpoint token version"
+      },
+      {
+        "action": "SetSTSRegionalEndpointStatus",
+        "access_level": "Write",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 135
+        },
+        "description": "Grants permission to activate or deactivate an STS regional endpoint"
+      },
+      {
+        "action": "SimulateCustomPolicy",
+        "access_level": "Read",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 137
+        },
+        "description": "Grants permission to simulate whether an identity-based policy or resource-based policy provides permissions for specific API operations and resources"
+      },
+      {
+        "action": "SimulatePrincipalPolicy",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "group",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 138
+            }
+          },
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 138
+            }
+          },
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 138
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 138
+        },
+        "description": "Grants permission to simulate whether an identity-based policy that is attached to a specified IAM entity (user or role) provides permissions for specific API operations and resources"
+      },
+      {
+        "action": "TagInstanceProfile",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "instance-profile",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 139
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 139
+        },
+        "description": "Grants permission to add tags to an instance profile"
+      },
+      {
+        "action": "TagMFADevice",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "mfa",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 140
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 140
+        },
+        "description": "Grants permission to add tags to a virtual mfa device"
+      },
+      {
+        "action": "TagOpenIDConnectProvider",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "oidc-provider",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 141
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 141
+        },
+        "description": "Grants permission to add tags to an OpenID Connect provider"
+      },
+      {
+        "action": "TagPolicy",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "policy",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 142
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 142
+        },
+        "description": "Grants permission to add tags to a managed policy"
+      },
+      {
+        "action": "TagRole",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 143
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 143
+        },
+        "description": "Grants permission to add tags to an IAM role"
+      },
+      {
+        "action": "TagSAMLProvider",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "saml-provider",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 144
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 144
+        },
+        "description": "Grants permission to add tags to a SAML Provider"
+      },
+      {
+        "action": "TagServerCertificate",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "server-certificate",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 145
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 145
+        },
+        "description": "Grants permission to add tags to a server certificate"
+      },
+      {
+        "action": "TagUser",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 146
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 146
+        },
+        "description": "Grants permission to add tags to an IAM user"
+      },
+      {
+        "action": "UntagInstanceProfile",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "instance-profile",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 147
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:TagKeys"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 147
+        },
+        "description": "Grants permission to remove the specified tags from the instance profile"
+      },
+      {
+        "action": "UntagMFADevice",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "mfa",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 148
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:TagKeys"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 148
+        },
+        "description": "Grants permission to remove the specified tags from the virtual mfa device"
+      },
+      {
+        "action": "UntagOpenIDConnectProvider",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "oidc-provider",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 149
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:TagKeys"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 149
+        },
+        "description": "Grants permission to remove the specified tags from the OpenID Connect provider"
+      },
+      {
+        "action": "UntagPolicy",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "policy",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 150
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:TagKeys"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 150
+        },
+        "description": "Grants permission to remove the specified tags from the managed policy"
+      },
+      {
+        "action": "UntagRole",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 151
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:TagKeys"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 151
+        },
+        "description": "Grants permission to remove the specified tags from the role"
+      },
+      {
+        "action": "UntagSAMLProvider",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "saml-provider",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 152
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:TagKeys"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 152
+        },
+        "description": "Grants permission to remove the specified tags from the SAML Provider"
+      },
+      {
+        "action": "UntagServerCertificate",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "server-certificate",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 153
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:TagKeys"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 153
+        },
+        "description": "Grants permission to remove the specified tags from the server certificate"
+      },
+      {
+        "action": "UntagUser",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 154
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:TagKeys"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 154
+        },
+        "description": "Grants permission to remove the specified tags from the user"
+      },
+      {
+        "action": "UpdateAccessKey",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 155
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 155
+        },
+        "description": "Grants permission to update the status of the specified access key as Active or Inactive"
+      },
+      {
+        "action": "UpdateAccountEmailAddress",
+        "access_level": "Write",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 156
+        },
+        "description": "Grants permission to update the email address that is associated with the account"
+      },
+      {
+        "action": "UpdateAccountName",
+        "access_level": "Write",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 157
+        },
+        "description": "Grants permission to update the account name that is associated with the account"
+      },
+      {
+        "action": "UpdateAccountPasswordPolicy",
+        "access_level": "Write",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 158
+        },
+        "description": "Grants permission to update the password policy settings for the AWS account"
+      },
+      {
+        "action": "UpdateAssumeRolePolicy",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 159
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 159
+        },
+        "description": "Grants permission to update the policy that grants an IAM entity permission to assume a role"
+      },
+      {
+        "action": "UpdateCloudFrontPublicKey",
+        "access_level": "Write",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 160
+        },
+        "description": "Grants permission to update an existing CloudFront public key"
+      },
+      {
+        "action": "UpdateGroup",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "group",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 161
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 161
+        },
+        "description": "Grants permission to update the name or path of the specified IAM group"
+      },
+      {
+        "action": "UpdateLoginProfile",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 162
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 162
+        },
+        "description": "Grants permission to change the password for the specified IAM user"
+      },
+      {
+        "action": "UpdateOpenIDConnectProviderThumbprint",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "oidc-provider",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 163
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 163
+        },
+        "description": "Grants permission to update the entire list of server certificate thumbprints that are associated with an OpenID Connect (OIDC) provider resource"
+      },
+      {
+        "action": "UpdateRole",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 164
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 164
+        },
+        "description": "Grants permission to update the description or maximum session duration setting of a role"
+      },
+      {
+        "action": "UpdateRoleDescription",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 165
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 165
+        },
+        "description": "Grants permission to update only the description of a role"
+      },
+      {
+        "action": "UpdateSAMLProvider",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "saml-provider",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 166
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 166
+        },
+        "description": "Grants permission to update the metadata document for an existing SAML provider resource"
+      },
+      {
+        "action": "UpdateServerCertificate",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "server-certificate",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 168
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 168
+        },
+        "description": "Grants permission to update the name or the path of the specified server certificate stored in IAM"
+      },
+      {
+        "action": "UpdateServiceSpecificCredential",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 169
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 169
+        },
+        "description": "Grants permission to update the status of a service-specific credential to active or inactive for an IAM user"
+      },
+      {
+        "action": "UpdateSigningCertificate",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 170
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 170
+        },
+        "description": "Grants permission to update the status of the specified user signing certificate to active or disabled"
+      },
+      {
+        "action": "UpdateSSHPublicKey",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 167
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 167
+        },
+        "description": "Grants permission to update the status of an IAM user's SSH public key to active or inactive"
+      },
+      {
+        "action": "UpdateUser",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 171
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 171
+        },
+        "description": "Grants permission to update the name or the path of the specified IAM user"
+      },
+      {
+        "action": "UploadCloudFrontPublicKey",
+        "access_level": "Write",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 172
+        },
+        "description": "Grants permission to upload a CloudFront public key"
+      },
+      {
+        "action": "UploadServerCertificate",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "server-certificate",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 174
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 174
+        },
+        "description": "Grants permission to upload a server certificate entity for the AWS account"
+      },
+      {
+        "action": "UploadSigningCertificate",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 175
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 175
+        },
+        "description": "Grants permission to upload an X.509 signing certificate and associate it with the specified IAM user"
+      },
+      {
+        "action": "UploadSSHPublicKey",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 173
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 173
+        },
+        "description": "Grants permission to upload an SSH public key and associate it with the specified IAM user"
+      }
+    ],
+    "resource_types": [
+      {
+        "type": "access-report",
+        "arn_template": "arn:${Partition}:iam::${Account}:access-report/${EntityPath}",
+        "condition_keys": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "resource_types",
+          "row_index": 0
+        }
+      },
+      {
+        "type": "assumed-role",
+        "arn_template": "arn:${Partition}:iam::${Account}:assumed-role/${RoleName}/${RoleSessionName}",
+        "condition_keys": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "resource_types",
+          "row_index": 1
+        }
+      },
+      {
+        "type": "federated-user",
+        "arn_template": "arn:${Partition}:iam::${Account}:federated-user/${UserName}",
+        "condition_keys": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "resource_types",
+          "row_index": 2
+        }
+      },
+      {
+        "type": "group",
+        "arn_template": "arn:${Partition}:iam::${Account}:group/${GroupNameWithPath}",
+        "condition_keys": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "resource_types",
+          "row_index": 3
+        }
+      },
+      {
+        "type": "instance-profile",
+        "arn_template": "arn:${Partition}:iam::${Account}:instance-profile/${InstanceProfileNameWithPath}",
+        "condition_keys": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "resource_types",
+          "row_index": 4
+        }
+      },
+      {
+        "type": "mfa",
+        "arn_template": "arn:${Partition}:iam::${Account}:mfa/${MfaTokenIdWithPath}",
+        "condition_keys": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "resource_types",
+          "row_index": 5
+        }
+      },
+      {
+        "type": "oidc-provider",
+        "arn_template": "arn:${Partition}:iam::${Account}:oidc-provider/${OidcProviderName}",
+        "condition_keys": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "resource_types",
+          "row_index": 6
+        }
+      },
+      {
+        "type": "policy",
+        "arn_template": "arn:${Partition}:iam::${Account}:policy/${PolicyNameWithPath}",
+        "condition_keys": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "resource_types",
+          "row_index": 7
+        }
+      },
+      {
+        "type": "role",
+        "arn_template": "arn:${Partition}:iam::${Account}:role/${RoleNameWithPath}",
+        "condition_keys": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "resource_types",
+          "row_index": 8
+        }
+      },
+      {
+        "type": "saml-provider",
+        "arn_template": "arn:${Partition}:iam::${Account}:saml-provider/${SamlProviderName}",
+        "condition_keys": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "resource_types",
+          "row_index": 9
+        }
+      },
+      {
+        "type": "server-certificate",
+        "arn_template": "arn:${Partition}:iam::${Account}:server-certificate/${CertificateNameWithPath}",
+        "condition_keys": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "resource_types",
+          "row_index": 10
+        }
+      },
+      {
+        "type": "sms-mfa",
+        "arn_template": "arn:${Partition}:iam::${Account}:sms-mfa/${MfaTokenIdWithPath}",
+        "condition_keys": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "resource_types",
+          "row_index": 11
+        }
+      },
+      {
+        "type": "user",
+        "arn_template": "arn:${Partition}:iam::${Account}:user/${UserNameWithPath}",
+        "condition_keys": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "resource_types",
+          "row_index": 12
+        }
+      }
+    ],
+    "service_condition_keys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:ResourceTag/${TagKey}",
+      "aws:TagKeys",
+      "iam:AWSServiceName",
+      "iam:AssociatedResourceArn",
+      "iam:FIDO-FIPS-140-2-certification",
+      "iam:FIDO-FIPS-140-3-certification",
+      "iam:FIDO-certification",
+      "iam:OrganizationsPolicyId",
+      "iam:PassedToService",
+      "iam:PermissionsBoundary",
+      "iam:PolicyARN",
+      "iam:RegisterSecurityKey",
+      "iam:ResourceTag/${TagKey}"
+    ]
+  }
+}

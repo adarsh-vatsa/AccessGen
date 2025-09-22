@@ -1,0 +1,5642 @@
+{
+  "s3": {
+    "service_name": "Amazon S3",
+    "service_prefix": "s3",
+    "page_url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+    "version": "v1.3",
+    "actions": [
+      {
+        "action": "AbortMultipartUpload",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "accesspointobject",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 0
+            }
+          },
+          {
+            "type": "object",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 0
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:AccessGrantsInstanceArn",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 0
+        },
+        "description": "Grants permission to abort a multipart upload"
+      },
+      {
+        "action": "AssociateAccessGrantsIdentityCenter",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "accessgrantsinstance",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 1
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 1
+        },
+        "description": "Grants permission to associate Access Grants identity center"
+      },
+      {
+        "action": "BypassGovernanceRetention",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "accesspointobject",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 2
+            }
+          },
+          {
+            "type": "object",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 2
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:RequestObjectTag/<key>",
+          "s3:RequestObjectTagKeys",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-acl",
+          "s3:x-amz-content-sha256",
+          "s3:x-amz-copy-source",
+          "s3:x-amz-grant-full-control",
+          "s3:x-amz-grant-read",
+          "s3:x-amz-grant-read-acp",
+          "s3:x-amz-grant-write",
+          "s3:x-amz-grant-write-acp",
+          "s3:x-amz-metadata-directive",
+          "s3:x-amz-server-side-encryption",
+          "s3:x-amz-server-side-encryption-aws-kms-key-id",
+          "s3:x-amz-server-side-encryption-customer-algorithm",
+          "s3:x-amz-storage-class",
+          "s3:x-amz-website-redirect-location"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 2
+        },
+        "description": "Grants permission to allow circumvention of governance-mode object retention settings"
+      },
+      {
+        "action": "CreateAccessGrant",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "accessgrantslocation",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 3
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys",
+          "s3:AccessGrantScope",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 3
+        },
+        "description": "Grants permission to create Access Grant"
+      },
+      {
+        "action": "CreateAccessGrantsInstance",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "accessgrantsinstance",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 4
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 4
+        },
+        "description": "Grants permission to Create Access Grants Instance"
+      },
+      {
+        "action": "CreateAccessGrantsLocation",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "accessgrantsinstance",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 5
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys",
+          "s3:AccessGrantsLocationScope",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 5
+        },
+        "description": "Grants permission to create Access Grants location"
+      },
+      {
+        "action": "CreateAccessPoint",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "accesspoint",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 6
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys",
+          "s3:AccessPointNetworkOrigin",
+          "s3:AccessPointTag/${TagKey}",
+          "s3:DataAccessPointAccount",
+          "s3:DataAccessPointArn",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:locationconstraint",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-acl",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 6
+        },
+        "description": "Grants permission to create a new access point"
+      },
+      {
+        "action": "CreateAccessPointForObjectLambda",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "objectlambdaaccesspoint",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 7
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:AccessPointNetworkOrigin",
+          "s3:DataAccessPointAccount",
+          "s3:DataAccessPointArn",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 7
+        },
+        "description": "Grants permission to create an object lambda enabled accesspoint"
+      },
+      {
+        "action": "CreateBucket",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 8
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:locationconstraint",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-acl",
+          "s3:x-amz-content-sha256",
+          "s3:x-amz-grant-full-control",
+          "s3:x-amz-grant-read",
+          "s3:x-amz-grant-read-acp",
+          "s3:x-amz-grant-write",
+          "s3:x-amz-grant-write-acp",
+          "s3:x-amz-object-ownership"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 8
+        },
+        "description": "Grants permission to create a new bucket"
+      },
+      {
+        "action": "CreateBucketMetadataTableConfiguration",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 9
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 9
+        },
+        "description": "Grants permission to create a new S3 Metadata configuration for a specified general purpose bucket"
+      },
+      {
+        "action": "CreateJob",
+        "access_level": "Write",
+        "resource_types": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "s3:RequestJobOperation",
+          "s3:RequestJobPriority",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 10
+        },
+        "description": "Grants permission to create a new Amazon S3 Batch Operations job"
+      },
+      {
+        "action": "CreateMultiRegionAccessPoint",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "multiregionaccesspoint",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 11
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:AccessPointNetworkOrigin",
+          "s3:DataAccessPointAccount",
+          "s3:DataAccessPointArn",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 11
+        },
+        "description": "Grants permission to create a new Multi-Region Access Point"
+      },
+      {
+        "action": "CreateStorageLensGroup",
+        "access_level": "Write",
+        "resource_types": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 12
+        },
+        "description": "Grants permission to create an Amazon S3 Storage Lens group"
+      },
+      {
+        "action": "DeleteAccessGrant",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "accessgrant",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 13
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}",
+          "s3:AccessGrantScope",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 13
+        },
+        "description": "Grants permission to delete Access Grant"
+      },
+      {
+        "action": "DeleteAccessGrantsInstance",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "accessgrantsinstance",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 14
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 14
+        },
+        "description": "Grants permission to Delete Access Grants Instance"
+      },
+      {
+        "action": "DeleteAccessGrantsInstanceResourcePolicy",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "accessgrantsinstance",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 15
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 15
+        },
+        "description": "Grants permission to read Access grants instance resource policy"
+      },
+      {
+        "action": "DeleteAccessGrantsLocation",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "accessgrantslocation",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 16
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}",
+          "s3:AccessGrantsLocationScope",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 16
+        },
+        "description": "Grants permission to delete Access Grants location"
+      },
+      {
+        "action": "DeleteAccessPoint",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "accesspoint",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 17
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}",
+          "s3:AccessPointNetworkOrigin",
+          "s3:AccessPointTag/${TagKey}",
+          "s3:DataAccessPointAccount",
+          "s3:DataAccessPointArn",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 17
+        },
+        "description": "Grants permission to delete the access point named in the URI"
+      },
+      {
+        "action": "DeleteAccessPointForObjectLambda",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "objectlambdaaccesspoint",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 18
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:AccessPointNetworkOrigin",
+          "s3:DataAccessPointAccount",
+          "s3:DataAccessPointArn",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 18
+        },
+        "description": "Grants permission to delete the object lambda enabled access point named in the URI"
+      },
+      {
+        "action": "DeleteAccessPointPolicy",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "accesspoint",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 19
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}",
+          "s3:AccessPointNetworkOrigin",
+          "s3:AccessPointTag/${TagKey}",
+          "s3:DataAccessPointAccount",
+          "s3:DataAccessPointArn",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 19
+        },
+        "description": "Grants permission to delete the policy on a specified access point"
+      },
+      {
+        "action": "DeleteAccessPointPolicyForObjectLambda",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "objectlambdaaccesspoint",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 20
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:AccessPointNetworkOrigin",
+          "s3:DataAccessPointAccount",
+          "s3:DataAccessPointArn",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 20
+        },
+        "description": "Grants permission to delete the policy on a specified object lambda enabled access point"
+      },
+      {
+        "action": "DeleteBucket",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 21
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 21
+        },
+        "description": "Grants permission to delete the bucket named in the URI"
+      },
+      {
+        "action": "DeleteBucketMetadataTableConfiguration",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 22
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 22
+        },
+        "description": "Grants permission to delete the S3 Metadata configuration for a specified general purpose bucket"
+      },
+      {
+        "action": "DeleteBucketPolicy",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 23
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 23
+        },
+        "description": "Grants permission to delete the policy on a specified bucket"
+      },
+      {
+        "action": "DeleteBucketWebsite",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 24
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 24
+        },
+        "description": "Grants permission to remove the website configuration for a bucket"
+      },
+      {
+        "action": "DeleteJobTagging",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "job",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 25
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ExistingJobOperation",
+          "s3:ExistingJobPriority",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 25
+        },
+        "description": "Grants permission to remove tags from an existing Amazon S3 Batch Operations job"
+      },
+      {
+        "action": "DeleteMultiRegionAccessPoint",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "multiregionaccesspoint",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 26
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:AccessPointNetworkOrigin",
+          "s3:DataAccessPointAccount",
+          "s3:DataAccessPointArn",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 26
+        },
+        "description": "Grants permission to delete the Multi-Region Access Point named in the URI"
+      },
+      {
+        "action": "DeleteObject",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "accesspointobject",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 27
+            }
+          },
+          {
+            "type": "object",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 27
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:AccessGrantsInstanceArn",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 27
+        },
+        "description": "Grants permission to remove the null version of an object and insert a delete marker, which becomes the current version of the object"
+      },
+      {
+        "action": "DeleteObjectTagging",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "accesspointobject",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 28
+            }
+          },
+          {
+            "type": "object",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 28
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ExistingObjectTag/<key>",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 28
+        },
+        "description": "Grants permission to use the tagging subresource to remove the entire tag set from the specified object"
+      },
+      {
+        "action": "DeleteObjectVersion",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "accesspointobject",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 29
+            }
+          },
+          {
+            "type": "object",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 29
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:AccessGrantsInstanceArn",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:versionid",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 29
+        },
+        "description": "Grants permission to remove a specific version of an object"
+      },
+      {
+        "action": "DeleteObjectVersionTagging",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "accesspointobject",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 30
+            }
+          },
+          {
+            "type": "object",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 30
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ExistingObjectTag/<key>",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:versionid",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 30
+        },
+        "description": "Grants permission to remove the entire tag set for a specific version of the object"
+      },
+      {
+        "action": "DeleteStorageLensConfiguration",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "storagelensconfiguration",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 31
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 31
+        },
+        "description": "Grants permission to delete an existing Amazon S3 Storage Lens configuration"
+      },
+      {
+        "action": "DeleteStorageLensConfigurationTagging",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "storagelensconfiguration",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 32
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 32
+        },
+        "description": "Grants permission to remove tags from an existing Amazon S3 Storage Lens configuration"
+      },
+      {
+        "action": "DeleteStorageLensGroup",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "storagelensgroup",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 33
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 33
+        },
+        "description": "Grants permission to delete an existing S3 Storage Lens group"
+      },
+      {
+        "action": "DescribeJob",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "job",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 34
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 34
+        },
+        "description": "Grants permission to retrieve the configuration parameters and status for a batch operations job"
+      },
+      {
+        "action": "DescribeMultiRegionAccessPointOperation",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "multiregionaccesspointrequestarn",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 35
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 35
+        },
+        "description": "Grants permission to retrieve the configurations for a Multi-Region Access Point"
+      },
+      {
+        "action": "DissociateAccessGrantsIdentityCenter",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "accessgrantsinstance",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 36
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 36
+        },
+        "description": "Grants permission to disassociate Access Grants identity center"
+      },
+      {
+        "action": "GetAccelerateConfiguration",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 37
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 37
+        },
+        "description": "Grants permission to uses the accelerate subresource to return the Transfer Acceleration state of a bucket, which is either Enabled or Suspended"
+      },
+      {
+        "action": "GetAccessGrant",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "accessgrant",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 38
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}",
+          "s3:AccessGrantScope",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 38
+        },
+        "description": "Grants permission to read Access Grant"
+      },
+      {
+        "action": "GetAccessGrantsInstance",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "accessgrantsinstance",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 39
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 39
+        },
+        "description": "Grants permission to Read Access Grants Instance"
+      },
+      {
+        "action": "GetAccessGrantsInstanceForPrefix",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "accessgrantsinstance",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 40
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 40
+        },
+        "description": "Grants permission to Read Access Grants Instance by prefix"
+      },
+      {
+        "action": "GetAccessGrantsInstanceResourcePolicy",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "accessgrantsinstance",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 41
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 41
+        },
+        "description": "Grants permission to read Access grants instance resource policy"
+      },
+      {
+        "action": "GetAccessGrantsLocation",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "accessgrantslocation",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 42
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}",
+          "s3:AccessGrantsLocationScope",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 42
+        },
+        "description": "Grants permission to read Access Grants location"
+      },
+      {
+        "action": "GetAccessPoint",
+        "access_level": "Read",
+        "resource_types": [],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}",
+          "s3:AccessPointNetworkOrigin",
+          "s3:AccessPointTag/${TagKey}",
+          "s3:DataAccessPointAccount",
+          "s3:DataAccessPointArn",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 43
+        },
+        "description": "Grants permission to return configuration information about the specified access point"
+      },
+      {
+        "action": "GetAccessPointConfigurationForObjectLambda",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "objectlambdaaccesspoint",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 44
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:AccessPointNetworkOrigin",
+          "s3:DataAccessPointAccount",
+          "s3:DataAccessPointArn",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 44
+        },
+        "description": "Grants permission to retrieve the configuration of the object lambda enabled access point"
+      },
+      {
+        "action": "GetAccessPointForObjectLambda",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "objectlambdaaccesspoint",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 45
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:AccessPointNetworkOrigin",
+          "s3:DataAccessPointAccount",
+          "s3:DataAccessPointArn",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 45
+        },
+        "description": "Grants permission to create an object lambda enabled accesspoint"
+      },
+      {
+        "action": "GetAccessPointPolicy",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "accesspoint",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 46
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}",
+          "s3:AccessPointNetworkOrigin",
+          "s3:AccessPointTag/${TagKey}",
+          "s3:DataAccessPointAccount",
+          "s3:DataAccessPointArn",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 46
+        },
+        "description": "Grants permission to return the access point policy associated with the specified access point"
+      },
+      {
+        "action": "GetAccessPointPolicyForObjectLambda",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "objectlambdaaccesspoint",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 47
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:AccessPointNetworkOrigin",
+          "s3:DataAccessPointAccount",
+          "s3:DataAccessPointArn",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 47
+        },
+        "description": "Grants permission to return the access point policy associated with the specified object lambda enabled access point"
+      },
+      {
+        "action": "GetAccessPointPolicyStatus",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "accesspoint",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 48
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}",
+          "s3:AccessPointNetworkOrigin",
+          "s3:AccessPointTag/${TagKey}",
+          "s3:DataAccessPointAccount",
+          "s3:DataAccessPointArn",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 48
+        },
+        "description": "Grants permission to return the policy status for a specific access point policy"
+      },
+      {
+        "action": "GetAccessPointPolicyStatusForObjectLambda",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "objectlambdaaccesspoint",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 49
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:AccessPointNetworkOrigin",
+          "s3:DataAccessPointAccount",
+          "s3:DataAccessPointArn",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 49
+        },
+        "description": "Grants permission to return the policy status for a specific object lambda access point policy"
+      },
+      {
+        "action": "GetAccountPublicAccessBlock",
+        "access_level": "Read",
+        "resource_types": [],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 50
+        },
+        "description": "Grants permission to retrieve the PublicAccessBlock configuration for an AWS account"
+      },
+      {
+        "action": "GetAnalyticsConfiguration",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 51
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 51
+        },
+        "description": "Grants permission to get an analytics configuration from an Amazon S3 bucket, identified by the analytics configuration ID"
+      },
+      {
+        "action": "GetBucketAcl",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "accesspoint",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 52
+            }
+          },
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 52
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 52
+        },
+        "description": "Grants permission to use the acl subresource to return the access control list (ACL) of an Amazon S3 bucket"
+      },
+      {
+        "action": "GetBucketCORS",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "accesspoint",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 53
+            }
+          },
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 53
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 53
+        },
+        "description": "Grants permission to return the CORS configuration information set for an Amazon S3 bucket"
+      },
+      {
+        "action": "GetBucketLocation",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "accesspoint",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 54
+            }
+          },
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 54
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 54
+        },
+        "description": "Grants permission to return the Region that an Amazon S3 bucket resides in"
+      },
+      {
+        "action": "GetBucketLogging",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 55
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 55
+        },
+        "description": "Grants permission to return the logging status of an Amazon S3 bucket and the permissions users have to view or modify that status"
+      },
+      {
+        "action": "GetBucketMetadataTableConfiguration",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 56
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 56
+        },
+        "description": "Grants permission to return the S3 Metadata configuration for a specified general purpose bucket"
+      },
+      {
+        "action": "GetBucketNotification",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "accesspoint",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 57
+            }
+          },
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 57
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 57
+        },
+        "description": "Grants permission to get the notification configuration of an Amazon S3 bucket"
+      },
+      {
+        "action": "GetBucketObjectLockConfiguration",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 58
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:signatureversion"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 58
+        },
+        "description": "Grants permission to get the Object Lock configuration of an Amazon S3 bucket"
+      },
+      {
+        "action": "GetBucketOwnershipControls",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 59
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 59
+        },
+        "description": "Grants permission to retrieve ownership controls on a bucket"
+      },
+      {
+        "action": "GetBucketPolicy",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "accesspoint",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 60
+            }
+          },
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 60
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 60
+        },
+        "description": "Grants permission to return the policy of the specified bucket"
+      },
+      {
+        "action": "GetBucketPolicyStatus",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 61
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 61
+        },
+        "description": "Grants permission to retrieve the policy status for a specific Amazon S3 bucket, which indicates whether the bucket is public"
+      },
+      {
+        "action": "GetBucketPublicAccessBlock",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 62
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 62
+        },
+        "description": "Grants permission to retrieve the PublicAccessBlock configuration for an Amazon S3 bucket"
+      },
+      {
+        "action": "GetBucketRequestPayment",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 63
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 63
+        },
+        "description": "Grants permission to return the request payment configuration for an Amazon S3 bucket"
+      },
+      {
+        "action": "GetBucketTagging",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 64
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 64
+        },
+        "description": "Grants permission to return the tag set associated with an Amazon S3 bucket"
+      },
+      {
+        "action": "GetBucketVersioning",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 65
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 65
+        },
+        "description": "Grants permission to return the versioning state of an Amazon S3 bucket"
+      },
+      {
+        "action": "GetBucketWebsite",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 66
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 66
+        },
+        "description": "Grants permission to return the website configuration for an Amazon S3 bucket"
+      },
+      {
+        "action": "GetDataAccess",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "accessgrantsinstance",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 67
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 67
+        },
+        "description": "Grants permission to get Access"
+      },
+      {
+        "action": "GetEncryptionConfiguration",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 68
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 68
+        },
+        "description": "Grants permission to return the default encryption configuration an Amazon S3 bucket"
+      },
+      {
+        "action": "GetIntelligentTieringConfiguration",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 69
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 69
+        },
+        "description": "Grants permission to get an or list all Amazon S3 Intelligent Tiering configuration in a S3 Bucket"
+      },
+      {
+        "action": "GetInventoryConfiguration",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 70
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 70
+        },
+        "description": "Grants permission to return an inventory configuration from an Amazon S3 bucket, identified by the inventory configuration ID"
+      },
+      {
+        "action": "GetJobTagging",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "job",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 71
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 71
+        },
+        "description": "Grants permission to return the tag set of an existing Amazon S3 Batch Operations job"
+      },
+      {
+        "action": "GetLifecycleConfiguration",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 72
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 72
+        },
+        "description": "Grants permission to return the lifecycle configuration information set on an Amazon S3 bucket"
+      },
+      {
+        "action": "GetMetricsConfiguration",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 73
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 73
+        },
+        "description": "Grants permission to get a metrics configuration from an Amazon S3 bucket"
+      },
+      {
+        "action": "GetMultiRegionAccessPoint",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "multiregionaccesspoint",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 74
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:AccessPointNetworkOrigin",
+          "s3:DataAccessPointAccount",
+          "s3:DataAccessPointArn",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 74
+        },
+        "description": "Grants permission to return configuration information about the specified Multi-Region Access Point"
+      },
+      {
+        "action": "GetMultiRegionAccessPointPolicy",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "multiregionaccesspoint",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 75
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:AccessPointNetworkOrigin",
+          "s3:DataAccessPointAccount",
+          "s3:DataAccessPointArn",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 75
+        },
+        "description": "Grants permission to return the access point policy associated with the specified Multi-Region Access Point"
+      },
+      {
+        "action": "GetMultiRegionAccessPointPolicyStatus",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "multiregionaccesspoint",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 76
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:AccessPointNetworkOrigin",
+          "s3:DataAccessPointAccount",
+          "s3:DataAccessPointArn",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 76
+        },
+        "description": "Grants permission to return the policy status for a specific Multi-Region Access Point policy"
+      },
+      {
+        "action": "GetMultiRegionAccessPointRoutes",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "multiregionaccesspoint",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 77
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:AccessPointNetworkOrigin",
+          "s3:DataAccessPointAccount",
+          "s3:DataAccessPointArn",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 77
+        },
+        "description": "Grants permission to return the route configuration for a Multi-Region Access Point"
+      },
+      {
+        "action": "GetObject",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "accesspointobject",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 78
+            }
+          },
+          {
+            "type": "object",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 78
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:AccessGrantsInstanceArn",
+          "s3:ExistingObjectTag/<key>",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:if-match",
+          "s3:if-none-match",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 78
+        },
+        "description": "Grants permission to retrieve objects from Amazon S3"
+      },
+      {
+        "action": "GetObjectAcl",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "accesspointobject",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 79
+            }
+          },
+          {
+            "type": "object",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 79
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:AccessGrantsInstanceArn",
+          "s3:ExistingObjectTag/<key>",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 79
+        },
+        "description": "Grants permission to return the access control list (ACL) of an object"
+      },
+      {
+        "action": "GetObjectAttributes",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "accesspointobject",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 80
+            }
+          },
+          {
+            "type": "object",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 80
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ExistingObjectTag/<key>",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 80
+        },
+        "description": "Grants permission to retrieve attributes related to a specific object"
+      },
+      {
+        "action": "GetObjectLegalHold",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "accesspointobject",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 81
+            }
+          },
+          {
+            "type": "object",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 81
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 81
+        },
+        "description": "Grants permission to get an object's current Legal Hold status"
+      },
+      {
+        "action": "GetObjectRetention",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "accesspointobject",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 82
+            }
+          },
+          {
+            "type": "object",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 82
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 82
+        },
+        "description": "Grants permission to retrieve the retention settings for an object"
+      },
+      {
+        "action": "GetObjectTagging",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "accesspointobject",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 83
+            }
+          },
+          {
+            "type": "object",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 83
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ExistingObjectTag/<key>",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 83
+        },
+        "description": "Grants permission to return the tag set of an object"
+      },
+      {
+        "action": "GetObjectTorrent",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "object",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 84
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 84
+        },
+        "description": "Grants permission to return torrent files from an Amazon S3 bucket"
+      },
+      {
+        "action": "GetObjectVersion",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "accesspointobject",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 85
+            }
+          },
+          {
+            "type": "object",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 85
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:AccessGrantsInstanceArn",
+          "s3:ExistingObjectTag/<key>",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:versionid",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 85
+        },
+        "description": "Grants permission to retrieve a specific version of an object"
+      },
+      {
+        "action": "GetObjectVersionAcl",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "accesspointobject",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 86
+            }
+          },
+          {
+            "type": "object",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 86
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:AccessGrantsInstanceArn",
+          "s3:ExistingObjectTag/<key>",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:versionid",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 86
+        },
+        "description": "Grants permission to return the access control list (ACL) of a specific object version"
+      },
+      {
+        "action": "GetObjectVersionAttributes",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "accesspointobject",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 87
+            }
+          },
+          {
+            "type": "object",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 87
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ExistingObjectTag/<key>",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:versionid",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 87
+        },
+        "description": "Grants permission to retrieve attributes related to a specific version of an object"
+      },
+      {
+        "action": "GetObjectVersionForReplication",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "object",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 88
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 88
+        },
+        "description": "Grants permission to replicate both unencrypted objects and objects encrypted with SSE-S3 or SSE-KMS"
+      },
+      {
+        "action": "GetObjectVersionTagging",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "accesspointobject",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 89
+            }
+          },
+          {
+            "type": "object",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 89
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ExistingObjectTag/<key>",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:versionid",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 89
+        },
+        "description": "Grants permission to return the tag set for a specific version of the object"
+      },
+      {
+        "action": "GetObjectVersionTorrent",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "object",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 90
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:versionid",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 90
+        },
+        "description": "Grants permission to get Torrent files about a different version using the versionId subresource"
+      },
+      {
+        "action": "GetReplicationConfiguration",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 91
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 91
+        },
+        "description": "Grants permission to get the replication configuration information set on an Amazon S3 bucket"
+      },
+      {
+        "action": "GetStorageLensConfiguration",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "storagelensconfiguration",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 92
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 92
+        },
+        "description": "Grants permission to get an Amazon S3 Storage Lens configuration"
+      },
+      {
+        "action": "GetStorageLensConfigurationTagging",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "storagelensconfiguration",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 93
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 93
+        },
+        "description": "Grants permission to get the tag set of an existing Amazon S3 Storage Lens configuration"
+      },
+      {
+        "action": "GetStorageLensDashboard",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "storagelensconfiguration",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 94
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 94
+        },
+        "description": "Grants permission to get an Amazon S3 Storage Lens dashboard"
+      },
+      {
+        "action": "GetStorageLensGroup",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "storagelensgroup",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 95
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 95
+        },
+        "description": "Grants permission to get an Amazon S3 Storage Lens group"
+      },
+      {
+        "action": "InitiateReplication",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "object",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 96
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 96
+        },
+        "description": "Grants permission to initiate the replication process by setting replication status of an object to pending"
+      },
+      {
+        "action": "ListAccessGrants",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "accessgrantsinstance",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 97
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 97
+        },
+        "description": "Grants permission to list Access Grant"
+      },
+      {
+        "action": "ListAccessGrantsInstances",
+        "access_level": "List",
+        "resource_types": [],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 98
+        },
+        "description": "Grants permission to List Access Grants Instances"
+      },
+      {
+        "action": "ListAccessGrantsLocations",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "accessgrantsinstance",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 99
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 99
+        },
+        "description": "Grants permission to list Access Grants locations"
+      },
+      {
+        "action": "ListAccessPoints",
+        "access_level": "List",
+        "resource_types": [],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 100
+        },
+        "description": "Grants permission to list access points"
+      },
+      {
+        "action": "ListAccessPointsForObjectLambda",
+        "access_level": "List",
+        "resource_types": [],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 101
+        },
+        "description": "Grants permission to list object lambda enabled accesspoints"
+      },
+      {
+        "action": "ListAllMyBuckets",
+        "access_level": "List",
+        "resource_types": [],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 102
+        },
+        "description": "Grants permission to list all buckets owned by the authenticated sender of the request"
+      },
+      {
+        "action": "ListBucket",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "accesspoint",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 103
+            }
+          },
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 103
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:AccessGrantsInstanceArn",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:delimiter",
+          "s3:max-keys",
+          "s3:prefix",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 103
+        },
+        "description": "Grants permission to list some or all of the objects in an Amazon S3 bucket (up to 1000)"
+      },
+      {
+        "action": "ListBucketMultipartUploads",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 104
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}",
+          "s3:AccessGrantsInstanceArn",
+          "s3:AccessPointNetworkOrigin",
+          "s3:AccessPointTag/${TagKey}",
+          "s3:DataAccessPointAccount",
+          "s3:DataAccessPointArn",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 104
+        },
+        "description": "Grants permission to list in-progress multipart uploads"
+      },
+      {
+        "action": "ListBucketVersions",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "accesspoint",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 105
+            }
+          },
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 105
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:AccessGrantsInstanceArn",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:delimiter",
+          "s3:max-keys",
+          "s3:prefix",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 105
+        },
+        "description": "Grants permission to list metadata about all the versions of objects in an Amazon S3 bucket"
+      },
+      {
+        "action": "ListCallerAccessGrants",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "accessgrantsinstance",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 106
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 106
+        },
+        "description": "Grants permission to list caller's Access Grant"
+      },
+      {
+        "action": "ListJobs",
+        "access_level": "List",
+        "resource_types": [],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 107
+        },
+        "description": "Grants permission to list current jobs and jobs that have ended recently"
+      },
+      {
+        "action": "ListMultipartUploadParts",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "accesspointobject",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 109
+            }
+          },
+          {
+            "type": "object",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 109
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:AccessGrantsInstanceArn",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 109
+        },
+        "description": "Grants permission to list the parts that have been uploaded for a specific multipart upload"
+      },
+      {
+        "action": "ListMultiRegionAccessPoints",
+        "access_level": "List",
+        "resource_types": [],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 108
+        },
+        "description": "Grants permission to list Multi-Region Access Points"
+      },
+      {
+        "action": "ListStorageLensConfigurations",
+        "access_level": "List",
+        "resource_types": [],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 110
+        },
+        "description": "Grants permission to list Amazon S3 Storage Lens configurations"
+      },
+      {
+        "action": "ListStorageLensGroups",
+        "access_level": "List",
+        "resource_types": [],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 111
+        },
+        "description": "Grants permission to list S3 Storage Lens groups"
+      },
+      {
+        "action": "ListTagsForResource",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "accessgrant",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 112
+            }
+          },
+          {
+            "type": "accessgrantsinstance",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 112
+            }
+          },
+          {
+            "type": "accessgrantslocation",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 112
+            }
+          },
+          {
+            "type": "accesspoint",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 112
+            }
+          },
+          {
+            "type": "storagelensgroup",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 112
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 112
+        },
+        "description": "Grants permission to list the tags attached to the specified resource"
+      },
+      {
+        "action": "ObjectOwnerOverrideToBucketOwner",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "object",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 113
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 113
+        },
+        "description": "Grants permission to change replica ownership"
+      },
+      {
+        "action": "PauseReplication",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 114
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:destinationRegion",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 114
+        },
+        "description": "Grants permission to pause S3 Replication from target source buckets to destination buckets"
+      },
+      {
+        "action": "PutAccelerateConfiguration",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 115
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 115
+        },
+        "description": "Grants permission to use the accelerate subresource to set the Transfer Acceleration state of an existing S3 bucket"
+      },
+      {
+        "action": "PutAccessGrantsInstanceResourcePolicy",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "accessgrantsinstance",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 116
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 116
+        },
+        "description": "Grants permission to put Access grants instance resource policy"
+      },
+      {
+        "action": "PutAccessPointConfigurationForObjectLambda",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "objectlambdaaccesspoint",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 117
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:AccessPointNetworkOrigin",
+          "s3:DataAccessPointAccount",
+          "s3:DataAccessPointArn",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 117
+        },
+        "description": "Grants permission to set the configuration of the object lambda enabled access point"
+      },
+      {
+        "action": "PutAccessPointPolicy",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "accesspoint",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 118
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 118
+        },
+        "description": "Grants permission to associate an access policy with a specified access point"
+      },
+      {
+        "action": "PutAccessPointPolicyForObjectLambda",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "objectlambdaaccesspoint",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 119
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:AccessPointNetworkOrigin",
+          "s3:DataAccessPointAccount",
+          "s3:DataAccessPointArn",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 119
+        },
+        "description": "Grants permission to associate an access policy with a specified object lambda enabled access point"
+      },
+      {
+        "action": "PutAccessPointPublicAccessBlock",
+        "access_level": "Permissions management",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 120
+        },
+        "description": "Grants permission to associate public access block configurations with a specified access point, while creating a access point"
+      },
+      {
+        "action": "PutAccountPublicAccessBlock",
+        "access_level": "Permissions management",
+        "resource_types": [],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 121
+        },
+        "description": "Grants permission to create or modify the PublicAccessBlock configuration for an AWS account"
+      },
+      {
+        "action": "PutAnalyticsConfiguration",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 122
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 122
+        },
+        "description": "Grants permission to set an analytics configuration for the bucket, specified by the analytics configuration ID"
+      },
+      {
+        "action": "PutBucketAcl",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 123
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-acl",
+          "s3:x-amz-content-sha256",
+          "s3:x-amz-grant-full-control",
+          "s3:x-amz-grant-read",
+          "s3:x-amz-grant-read-acp",
+          "s3:x-amz-grant-write",
+          "s3:x-amz-grant-write-acp"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 123
+        },
+        "description": "Grants permission to set the permissions on an existing bucket using access control lists (ACLs)"
+      },
+      {
+        "action": "PutBucketCORS",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 124
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 124
+        },
+        "description": "Grants permission to set the CORS configuration for an Amazon S3 bucket"
+      },
+      {
+        "action": "PutBucketLogging",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 125
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 125
+        },
+        "description": "Grants permission to set the logging parameters for an Amazon S3 bucket"
+      },
+      {
+        "action": "PutBucketNotification",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 126
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 126
+        },
+        "description": "Grants permission to receive notifications when certain events happen in an Amazon S3 bucket"
+      },
+      {
+        "action": "PutBucketObjectLockConfiguration",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 127
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 127
+        },
+        "description": "Grants permission to put Object Lock configuration on a specific bucket"
+      },
+      {
+        "action": "PutBucketOwnershipControls",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 128
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 128
+        },
+        "description": "Grants permission to add, replace or delete ownership controls on a bucket"
+      },
+      {
+        "action": "PutBucketPolicy",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 129
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 129
+        },
+        "description": "Grants permission to add or replace a bucket policy on a bucket"
+      },
+      {
+        "action": "PutBucketPublicAccessBlock",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 130
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 130
+        },
+        "description": "Grants permission to create or modify the PublicAccessBlock configuration for a specific Amazon S3 bucket"
+      },
+      {
+        "action": "PutBucketRequestPayment",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 131
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 131
+        },
+        "description": "Grants permission to set the request payment configuration of a bucket"
+      },
+      {
+        "action": "PutBucketTagging",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 132
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 132
+        },
+        "description": "Grants permission to add a set of tags to an existing Amazon S3 bucket"
+      },
+      {
+        "action": "PutBucketVersioning",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 133
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 133
+        },
+        "description": "Grants permission to set the versioning state of an existing Amazon S3 bucket"
+      },
+      {
+        "action": "PutBucketWebsite",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 134
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 134
+        },
+        "description": "Grants permission to set the configuration of the website that is specified in the website subresource"
+      },
+      {
+        "action": "PutEncryptionConfiguration",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 135
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 135
+        },
+        "description": "Grants permission to set the encryption configuration for an Amazon S3 bucket"
+      },
+      {
+        "action": "PutIntelligentTieringConfiguration",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 136
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 136
+        },
+        "description": "Grants permission to create new or update or delete an existing Amazon S3 Intelligent Tiering configuration"
+      },
+      {
+        "action": "PutInventoryConfiguration",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 137
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:InventoryAccessibleOptionalFields",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 137
+        },
+        "description": "Grants permission to add an inventory configuration to the bucket, identified by the inventory ID"
+      },
+      {
+        "action": "PutJobTagging",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "job",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 138
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "s3:ExistingJobOperation",
+          "s3:ExistingJobPriority",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 138
+        },
+        "description": "Grants permission to replace tags on an existing Amazon S3 Batch Operations job"
+      },
+      {
+        "action": "PutLifecycleConfiguration",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 139
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 139
+        },
+        "description": "Grants permission to create a new lifecycle configuration for the bucket or replace an existing lifecycle configuration"
+      },
+      {
+        "action": "PutMetricsConfiguration",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 140
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 140
+        },
+        "description": "Grants permission to set or update a metrics configuration for the CloudWatch request metrics from an Amazon S3 bucket"
+      },
+      {
+        "action": "PutMultiRegionAccessPointPolicy",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "multiregionaccesspoint",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 141
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:AccessPointNetworkOrigin",
+          "s3:DataAccessPointAccount",
+          "s3:DataAccessPointArn",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 141
+        },
+        "description": "Grants permission to associate an access policy with a specified Multi-Region Access Point"
+      },
+      {
+        "action": "PutObject",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "accesspointobject",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 142
+            }
+          },
+          {
+            "type": "object",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 142
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:AccessGrantsInstanceArn",
+          "s3:ObjectCreationOperation",
+          "s3:RequestObjectTag/<key>",
+          "s3:RequestObjectTagKeys",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:if-match",
+          "s3:if-none-match",
+          "s3:object-lock-legal-hold",
+          "s3:object-lock-mode",
+          "s3:object-lock-remaining-retention-days",
+          "s3:object-lock-retain-until-date",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-acl",
+          "s3:x-amz-content-sha256",
+          "s3:x-amz-copy-source",
+          "s3:x-amz-grant-full-control",
+          "s3:x-amz-grant-read",
+          "s3:x-amz-grant-read-acp",
+          "s3:x-amz-grant-write",
+          "s3:x-amz-grant-write-acp",
+          "s3:x-amz-metadata-directive",
+          "s3:x-amz-server-side-encryption",
+          "s3:x-amz-server-side-encryption-aws-kms-key-id",
+          "s3:x-amz-server-side-encryption-customer-algorithm",
+          "s3:x-amz-storage-class",
+          "s3:x-amz-website-redirect-location"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 142
+        },
+        "description": "Grants permission to add an object to a bucket"
+      },
+      {
+        "action": "PutObjectAcl",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "accesspointobject",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 143
+            }
+          },
+          {
+            "type": "object",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 143
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:AccessGrantsInstanceArn",
+          "s3:ExistingObjectTag/<key>",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-acl",
+          "s3:x-amz-content-sha256",
+          "s3:x-amz-grant-full-control",
+          "s3:x-amz-grant-read",
+          "s3:x-amz-grant-read-acp",
+          "s3:x-amz-grant-write",
+          "s3:x-amz-grant-write-acp",
+          "s3:x-amz-storage-class"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 143
+        },
+        "description": "Grants permission to set the access control list (ACL) permissions for new or existing objects in an S3 bucket"
+      },
+      {
+        "action": "PutObjectLegalHold",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "accesspointobject",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 144
+            }
+          },
+          {
+            "type": "object",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 144
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:object-lock-legal-hold",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 144
+        },
+        "description": "Grants permission to apply a Legal Hold configuration to the specified object"
+      },
+      {
+        "action": "PutObjectRetention",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "accesspointobject",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 145
+            }
+          },
+          {
+            "type": "object",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 145
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:object-lock-mode",
+          "s3:object-lock-remaining-retention-days",
+          "s3:object-lock-retain-until-date",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 145
+        },
+        "description": "Grants permission to place an Object Retention configuration on an object"
+      },
+      {
+        "action": "PutObjectTagging",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "accesspointobject",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 146
+            }
+          },
+          {
+            "type": "object",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 146
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ExistingObjectTag/<key>",
+          "s3:RequestObjectTag/<key>",
+          "s3:RequestObjectTagKeys",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 146
+        },
+        "description": "Grants permission to set the supplied tag-set to an object that already exists in a bucket"
+      },
+      {
+        "action": "PutObjectVersionAcl",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "accesspointobject",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 147
+            }
+          },
+          {
+            "type": "object",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 147
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:AccessGrantsInstanceArn",
+          "s3:ExistingObjectTag/<key>",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:versionid",
+          "s3:x-amz-acl",
+          "s3:x-amz-content-sha256",
+          "s3:x-amz-grant-full-control",
+          "s3:x-amz-grant-read",
+          "s3:x-amz-grant-read-acp",
+          "s3:x-amz-grant-write",
+          "s3:x-amz-grant-write-acp",
+          "s3:x-amz-storage-class"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 147
+        },
+        "description": "Grants permission to use the acl subresource to set the access control list (ACL) permissions for an object that already exists in a bucket"
+      },
+      {
+        "action": "PutObjectVersionTagging",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "accesspointobject",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 148
+            }
+          },
+          {
+            "type": "object",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 148
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ExistingObjectTag/<key>",
+          "s3:RequestObjectTag/<key>",
+          "s3:RequestObjectTagKeys",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:versionid",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 148
+        },
+        "description": "Grants permission to set the supplied tag-set for a specific version of an object"
+      },
+      {
+        "action": "PutReplicationConfiguration",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 149
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:isReplicationPauseRequest",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 149
+        },
+        "description": "Grants permission to create a new replication configuration or replace an existing one"
+      },
+      {
+        "action": "PutStorageLensConfiguration",
+        "access_level": "Write",
+        "resource_types": [],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 150
+        },
+        "description": "Grants permission to create or update an Amazon S3 Storage Lens configuration"
+      },
+      {
+        "action": "PutStorageLensConfigurationTagging",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "storagelensconfiguration",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 151
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 151
+        },
+        "description": "Grants permission to put or replace tags on an existing Amazon S3 Storage Lens configuration"
+      },
+      {
+        "action": "ReplicateDelete",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "object",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 152
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 152
+        },
+        "description": "Grants permission to replicate delete markers to the destination bucket"
+      },
+      {
+        "action": "ReplicateObject",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "object",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 153
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256",
+          "s3:x-amz-server-side-encryption",
+          "s3:x-amz-server-side-encryption-aws-kms-key-id",
+          "s3:x-amz-server-side-encryption-customer-algorithm"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 153
+        },
+        "description": "Grants permission to replicate objects and object tags to the destination bucket"
+      },
+      {
+        "action": "ReplicateTags",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "object",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 154
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 154
+        },
+        "description": "Grants permission to replicate object tags to the destination bucket"
+      },
+      {
+        "action": "RestoreObject",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "accesspointobject",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 155
+            }
+          },
+          {
+            "type": "object",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 155
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 155
+        },
+        "description": "Grants permission to restore an archived copy of an object back into Amazon S3"
+      },
+      {
+        "action": "SubmitMultiRegionAccessPointRoutes",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "multiregionaccesspoint",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 156
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:AccessPointNetworkOrigin",
+          "s3:DataAccessPointAccount",
+          "s3:DataAccessPointArn",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 156
+        },
+        "description": "Grants permission to submit a route configuration update for a Multi-Region Access Point"
+      },
+      {
+        "action": "TagResource",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "accessgrant",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 157
+            }
+          },
+          {
+            "type": "accessgrantsinstance",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 157
+            }
+          },
+          {
+            "type": "accessgrantslocation",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 157
+            }
+          },
+          {
+            "type": "accesspoint",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 157
+            }
+          },
+          {
+            "type": "storagelensgroup",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 157
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 157
+        },
+        "description": "Grants permission to add tags to the specified resource"
+      },
+      {
+        "action": "UntagResource",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "accessgrant",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 158
+            }
+          },
+          {
+            "type": "accessgrantsinstance",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 158
+            }
+          },
+          {
+            "type": "accessgrantslocation",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 158
+            }
+          },
+          {
+            "type": "accesspoint",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 158
+            }
+          },
+          {
+            "type": "storagelensgroup",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 158
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:TagKeys",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 158
+        },
+        "description": "Grants permission to remove tags from the specified resource"
+      },
+      {
+        "action": "UpdateAccessGrantsLocation",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "accessgrantslocation",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 159
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:ResourceTag/${TagKey}",
+          "s3:AccessGrantsLocationScope",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 159
+        },
+        "description": "Grants permission to update Access Grants location"
+      },
+      {
+        "action": "UpdateBucketMetadataInventoryTableConfiguration",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 160
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 160
+        },
+        "description": "Grants permission to update the inventory table configuration on an existing S3 Metadata configuration for a specified general purpose bucket"
+      },
+      {
+        "action": "UpdateBucketMetadataJournalTableConfiguration",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "bucket",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 161
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 161
+        },
+        "description": "Grants permission to update the journal table configuration on an existing S3 Metadata configuration for a specified general purpose bucket"
+      },
+      {
+        "action": "UpdateJobPriority",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "job",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 162
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ExistingJobOperation",
+          "s3:ExistingJobPriority",
+          "s3:RequestJobPriority",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 162
+        },
+        "description": "Grants permission to update the priority of an existing job"
+      },
+      {
+        "action": "UpdateJobStatus",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "job",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 163
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ExistingJobOperation",
+          "s3:ExistingJobPriority",
+          "s3:JobSuspendedCause",
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 163
+        },
+        "description": "Grants permission to update the status for the specified job"
+      },
+      {
+        "action": "UpdateStorageLensGroup",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "storagelensgroup",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+              "table": "actions",
+              "row_index": 164
+            }
+          }
+        ],
+        "condition_keys": [
+          "s3:ResourceAccount",
+          "s3:TlsVersion",
+          "s3:authType",
+          "s3:signatureAge",
+          "s3:signatureversion",
+          "s3:x-amz-content-sha256"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "actions",
+          "row_index": 164
+        },
+        "description": "Grants permission to update an existing S3 Storage Lens group"
+      }
+    ],
+    "resource_types": [
+      {
+        "type": "accessgrant",
+        "arn_template": "arn:${Partition}:s3:${Region}:${Account}:access-grants/default/grant/${Token}",
+        "condition_keys": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "resource_types",
+          "row_index": 0
+        }
+      },
+      {
+        "type": "accessgrantsinstance",
+        "arn_template": "arn:${Partition}:s3:${Region}:${Account}:access-grants/default",
+        "condition_keys": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "resource_types",
+          "row_index": 1
+        }
+      },
+      {
+        "type": "accessgrantslocation",
+        "arn_template": "arn:${Partition}:s3:${Region}:${Account}:access-grants/default/location/${Token}",
+        "condition_keys": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "resource_types",
+          "row_index": 2
+        }
+      },
+      {
+        "type": "accesspoint",
+        "arn_template": "arn:${Partition}:s3:${Region}:${Account}:accesspoint/${AccessPointName}",
+        "condition_keys": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "resource_types",
+          "row_index": 3
+        }
+      },
+      {
+        "type": "accesspointobject",
+        "arn_template": "arn:${Partition}:s3:${Region}:${Account}:accesspoint/${AccessPointName}/object/${ObjectName}",
+        "condition_keys": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "resource_types",
+          "row_index": 4
+        }
+      },
+      {
+        "type": "bucket",
+        "arn_template": "arn:${Partition}:s3:::${BucketName}",
+        "condition_keys": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "resource_types",
+          "row_index": 5
+        }
+      },
+      {
+        "type": "job",
+        "arn_template": "arn:${Partition}:s3:${Region}:${Account}:job/${JobId}",
+        "condition_keys": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "resource_types",
+          "row_index": 6
+        }
+      },
+      {
+        "type": "multiregionaccesspoint",
+        "arn_template": "arn:${Partition}:s3::${Account}:accesspoint/${AccessPointAlias}",
+        "condition_keys": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "resource_types",
+          "row_index": 7
+        }
+      },
+      {
+        "type": "multiregionaccesspointrequestarn",
+        "arn_template": "arn:${Partition}:s3:us-west-2:${Account}:async-request/mrap/${Operation}/${Token}",
+        "condition_keys": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "resource_types",
+          "row_index": 8
+        }
+      },
+      {
+        "type": "object",
+        "arn_template": "arn:${Partition}:s3:::${BucketName}/${ObjectName}",
+        "condition_keys": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "resource_types",
+          "row_index": 9
+        }
+      },
+      {
+        "type": "objectlambdaaccesspoint",
+        "arn_template": "arn:${Partition}:s3-object-lambda:${Region}:${Account}:accesspoint/${AccessPointName}",
+        "condition_keys": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "resource_types",
+          "row_index": 10
+        }
+      },
+      {
+        "type": "storagelensconfiguration",
+        "arn_template": "arn:${Partition}:s3:${Region}:${Account}:storage-lens/${ConfigId}",
+        "condition_keys": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "resource_types",
+          "row_index": 11
+        }
+      },
+      {
+        "type": "storagelensgroup",
+        "arn_template": "arn:${Partition}:s3:${Region}:${Account}:storage-lens-group/${Name}",
+        "condition_keys": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/s3/s3.json",
+          "table": "resource_types",
+          "row_index": 12
+        }
+      }
+    ],
+    "service_condition_keys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:ResourceTag/${TagKey}",
+      "aws:TagKeys",
+      "s3:AccessGrantScope",
+      "s3:AccessGrantsInstanceArn",
+      "s3:AccessGrantsLocationScope",
+      "s3:AccessPointNetworkOrigin",
+      "s3:AccessPointTag/${TagKey}",
+      "s3:DataAccessPointAccount",
+      "s3:DataAccessPointArn",
+      "s3:ExistingJobOperation",
+      "s3:ExistingJobPriority",
+      "s3:ExistingObjectTag/<key>",
+      "s3:InventoryAccessibleOptionalFields",
+      "s3:JobSuspendedCause",
+      "s3:ObjectCreationOperation",
+      "s3:RequestJobOperation",
+      "s3:RequestJobPriority",
+      "s3:RequestObjectTag/<key>",
+      "s3:RequestObjectTagKeys",
+      "s3:ResourceAccount",
+      "s3:TlsVersion",
+      "s3:authType",
+      "s3:delimiter",
+      "s3:destinationRegion",
+      "s3:if-match",
+      "s3:if-none-match",
+      "s3:isReplicationPauseRequest",
+      "s3:locationconstraint",
+      "s3:max-keys",
+      "s3:object-lock-legal-hold",
+      "s3:object-lock-mode",
+      "s3:object-lock-remaining-retention-days",
+      "s3:object-lock-retain-until-date",
+      "s3:prefix",
+      "s3:signatureAge",
+      "s3:signatureversion",
+      "s3:versionid",
+      "s3:x-amz-acl",
+      "s3:x-amz-content-sha256",
+      "s3:x-amz-copy-source",
+      "s3:x-amz-grant-full-control",
+      "s3:x-amz-grant-read",
+      "s3:x-amz-grant-read-acp",
+      "s3:x-amz-grant-write",
+      "s3:x-amz-grant-write-acp",
+      "s3:x-amz-metadata-directive",
+      "s3:x-amz-object-ownership",
+      "s3:x-amz-server-side-encryption",
+      "s3:x-amz-server-side-encryption-aws-kms-key-id",
+      "s3:x-amz-server-side-encryption-customer-algorithm",
+      "s3:x-amz-storage-class",
+      "s3:x-amz-website-redirect-location"
+    ]
+  }
+}

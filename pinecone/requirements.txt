@@ -1,0 +1,20 @@
+# IAM Actions RAG - Dependencies
+
+# Pinecone for vector database (new SDK name)
+pinecone>=5.0.0
+
+# Pinecone text utilities for BM25
+pinecone-text>=0.7.0
+
+# Google AI for Gemini embeddings (new SDK)
+google-genai>=0.1.0
+
+# Core data processing
+numpy>=1.24.0
+requests>=2.31.0
+
+# Optional: For better JSON handling
+orjson>=3.9.0
+
+# Load .env for local dev
+python-dotenv>=1.0.1

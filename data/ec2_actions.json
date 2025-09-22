@@ -1,0 +1,4650 @@
+[
+  {
+    "action": "AcceptAddressTransfer",
+    "description": "Grants permission to accept an Elastic IP address transfer"
+  },
+  {
+    "action": "AcceptCapacityReservationBillingOwnership",
+    "description": "Grants permission to accept assign billing of the available capacity of a shared Capacity Reservation to the calling account"
+  },
+  {
+    "action": "AcceptReservedInstancesExchangeQuote",
+    "description": "Grants permission to accept a Convertible Reserved Instance exchange quote"
+  },
+  {
+    "action": "AcceptTransitGatewayMulticastDomainAssociations",
+    "description": "Grants permission to accept a request to associate subnets with a transit gateway multicast domain"
+  },
+  {
+    "action": "transit-gateway-multicast-domain",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:transitGatewayMulticastDomainId"
+  },
+  {
+    "action": "AcceptTransitGatewayPeeringAttachment",
+    "description": "Grants permission to accept a transit gateway peering attachment request"
+  },
+  {
+    "action": "AcceptTransitGatewayVpcAttachment",
+    "description": "Grants permission to accept a request to attach a VPC to a transit gateway"
+  },
+  {
+    "action": "AcceptVpcEndpointConnections",
+    "description": "Grants permission to accept one or more interface VPC endpoint connections to your VPC endpoint service"
+  },
+  {
+    "action": "AcceptVpcPeeringConnection",
+    "description": "Grants permission to accept a VPC peering connection request"
+  },
+  {
+    "action": "vpc-peering-connection*",
+    "description": "aws:ResourceTag/${TagKey}ec2:AccepterVpcec2:RequesterVpcec2:ResourceTag/${TagKey}ec2:VpcPeeringConnectionID"
+  },
+  {
+    "action": "AdvertiseByoipCidr",
+    "description": "Grants permission to advertise an IP address range that is provisioned for use in AWS through bring your own IP addresses (BYOIP)"
+  },
+  {
+    "action": "AllocateAddress",
+    "description": "Grants permission to allocate an Elastic IP address (EIP) to your account"
+  },
+  {
+    "action": "ipam-pool",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "ipv4pool-ec2",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "AllocateHosts",
+    "description": "Grants permission to allocate a Dedicated Host to your account"
+  },
+  {
+    "action": "AllocateIpamPoolCidr",
+    "description": "Grants permission to allocate a CIDR from an Amazon VPC IP Address Manager (IPAM) pool"
+  },
+  {
+    "action": "ApplySecurityGroupsToClientVpnTargetNetwork",
+    "description": "Grants permission to apply a security group to the association between a Client VPN endpoint and a target network"
+  },
+  {
+    "action": "security-group*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:SecurityGroupIDec2:Vpc"
+  },
+  {
+    "action": "vpc*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:Tenancyec2:VpcID"
+  },
+  {
+    "action": "AssignIpv6Addresses",
+    "description": "Grants permission to assign one or more IPv6 addresses to a network interface"
+  },
+  {
+    "action": "AssignPrivateIpAddresses",
+    "description": "Grants permission to assign one or more secondary private IP addresses to a network interface"
+  },
+  {
+    "action": "AssignPrivateNatGatewayAddress",
+    "description": "Grants permission to assign one or more secondary private IP addresses to a private NAT gateway"
+  },
+  {
+    "action": "AssociateAddress",
+    "description": "Grants permission to associate an Elastic IP address (EIP) with an instance or a network interface"
+  },
+  {
+    "action": "instance",
+    "description": "aws:ResourceTag/${TagKey}ec2:AvailabilityZoneec2:AvailabilityZoneIdec2:CpuOptionsAmdSevSnpec2:EbsOptimizedec2:InstanceAutoRecoveryec2:InstanceBandwidthWeightingec2:InstanceIDec2:InstanceMarketTypeec2:InstanceMetadataTagsec2:InstanceProfileec2:InstanceTypeec2:ManagedResourceOperatorec2:MetadataHttpEndpointec2:MetadataHttpPutResponseHopLimitec2:MetadataHttpTokensec2:PlacementGroupec2:ProductCodeec2:ResourceTag/${TagKey}ec2:RootDeviceTypeec2:Tenancy"
+  },
+  {
+    "action": "network-interface",
+    "description": "aws:ResourceTag/${TagKey}ec2:AvailabilityZoneec2:ManagedResourceOperatorec2:NetworkInterfaceIDec2:ResourceTag/${TagKey}ec2:Subnetec2:Vpc"
+  },
+  {
+    "action": "AssociateCapacityReservationBillingOwner",
+    "description": "Grants permission to assign billing of the unused capacity of a shared Capacity Reservation to a consumer account"
+  },
+  {
+    "action": "AssociateClientVpnTargetNetwork",
+    "description": "Grants permission to associate a target network with a Client VPN endpoint"
+  },
+  {
+    "action": "subnet*",
+    "description": "aws:ResourceTag/${TagKey}ec2:AvailabilityZoneIdec2:ResourceTag/${TagKey}ec2:SubnetID"
+  },
+  {
+    "action": "AssociateDhcpOptions",
+    "description": "Grants permission to associate or disassociate a set of DHCP options with a VPC"
+  },
+  {
+    "action": "vpc*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:Tenancyec2:VpcID"
+  },
+  {
+    "action": "AssociateEnclaveCertificateIamRole",
+    "description": "Grants permission to associate an ACM certificate with an IAM role to be used in an EC2 Enclave"
+  },
+  {
+    "action": "AssociateIamInstanceProfile",
+    "description": "Grants permission to associate an IAM instance profile with a running or stopped instance"
+  },
+  {
+    "action": "AssociateInstanceEventWindow",
+    "description": "Grants permission to associate one or more targets with an event window"
+  },
+  {
+    "action": "AssociateIpamByoasn",
+    "description": "Grants permission to associate an Autonomous System Number (ASN) with a BYOIP CIDR"
+  },
+  {
+    "action": "AssociateIpamResourceDiscovery",
+    "description": "Grants permission to associate an IPAM resource discovery with an Amazon VPC IPAM"
+  },
+  {
+    "action": "ipam-resource-discovery*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "ipam-resource-discovery-association*",
+    "description": "aws:RequestTag/${TagKey}aws:TagKeys"
+  },
+  {
+    "action": "AssociateNatGatewayAddress",
+    "description": "Grants permission to associate an Elastic IP address and private IP address with a public Nat gateway"
+  },
+  {
+    "action": "natgateway*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "AssociateRouteServer",
+    "description": "Grants permission to associate a route server with a VPC"
+  },
+  {
+    "action": "vpc*",
+    "description": "aws:ResourceTag/${TagKey}ec2:Ipv4IpamPoolIdec2:Ipv6IpamPoolIdec2:ResourceTag/${TagKey}ec2:Tenancyec2:VpcID"
+  },
+  {
+    "action": "AssociateRouteTable",
+    "description": "Grants permission to associate a subnet or gateway with a route table"
+  },
+  {
+    "action": "internet-gateway",
+    "description": "aws:ResourceTag/${TagKey}ec2:InternetGatewayIDec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "ipv4pool-ec2",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "subnet",
+    "description": "aws:ResourceTag/${TagKey}ec2:AvailabilityZoneec2:AvailabilityZoneIdec2:ResourceTag/${TagKey}ec2:SubnetIDec2:Vpc"
+  },
+  {
+    "action": "vpn-gateway",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "AssociateSecurityGroupVpc",
+    "description": "Grants permission to associate a security group with another VPC in the same Region"
+  },
+  {
+    "action": "vpc*",
+    "description": "aws:ResourceTag/${TagKey}ec2:Ipv4IpamPoolIdec2:Ipv6IpamPoolIdec2:ResourceTag/${TagKey}ec2:Tenancyec2:VpcID"
+  },
+  {
+    "action": "AssociateSubnetCidrBlock",
+    "description": "Grants permission to associate a CIDR block with a subnet"
+  },
+  {
+    "action": "ipam-pool",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "AssociateTransitGatewayMulticastDomain",
+    "description": "Grants permission to associate an attachment and list of subnets with a transit gateway multicast domain"
+  },
+  {
+    "action": "transit-gateway-attachment*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:transitGatewayAttachmentId"
+  },
+  {
+    "action": "transit-gateway-multicast-domain*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:transitGatewayMulticastDomainId"
+  },
+  {
+    "action": "AssociateTransitGatewayPolicyTable",
+    "description": "Grants permission to associate a policy table with a transit gateway attachment"
+  },
+  {
+    "action": "transit-gateway-policy-table*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:transitGatewayPolicyTableId"
+  },
+  {
+    "action": "AssociateTransitGatewayRouteTable",
+    "description": "Grants permission to associate an attachment with a transit gateway route table"
+  },
+  {
+    "action": "transit-gateway-route-table*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:transitGatewayRouteTableId"
+  },
+  {
+    "action": "AssociateTrunkInterface",
+    "description": "Grants permission to associate a branch network interface with a trunk network interface"
+  },
+  {
+    "action": "AssociateVerifiedAccessInstanceWebAcl[permission only]",
+    "description": "Grants permission to associate an AWS Web Application Firewall (WAF) web access control list (ACL) with a Verified Access instance"
+  },
+  {
+    "action": "AssociateVpcCidrBlock",
+    "description": "Grants permission to associate a CIDR block with a VPC"
+  },
+  {
+    "action": "ipam-pool",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "ipv6pool-ec2",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "AttachClassicLinkVpc",
+    "description": "Grants permission to link an EC2-Classic instance to a ClassicLink-enabled VPC through one or more of the VPC's security groups"
+  },
+  {
+    "action": "security-group*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:SecurityGroupIDec2:Vpc"
+  },
+  {
+    "action": "vpc*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:Tenancyec2:VpcID"
+  },
+  {
+    "action": "AttachInternetGateway",
+    "description": "Grants permission to attach an internet gateway to a VPC"
+  },
+  {
+    "action": "vpc*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:Tenancyec2:VpcID"
+  },
+  {
+    "action": "AttachNetworkInterface",
+    "description": "Grants permission to attach a network interface to an instance"
+  },
+  {
+    "action": "network-interface*",
+    "description": "aws:ResourceTag/${TagKey}ec2:AvailabilityZoneec2:ManagedResourceOperatorec2:NetworkInterfaceIDec2:ResourceTag/${TagKey}ec2:Subnetec2:Vpc"
+  },
+  {
+    "action": "AttachVerifiedAccessTrustProvider",
+    "description": "Grants permission to attach a trust provider to a Verified Access instance"
+  },
+  {
+    "action": "verified-access-trust-provider*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "AttachVolume",
+    "description": "Grants permission to attach an EBS volume to a running or stopped instance and expose it to the instance with the specified device name"
+  },
+  {
+    "action": "volume*",
+    "description": "aws:ResourceTag/${TagKey}ec2:AvailabilityZoneec2:AvailabilityZoneIdec2:Encryptedec2:ManagedResourceOperatorec2:ParentSnapshotec2:ResourceTag/${TagKey}ec2:VolumeIDec2:VolumeInitializationRateec2:VolumeIopsec2:VolumeSizeec2:VolumeThroughputec2:VolumeType"
+  },
+  {
+    "action": "AttachVpnGateway",
+    "description": "Grants permission to attach a virtual private gateway to a VPC"
+  },
+  {
+    "action": "vpn-gateway*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "AuthorizeClientVpnIngress",
+    "description": "Grants permission to add an inbound authorization rule to a Client VPN endpoint"
+  },
+  {
+    "action": "AuthorizeSecurityGroupEgress",
+    "description": "Grants permission to add one or more outbound rules to a VPC security group. Policies using the security-group-rule resource-level permission are only enforced when the API request includes TagSpecifications"
+  },
+  {
+    "action": "security-group-rule",
+    "description": "aws:RequestTag/${TagKey}aws:TagKeys"
+  },
+  {
+    "action": "AuthorizeSecurityGroupIngress",
+    "description": "Grants permission to add one or more inbound rules to a VPC security group. Policies using the security-group-rule resource-level permission are only enforced when the API request includes TagSpecifications"
+  },
+  {
+    "action": "security-group-rule",
+    "description": "aws:RequestTag/${TagKey}aws:TagKeys"
+  },
+  {
+    "action": "BundleInstance",
+    "description": "Grants permission to bundle an instance store-backed Windows instance"
+  },
+  {
+    "action": "CancelBundleTask",
+    "description": "Grants permission to cancel a bundling operation"
+  },
+  {
+    "action": "CancelCapacityReservation",
+    "description": "Grants permission to cancel a Capacity Reservation and release the reserved capacity"
+  },
+  {
+    "action": "CancelCapacityReservationFleets",
+    "description": "Grants permission to cancel one or more Capacity Reservation Fleets"
+  },
+  {
+    "action": "CancelConversionTask",
+    "description": "Grants permission to cancel an active conversion task"
+  },
+  {
+    "action": "CancelDeclarativePoliciesReport",
+    "description": "Grants permission to cancel a declarative policies report"
+  },
+  {
+    "action": "CancelExportTask",
+    "description": "Grants permission to cancel an active export task"
+  },
+  {
+    "action": "export-instance-task",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "CancelImageLaunchPermission",
+    "description": "Grants permission to remove your AWS account from the launch permissions for the specified AMI"
+  },
+  {
+    "action": "CancelImportTask",
+    "description": "Grants permission to cancel an in-process import virtual machine or import snapshot task"
+  },
+  {
+    "action": "import-snapshot-task",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "CancelReservedInstancesListing",
+    "description": "Grants permission to cancel a Reserved Instance listing on the Reserved Instance Marketplace"
+  },
+  {
+    "action": "CancelSpotFleetRequests",
+    "description": "Grants permission to cancel one or more Spot Fleet requests"
+  },
+  {
+    "action": "CancelSpotInstanceRequests",
+    "description": "Grants permission to cancel one or more Spot Instance requests"
+  },
+  {
+    "action": "ConfirmProductInstance",
+    "description": "Grants permission to determine whether an owned product code is associated with an instance"
+  },
+  {
+    "action": "CopyFpgaImage",
+    "description": "Grants permission to copy a source Amazon FPGA image (AFI) to the current Region. Resource-level permissions specified for this action apply to the new AFI only. They do not apply to the source AFI"
+  },
+  {
+    "action": "CopyImage",
+    "description": "Grants permission to copy an Amazon Machine Image (AMI) from a source Region to the current Region"
+  },
+  {
+    "action": "snapshot*",
+    "description": "aws:RequestTag/${TagKey}aws:TagKeys"
+  },
+  {
+    "action": "CopySnapshot",
+    "description": "Grants permission to copy a point-in-time snapshot of an EBS volume and store it in Amazon S3. Resource-level permissions specified for this action apply to both the snapshot copy and the source snapshot"
+  },
+  {
+    "action": "CreateCapacityReservation",
+    "description": "Grants permission to create a Capacity Reservation"
+  },
+  {
+    "action": "CreateCapacityReservationBySplitting",
+    "description": "Grants permission to create a new Capacity Reservation by splitting the available capacity of the source Capacity Reservation"
+  },
+  {
+    "action": "CreateCapacityReservationFleet",
+    "description": "Grants permission to create a Capacity Reservation Fleet"
+  },
+  {
+    "action": "CreateCarrierGateway",
+    "description": "Grants permission to create a carrier gateway and provides CSP connectivity to VPC customers"
+  },
+  {
+    "action": "vpc*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:Tenancyec2:VpcID"
+  },
+  {
+    "action": "CreateClientVpnEndpoint",
+    "description": "Grants permission to create a Client VPN endpoint"
+  },
+  {
+    "action": "security-group",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:SecurityGroupID"
+  },
+  {
+    "action": "vpc",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:VpcID"
+  },
+  {
+    "action": "CreateClientVpnRoute",
+    "description": "Grants permission to add a network route to a Client VPN endpoint's route table"
+  },
+  {
+    "action": "subnet*",
+    "description": "aws:ResourceTag/${TagKey}ec2:AvailabilityZoneIdec2:ResourceTag/${TagKey}ec2:SubnetID"
+  },
+  {
+    "action": "CreateCoipCidr",
+    "description": "Grants permission to create a range of customer-owned IP (CoIP) addresses"
+  },
+  {
+    "action": "CreateCoipPool",
+    "description": "Grants permission to create a pool of customer-owned IP (CoIP) addresses"
+  },
+  {
+    "action": "local-gateway-route-table*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "CreateCoipPoolPermission[permission only]",
+    "description": "Grants permission to allow a service to access a customer-owned IP (CoIP) pool"
+  },
+  {
+    "action": "CreateCustomerGateway",
+    "description": "Grants permission to create a customer gateway, which provides information to AWS about your customer gateway device"
+  },
+  {
+    "action": "CreateDefaultSubnet",
+    "description": "Grants permission to create a default subnet in a specified Availability Zone in a default VPC"
+  },
+  {
+    "action": "CreateDefaultVpc",
+    "description": "Grants permission to create a default VPC with a default subnet in each Availability Zone"
+  },
+  {
+    "action": "CreateDelegateMacVolumeOwnershipTask",
+    "description": "Grants permission to create a volume ownership delegation task for an Apple silicon Mac instance"
+  },
+  {
+    "action": "mac-modification-task*",
+    "description": "aws:RequestTag/${TagKey}aws:TagKeys"
+  },
+  {
+    "action": "CreateDhcpOptions",
+    "description": "Grants permission to create a set of DHCP options for a VPC"
+  },
+  {
+    "action": "CreateEgressOnlyInternetGateway",
+    "description": "Grants permission to create an egress-only internet gateway for a VPC"
+  },
+  {
+    "action": "vpc*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:Tenancyec2:VpcID"
+  },
+  {
+    "action": "CreateFleet",
+    "description": "Grants permission to launch an EC2 Fleet. Resource-level permissions for this action do not include the resources specified in a launch template. To specify resource-level permissions for resources specified in a launch template, you must include the resources in the RunInstances action statement"
+  },
+  {
+    "action": "instance*",
+    "description": "aws:RequestTag/${TagKey}aws:TagKeysec2:AvailabilityZoneec2:AvailabilityZoneIdec2:CpuOptionsAmdSevSnpec2:EbsOptimizedec2:InstanceBandwidthWeightingec2:InstanceIDec2:InstanceProfileec2:InstanceTypeec2:PlacementGroupec2:RootDeviceTypeec2:Tenancy"
+  },
+  {
+    "action": "image",
+    "description": "aws:ResourceTag/${TagKey}ec2:ImageIDec2:ImageTypeec2:Ownerec2:Publicec2:ResourceTag/${TagKey}ec2:RootDeviceType"
+  },
+  {
+    "action": "launch-template",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "placement-group",
+    "description": "aws:ResourceTag/${TagKey}ec2:PlacementGroupNameec2:PlacementGroupStrategyec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "subnet",
+    "description": "aws:ResourceTag/${TagKey}ec2:AvailabilityZoneec2:AvailabilityZoneIdec2:ResourceTag/${TagKey}ec2:SubnetIDec2:Vpc"
+  },
+  {
+    "action": "volume",
+    "description": "aws:RequestTag/${TagKey}aws:TagKeysec2:AvailabilityZoneec2:AvailabilityZoneIdec2:Encryptedec2:KmsKeyIdec2:ParentSnapshotec2:VolumeIDec2:VolumeIopsec2:VolumeSizeec2:VolumeThroughputec2:VolumeType"
+  },
+  {
+    "action": "CreateFlowLogs",
+    "description": "Grants permission to create one or more flow logs to capture IP traffic for a network interface"
+  },
+  {
+    "action": "network-interface",
+    "description": "aws:ResourceTag/${TagKey}ec2:AvailabilityZoneec2:NetworkInterfaceIDec2:ResourceTag/${TagKey}ec2:Subnetec2:Vpc"
+  },
+  {
+    "action": "subnet",
+    "description": "aws:ResourceTag/${TagKey}ec2:AvailabilityZoneec2:ResourceTag/${TagKey}ec2:SubnetIDec2:Vpc"
+  },
+  {
+    "action": "transit-gateway",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:transitGatewayId"
+  },
+  {
+    "action": "transit-gateway-attachment",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:transitGatewayAttachmentId"
+  },
+  {
+    "action": "vpc",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:Tenancyec2:VpcID"
+  },
+  {
+    "action": "CreateFpgaImage",
+    "description": "Grants permission to create an Amazon FPGA Image (AFI) from a design checkpoint (DCP)"
+  },
+  {
+    "action": "CreateImage",
+    "description": "Grants permission to create an Amazon EBS-backed AMI from a stopped or running Amazon EBS-backed instance. This action can reboot instances as part of the image creation process, even without RebootInstances permissions. To prevent instance reboots during image creation, use the NoReboot parameter"
+  },
+  {
+    "action": "instance*",
+    "description": "aws:ResourceTag/${TagKey}ec2:AvailabilityZoneec2:AvailabilityZoneIdec2:CpuOptionsAmdSevSnpec2:EbsOptimizedec2:InstanceAutoRecoveryec2:InstanceBandwidthWeightingec2:InstanceIDec2:InstanceMarketTypeec2:InstanceMetadataTagsec2:InstanceProfileec2:InstanceTypeec2:MetadataHttpEndpointec2:MetadataHttpPutResponseHopLimitec2:MetadataHttpTokensec2:PlacementGroupec2:ProductCodeec2:ResourceTag/${TagKey}ec2:RootDeviceTypeec2:Tenancy"
+  },
+  {
+    "action": "snapshot*",
+    "description": "aws:RequestTag/${TagKey}aws:TagKeysec2:OutpostArnec2:ParentVolumeec2:SnapshotIDec2:SnapshotTimeec2:SourceOutpostArnec2:VolumeSize"
+  },
+  {
+    "action": "CreateImageUsageReport",
+    "description": "Grants permission to create an AMI usage report"
+  },
+  {
+    "action": "image-usage-report*",
+    "description": "aws:RequestTag/${TagKey}aws:TagKeys"
+  },
+  {
+    "action": "CreateInstanceConnectEndpoint",
+    "description": "Grants permission to create an EC2 Instance Connect Endpoint that allows you to connect to an instance without a public IPv4 address"
+  },
+  {
+    "action": "subnet*",
+    "description": "aws:ResourceTag/${TagKey}ec2:AvailabilityZoneec2:AvailabilityZoneIdec2:ResourceTag/${TagKey}ec2:SubnetIDec2:Vpc"
+  },
+  {
+    "action": "security-group",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:SecurityGroupIDec2:Vpc"
+  },
+  {
+    "action": "CreateInstanceEventWindow",
+    "description": "Grants permission to create an event window in which scheduled events for the associated Amazon EC2 instances can run"
+  },
+  {
+    "action": "CreateInstanceExportTask",
+    "description": "Grants permission to export a running or stopped instance to an Amazon S3 bucket"
+  },
+  {
+    "action": "instance*",
+    "description": "aws:ResourceTag/${TagKey}ec2:AvailabilityZoneec2:AvailabilityZoneIdec2:CpuOptionsAmdSevSnpec2:EbsOptimizedec2:InstanceAutoRecoveryec2:InstanceBandwidthWeightingec2:InstanceIDec2:InstanceMarketTypeec2:InstanceMetadataTagsec2:InstanceProfileec2:InstanceTypeec2:MetadataHttpEndpointec2:MetadataHttpPutResponseHopLimitec2:MetadataHttpTokensec2:ProductCodeec2:ResourceTag/${TagKey}ec2:RootDeviceTypeec2:Tenancy"
+  },
+  {
+    "action": "CreateInternetGateway",
+    "description": "Grants permission to create an internet gateway for a VPC"
+  },
+  {
+    "action": "CreateIpam",
+    "description": "Grants permission to create an Amazon VPC IP Address Manager (IPAM)"
+  },
+  {
+    "action": "CreateIpamExternalResourceVerificationToken",
+    "description": "Grants permission to create a verification token, which proves ownership of an external resource"
+  },
+  {
+    "action": "ipam-external-resource-verification-token*",
+    "description": "aws:RequestTag/${TagKey}aws:TagKeys"
+  },
+  {
+    "action": "CreateIpamPool",
+    "description": "Grants permission to create an IP address pool for Amazon VPC IP Address Manager (IPAM), which is a collection of contiguous IP address CIDRs"
+  },
+  {
+    "action": "ipam-scope*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "CreateIpamResourceDiscovery",
+    "description": "Grants permission to create an IPAM resource discovery"
+  },
+  {
+    "action": "CreateIpamScope",
+    "description": "Grants permission to create an Amazon VPC IP Address Manager (IPAM) scope, which is the highest-level container within IPAM"
+  },
+  {
+    "action": "ipam-scope*",
+    "description": "aws:RequestTag/${TagKey}aws:TagKeys"
+  },
+  {
+    "action": "CreateKeyPair",
+    "description": "Grants permission to create a 2048-bit RSA key pair"
+  },
+  {
+    "action": "CreateLaunchTemplate",
+    "description": "Grants permission to create a launch template"
+  },
+  {
+    "action": "CreateLaunchTemplateVersion",
+    "description": "Grants permission to create a new version of a launch template"
+  },
+  {
+    "action": "CreateLocalGatewayRoute",
+    "description": "Grants permission to create a static route for a local gateway route table"
+  },
+  {
+    "action": "local-gateway-virtual-interface-group",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "network-interface",
+    "description": "aws:ResourceTag/${TagKey}ec2:AvailabilityZoneec2:NetworkInterfaceIDec2:ResourceTag/${TagKey}ec2:Subnetec2:Vpc"
+  },
+  {
+    "action": "prefix-list",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "CreateLocalGatewayRouteTable",
+    "description": "Grants permission to create a local gateway route table"
+  },
+  {
+    "action": "local-gateway-route-table*",
+    "description": "aws:RequestTag/${TagKey}aws:TagKeys"
+  },
+  {
+    "action": "CreateLocalGatewayRouteTablePermission[permission only]",
+    "description": "Grants permission to allow a service to access a local gateway route table"
+  },
+  {
+    "action": "CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociation",
+    "description": "Grants permission to create a local gateway route table virtual interface group association"
+  },
+  {
+    "action": "local-gateway-route-table-virtual-interface-group-association*",
+    "description": "aws:RequestTag/${TagKey}aws:TagKeys"
+  },
+  {
+    "action": "local-gateway-virtual-interface-group*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "CreateLocalGatewayRouteTableVpcAssociation",
+    "description": "Grants permission to associate a VPC with a local gateway route table"
+  },
+  {
+    "action": "local-gateway-route-table-vpc-association*",
+    "description": "aws:RequestTag/${TagKey}aws:TagKeys"
+  },
+  {
+    "action": "vpc*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:Tenancyec2:VpcID"
+  },
+  {
+    "action": "CreateLocalGatewayVirtualInterface",
+    "description": "Grants permission to create a local gateway virtual interface"
+  },
+  {
+    "action": "local-gateway-virtual-interface-group*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "outpost-lag*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "CreateLocalGatewayVirtualInterfaceGroup",
+    "description": "Grants permission to create a local gateway virtual interface group"
+  },
+  {
+    "action": "local-gateway-virtual-interface-group*",
+    "description": "aws:RequestTag/${TagKey}aws:TagKeys"
+  },
+  {
+    "action": "CreateMacSystemIntegrityProtectionModificationTask",
+    "description": "Grants permission to create a System Integrity Protection (SIP) modification task for an Amazon EC2 Mac instance"
+  },
+  {
+    "action": "mac-modification-task*",
+    "description": "aws:RequestTag/${TagKey}aws:TagKeys"
+  },
+  {
+    "action": "CreateManagedPrefixList",
+    "description": "Grants permission to create a managed prefix list"
+  },
+  {
+    "action": "CreateNatGateway",
+    "description": "Grants permission to create a NAT gateway in a subnet"
+  },
+  {
+    "action": "subnet*",
+    "description": "aws:ResourceTag/${TagKey}ec2:AvailabilityZoneec2:AvailabilityZoneIdec2:ResourceTag/${TagKey}ec2:SubnetIDec2:Vpc"
+  },
+  {
+    "action": "elastic-ip",
+    "description": "aws:ResourceTag/${TagKey}ec2:AllocationIdec2:Domainec2:PublicIpAddressec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "CreateNetworkAcl",
+    "description": "Grants permission to create a network ACL in a VPC"
+  },
+  {
+    "action": "vpc*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:Tenancyec2:VpcID"
+  },
+  {
+    "action": "CreateNetworkAclEntry",
+    "description": "Grants permission to create a numbered entry (a rule) in a network ACL"
+  },
+  {
+    "action": "CreateNetworkInsightsAccessScope",
+    "description": "Grants permission to create a Network Access Scope"
+  },
+  {
+    "action": "CreateNetworkInsightsPath",
+    "description": "Grants permission to create a path to analyze for reachability"
+  },
+  {
+    "action": "instance",
+    "description": "aws:ResourceTag/${TagKey}ec2:AvailabilityZoneec2:AvailabilityZoneIdec2:CpuOptionsAmdSevSnpec2:EbsOptimizedec2:InstanceAutoRecoveryec2:InstanceBandwidthWeightingec2:InstanceIDec2:InstanceMarketTypeec2:InstanceMetadataTagsec2:InstanceProfileec2:InstanceTypeec2:MetadataHttpEndpointec2:MetadataHttpPutResponseHopLimitec2:MetadataHttpTokensec2:PlacementGroupec2:ProductCodeec2:ResourceTag/${TagKey}ec2:RootDeviceTypeec2:Tenancy"
+  },
+  {
+    "action": "internet-gateway",
+    "description": "aws:ResourceTag/${TagKey}ec2:InternetGatewayIDec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "network-interface",
+    "description": "aws:ResourceTag/${TagKey}ec2:AvailabilityZoneec2:NetworkInterfaceIDec2:ResourceTag/${TagKey}ec2:Subnetec2:Vpc"
+  },
+  {
+    "action": "transit-gateway",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:transitGatewayId"
+  },
+  {
+    "action": "vpc-endpoint",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "vpc-endpoint-service",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "vpc-peering-connection",
+    "description": "aws:ResourceTag/${TagKey}ec2:AccepterVpcec2:RequesterVpcec2:ResourceTag/${TagKey}ec2:VpcPeeringConnectionID"
+  },
+  {
+    "action": "vpn-gateway",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "CreateNetworkInterface",
+    "description": "Grants permission to create a network interface in a subnet"
+  },
+  {
+    "action": "subnet*",
+    "description": "aws:ResourceTag/${TagKey}ec2:AvailabilityZoneec2:AvailabilityZoneIdec2:ResourceTag/${TagKey}ec2:SubnetIDec2:Vpc"
+  },
+  {
+    "action": "security-group",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:SecurityGroupIDec2:Vpc"
+  },
+  {
+    "action": "CreateNetworkInterfacePermission",
+    "description": "Grants permission to create a permission for an AWS-authorized user to perform certain operations on a network interface"
+  },
+  {
+    "action": "CreatePlacementGroup",
+    "description": "Grants permission to create a placement group"
+  },
+  {
+    "action": "CreatePublicIpv4Pool",
+    "description": "Grants permission to create a public IPv4 address pool for public IPv4 CIDRs that you own and bring to Amazon to manage with Amazon VPC IP Address Manager (IPAM)"
+  },
+  {
+    "action": "CreateReplaceRootVolumeTask",
+    "description": "Grants permission to create a root volume replacement task"
+  },
+  {
+    "action": "replace-root-volume-task*",
+    "description": "aws:RequestTag/${TagKey}aws:TagKeys"
+  },
+  {
+    "action": "volume*",
+    "description": "aws:RequestTag/${TagKey}aws:TagKeysec2:VolumeIDec2:VolumeInitializationRate"
+  },
+  {
+    "action": "image",
+    "description": "aws:ResourceTag/${TagKey}ec2:ImageIDec2:ImageTypeec2:Ownerec2:Publicec2:ResourceTag/${TagKey}ec2:RootDeviceType"
+  },
+  {
+    "action": "snapshot",
+    "description": "aws:ResourceTag/${TagKey}ec2:Ownerec2:ParentVolumeec2:ResourceTag/${TagKey}ec2:SnapshotIDec2:SnapshotTimeec2:VolumeSize"
+  },
+  {
+    "action": "CreateReservedInstancesListing",
+    "description": "Grants permission to create a listing for Standard Reserved Instances to be sold in the Reserved Instance Marketplace"
+  },
+  {
+    "action": "CreateRestoreImageTask",
+    "description": "Grants permission to start a task that restores an AMI from an S3 object previously created by using CreateStoreImageTask"
+  },
+  {
+    "action": "CreateRoute",
+    "description": "Grants permission to create a route in a VPC route table"
+  },
+  {
+    "action": "CreateRouteServer",
+    "description": "Grants permission to create a route server"
+  },
+  {
+    "action": "CreateRouteServerEndpoint",
+    "description": "Grants permission to create a route server endpoint"
+  },
+  {
+    "action": "route-server-endpoint*",
+    "description": "aws:RequestTag/${TagKey}aws:TagKeysec2:AvailabilityZone"
+  },
+  {
+    "action": "subnet*",
+    "description": "aws:ResourceTag/${TagKey}ec2:AvailabilityZoneec2:AvailabilityZoneIdec2:ResourceTag/${TagKey}ec2:SubnetIDec2:Vpc"
+  },
+  {
+    "action": "CreateRouteServerPeer",
+    "description": "Grants permission to create a route server peer"
+  },
+  {
+    "action": "route-server-peer*",
+    "description": "aws:RequestTag/${TagKey}aws:TagKeysec2:AvailabilityZone"
+  },
+  {
+    "action": "CreateRouteTable",
+    "description": "Grants permission to create a route table for a VPC"
+  },
+  {
+    "action": "vpc*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:Tenancyec2:VpcID"
+  },
+  {
+    "action": "CreateSecurityGroup",
+    "description": "Grants permission to create a security group"
+  },
+  {
+    "action": "vpc",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:Tenancyec2:VpcID"
+  },
+  {
+    "action": "CreateSnapshot",
+    "description": "Grants permission to create a snapshot of an EBS volume and store it in Amazon S3"
+  },
+  {
+    "action": "volume*",
+    "description": "aws:ResourceTag/${TagKey}ec2:AvailabilityZoneIdec2:Encryptedec2:ResourceTag/${TagKey}ec2:VolumeIDec2:VolumeInitializationRateec2:VolumeIopsec2:VolumeSizeec2:VolumeThroughputec2:VolumeType"
+  },
+  {
+    "action": "CreateSnapshots",
+    "description": "Grants permission to create crash-consistent snapshots of multiple EBS volumes and store them in Amazon S3"
+  },
+  {
+    "action": "snapshot*",
+    "description": "aws:RequestTag/${TagKey}aws:TagKeysec2:Locationec2:OutpostArnec2:ParentVolumeec2:SnapshotIDec2:SourceAvailabilityZoneec2:SourceOutpostArnec2:VolumeSize"
+  },
+  {
+    "action": "volume*",
+    "description": "aws:ResourceTag/${TagKey}ec2:Encryptedec2:ResourceTag/${TagKey}ec2:VolumeIDec2:VolumeInitializationRateec2:VolumeIopsec2:VolumeSizeec2:VolumeThroughputec2:VolumeType"
+  },
+  {
+    "action": "CreateSpotDatafeedSubscription",
+    "description": "Grants permission to create a data feed for Spot Instances to view Spot Instance usage logs"
+  },
+  {
+    "action": "CreateStoreImageTask",
+    "description": "Grants permission to store an AMI as a single object in an S3 bucket"
+  },
+  {
+    "action": "CreateSubnet",
+    "description": "Grants permission to create a subnet in a VPC"
+  },
+  {
+    "action": "vpc*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:Tenancyec2:VpcID"
+  },
+  {
+    "action": "ipam-pool",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "CreateSubnetCidrReservation",
+    "description": "Grants permission to create a subnet CIDR reservation"
+  },
+  {
+    "action": "CreateTags",
+    "description": "Grants permission to add or overwrite one or more tags for Amazon EC2 resources"
+  },
+  {
+    "action": "capacity-reservation",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeys"
+  },
+  {
+    "action": "capacity-reservation-fleet",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "carrier-gateway",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}ec2:Tenancyec2:Vpc"
+  },
+  {
+    "action": "client-vpn-endpoint",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ClientRootCertificateChainArnec2:CloudwatchLogGroupArnec2:CloudwatchLogStreamArnec2:DirectoryArnec2:ResourceTag/${TagKey}ec2:SamlProviderArnec2:ServerCertificateArn"
+  },
+  {
+    "action": "coip-pool",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "customer-gateway",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "declarative-policies-report",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "dedicated-host",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:AutoPlacementec2:AvailabilityZoneec2:HostRecoveryec2:InstanceTypeec2:Quantityec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "dhcp-options",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:DhcpOptionsIDec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "egress-only-internet-gateway",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "elastic-gpu",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ElasticGpuTypeec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "elastic-ip",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:AllocationIdec2:Domainec2:PublicIpAddressec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "export-image-task",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "export-instance-task",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "fleet",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "fpga-image",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:Ownerec2:Publicec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "host-reservation",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "image",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ImageIDec2:ImageTypeec2:Ownerec2:Publicec2:ResourceTag/${TagKey}ec2:RootDeviceType"
+  },
+  {
+    "action": "image-usage-report",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "import-image-task",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "import-snapshot-task",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "instance",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:AvailabilityZoneec2:AvailabilityZoneIdec2:CpuOptionsAmdSevSnpec2:EbsOptimizedec2:InstanceAutoRecoveryec2:InstanceBandwidthWeightingec2:InstanceIDec2:InstanceMarketTypeec2:InstanceMetadataTagsec2:InstanceProfileec2:InstanceTypeec2:MetadataHttpEndpointec2:MetadataHttpPutResponseHopLimitec2:MetadataHttpTokensec2:PlacementGroupec2:ProductCodeec2:ResourceTag/${TagKey}ec2:RootDeviceTypeec2:Tenancy"
+  },
+  {
+    "action": "instance-connect-endpoint",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}ec2:SubnetID"
+  },
+  {
+    "action": "instance-event-window",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "internet-gateway",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:InternetGatewayIDec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "ipam",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "ipam-external-resource-verification-token",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "ipam-pool",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "ipam-resource-discovery",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "ipam-resource-discovery-association",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "ipam-scope",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "ipv4pool-ec2",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "ipv6pool-ec2",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "key-pair",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:KeyPairNameec2:KeyPairTypeec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "launch-template",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "local-gateway",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "local-gateway-route-table",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "local-gateway-route-table-virtual-interface-group-association",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "local-gateway-route-table-vpc-association",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "local-gateway-virtual-interface",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "local-gateway-virtual-interface-group",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "natgateway",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "network-acl",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:NetworkAclIDec2:ResourceTag/${TagKey}ec2:Vpc"
+  },
+  {
+    "action": "network-insights-access-scope",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "network-insights-access-scope-analysis",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "network-insights-analysis",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "network-insights-path",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "network-interface",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:AuthorizedUserec2:AvailabilityZoneec2:NetworkInterfaceIDec2:Permissionec2:ResourceTag/${TagKey}ec2:Subnetec2:Vpc"
+  },
+  {
+    "action": "placement-group",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:PlacementGroupNameec2:PlacementGroupStrategyec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "prefix-list",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "replace-root-volume-task",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "reserved-instances",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:AvailabilityZoneec2:InstanceTypeec2:ReservedInstancesOfferingTypeec2:ResourceTag/${TagKey}ec2:Tenancy"
+  },
+  {
+    "action": "route-server",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "route-server-endpoint",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "route-server-peer",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "route-table",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}ec2:RouteTableIDec2:Vpc"
+  },
+  {
+    "action": "security-group",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}ec2:SecurityGroupIDec2:Vpc"
+  },
+  {
+    "action": "security-group-rule",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "snapshot",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:Encryptedec2:Ownerec2:ParentVolumeec2:ResourceTag/${TagKey}ec2:SnapshotIDec2:SnapshotTimeec2:VolumeSize"
+  },
+  {
+    "action": "spot-fleet-request",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "spot-instances-request",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "subnet",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:AvailabilityZoneec2:AvailabilityZoneIdec2:ResourceTag/${TagKey}ec2:SubnetIDec2:Vpc"
+  },
+  {
+    "action": "subnet-cidr-reservation",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "traffic-mirror-filter",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "traffic-mirror-filter-rule",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "traffic-mirror-session",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "traffic-mirror-target",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "transit-gateway",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}ec2:transitGatewayId"
+  },
+  {
+    "action": "transit-gateway-attachment",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}ec2:transitGatewayAttachmentId"
+  },
+  {
+    "action": "transit-gateway-connect-peer",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}ec2:transitGatewayConnectPeerId"
+  },
+  {
+    "action": "transit-gateway-multicast-domain",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}ec2:transitGatewayMulticastDomainId"
+  },
+  {
+    "action": "transit-gateway-policy-table",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}ec2:transitGatewayPolicyTableId"
+  },
+  {
+    "action": "transit-gateway-route-table",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}ec2:transitGatewayRouteTableId"
+  },
+  {
+    "action": "transit-gateway-route-table-announcement",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}ec2:transitGatewayRouteTableAnnouncementId"
+  },
+  {
+    "action": "verified-access-endpoint",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "verified-access-endpoint-target",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "verified-access-group",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "verified-access-instance",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "verified-access-policy",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "verified-access-trust-provider",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "volume",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:AvailabilityZoneec2:AvailabilityZoneIdec2:Encryptedec2:ParentSnapshotec2:ResourceTag/${TagKey}ec2:VolumeIDec2:VolumeInitializationRateec2:VolumeIopsec2:VolumeSizeec2:VolumeThroughputec2:VolumeType"
+  },
+  {
+    "action": "vpc",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}ec2:Tenancyec2:VpcID"
+  },
+  {
+    "action": "vpc-block-public-access-exclusion",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "vpc-endpoint",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "vpc-endpoint-connection",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "vpc-endpoint-service",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}ec2:vpceMultiRegionec2:vpceServiceRegionec2:vpceSupportedRegion"
+  },
+  {
+    "action": "vpc-endpoint-service-permission",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "vpc-flow-log",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "vpc-peering-connection",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:AccepterVpcec2:RequesterVpcec2:ResourceTag/${TagKey}ec2:VpcPeeringConnectionID"
+  },
+  {
+    "action": "vpn-connection",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:AuthenticationTypeec2:DPDTimeoutSecondsec2:GatewayTypeec2:IKEVersionsec2:InsideTunnelCidrec2:InsideTunnelIpv6Cidrec2:Phase1DHGroupec2:Phase1EncryptionAlgorithmsec2:Phase1IntegrityAlgorithmsec2:Phase1LifetimeSecondsec2:Phase2DHGroupec2:Phase2EncryptionAlgorithmsec2:Phase2IntegrityAlgorithmsec2:Phase2LifetimeSecondsec2:RekeyFuzzPercentageec2:RekeyMarginTimeSecondsec2:ReplayWindowSizePacketsec2:ResourceTag/${TagKey}ec2:RoutingType"
+  },
+  {
+    "action": "vpn-gateway",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "CreateTrafficMirrorFilter",
+    "description": "Grants permission to create a traffic mirror filter"
+  },
+  {
+    "action": "CreateTrafficMirrorFilterRule",
+    "description": "Grants permission to create a traffic mirror filter rule"
+  },
+  {
+    "action": "traffic-mirror-filter-rule*",
+    "description": "aws:RequestTag/${TagKey}aws:TagKeys"
+  },
+  {
+    "action": "CreateTrafficMirrorSession",
+    "description": "Grants permission to create a traffic mirror session"
+  },
+  {
+    "action": "traffic-mirror-filter*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "traffic-mirror-session*",
+    "description": "aws:RequestTag/${TagKey}aws:TagKeys"
+  },
+  {
+    "action": "traffic-mirror-target*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "CreateTrafficMirrorTarget",
+    "description": "Grants permission to create a traffic mirror target"
+  },
+  {
+    "action": "network-interface",
+    "description": "aws:ResourceTag/${TagKey}ec2:NetworkInterfaceIDec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "vpc-endpoint",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:VpceServiceNameec2:VpceServiceOwner"
+  },
+  {
+    "action": "CreateTransitGateway",
+    "description": "Grants permission to create a transit gateway"
+  },
+  {
+    "action": "CreateTransitGatewayConnect",
+    "description": "Grants permission to create a Connect attachment from a specified transit gateway attachment"
+  },
+  {
+    "action": "CreateTransitGatewayConnectPeer",
+    "description": "Grants permission to create a Connect peer between a transit gateway and an appliance"
+  },
+  {
+    "action": "transit-gateway-connect-peer*",
+    "description": "aws:RequestTag/${TagKey}aws:TagKeysec2:transitGatewayConnectPeerId"
+  },
+  {
+    "action": "CreateTransitGatewayMulticastDomain",
+    "description": "Grants permission to create a multicast domain for a transit gateway"
+  },
+  {
+    "action": "transit-gateway-multicast-domain*",
+    "description": "aws:RequestTag/${TagKey}aws:TagKeysec2:transitGatewayMulticastDomainId"
+  },
+  {
+    "action": "CreateTransitGatewayPeeringAttachment",
+    "description": "Grants permission to request a transit gateway peering attachment between a requester and accepter transit gateway"
+  },
+  {
+    "action": "transit-gateway-attachment*",
+    "description": "aws:RequestTag/${TagKey}aws:TagKeysec2:transitGatewayAttachmentId"
+  },
+  {
+    "action": "CreateTransitGatewayPolicyTable",
+    "description": "Grants permission to create a transit gateway policy table"
+  },
+  {
+    "action": "transit-gateway-policy-table*",
+    "description": "aws:RequestTag/${TagKey}aws:TagKeysec2:transitGatewayPolicyTableId"
+  },
+  {
+    "action": "CreateTransitGatewayPrefixListReference",
+    "description": "Grants permission to create a transit gateway prefix list reference"
+  },
+  {
+    "action": "transit-gateway-route-table*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:transitGatewayRouteTableId"
+  },
+  {
+    "action": "transit-gateway-attachment",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:transitGatewayAttachmentId"
+  },
+  {
+    "action": "CreateTransitGatewayRoute",
+    "description": "Grants permission to create a static route for a transit gateway route table"
+  },
+  {
+    "action": "transit-gateway-attachment",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:transitGatewayAttachmentId"
+  },
+  {
+    "action": "CreateTransitGatewayRouteTable",
+    "description": "Grants permission to create a route table for a transit gateway"
+  },
+  {
+    "action": "transit-gateway-route-table*",
+    "description": "aws:RequestTag/${TagKey}aws:TagKeysec2:transitGatewayRouteTableId"
+  },
+  {
+    "action": "CreateTransitGatewayRouteTableAnnouncement",
+    "description": "Grants permission to create an announcement for a transit gateway route table"
+  },
+  {
+    "action": "transit-gateway-route-table*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:transitGatewayRouteTableId"
+  },
+  {
+    "action": "transit-gateway-route-table-announcement*",
+    "description": "aws:RequestTag/${TagKey}aws:TagKeysec2:transitGatewayRouteTableAnnouncementId"
+  },
+  {
+    "action": "CreateTransitGatewayVpcAttachment",
+    "description": "Grants permission to attach a VPC to a transit gateway"
+  },
+  {
+    "action": "transit-gateway*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:transitGatewayId"
+  },
+  {
+    "action": "transit-gateway-attachment*",
+    "description": "aws:RequestTag/${TagKey}aws:TagKeysec2:transitGatewayAttachmentId"
+  },
+  {
+    "action": "vpc*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:Tenancyec2:VpcID"
+  },
+  {
+    "action": "CreateVerifiedAccessEndpoint",
+    "description": "Grants permission to create a Verified Access endpoint"
+  },
+  {
+    "action": "verified-access-group*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "network-interface",
+    "description": "aws:ResourceTag/${TagKey}ec2:AuthorizedUserec2:AvailabilityZoneec2:NetworkInterfaceIDec2:Permissionec2:ResourceTag/${TagKey}ec2:Subnetec2:Vpc"
+  },
+  {
+    "action": "security-group",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:SecurityGroupIDec2:Vpc"
+  },
+  {
+    "action": "subnet",
+    "description": "aws:ResourceTag/${TagKey}ec2:AvailabilityZoneec2:AvailabilityZoneIdec2:ResourceTag/${TagKey}ec2:SubnetIDec2:Vpc"
+  },
+  {
+    "action": "CreateVerifiedAccessGroup",
+    "description": "Grants permission to create a Verified Access group"
+  },
+  {
+    "action": "verified-access-instance*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "CreateVerifiedAccessInstance",
+    "description": "Grants permission to create a Verified Access instance"
+  },
+  {
+    "action": "CreateVerifiedAccessTrustProvider",
+    "description": "Grants permission to create a verified trust provider"
+  },
+  {
+    "action": "CreateVolume",
+    "description": "Grants permission to create an EBS volume"
+  },
+  {
+    "action": "snapshot",
+    "description": "aws:ResourceTag/${TagKey}ec2:Encryptedec2:Ownerec2:ParentVolumeec2:ResourceTag/${TagKey}ec2:SnapshotTimeec2:VolumeSize"
+  },
+  {
+    "action": "CreateVpc",
+    "description": "Grants permission to create a VPC with a specified CIDR block"
+  },
+  {
+    "action": "ipam-pool",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "ipv6pool-ec2",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "CreateVpcBlockPublicAccessExclusion",
+    "description": "Grants permission to create an exclusion list for blocked public access on a VPC"
+  },
+  {
+    "action": "subnet",
+    "description": "aws:ResourceTag/${TagKey}ec2:AvailabilityZoneec2:AvailabilityZoneIdec2:ResourceTag/${TagKey}ec2:SubnetIDec2:Vpc"
+  },
+  {
+    "action": "vpc",
+    "description": "aws:ResourceTag/${TagKey}ec2:Ipv4IpamPoolIdec2:Ipv6IpamPoolIdec2:ResourceTag/${TagKey}ec2:Tenancyec2:VpcID"
+  },
+  {
+    "action": "CreateVpcEndpoint",
+    "description": "Grants permission to create a VPC endpoint for an AWS service"
+  },
+  {
+    "action": "vpc-endpoint*",
+    "description": "aws:RequestTag/${TagKey}aws:TagKeysec2:VpceServiceNameec2:VpceServiceOwnerec2:vpceMultiRegionec2:vpceServiceRegion"
+  },
+  {
+    "action": "route-table",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:RouteTableID"
+  },
+  {
+    "action": "security-group",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:SecurityGroupID"
+  },
+  {
+    "action": "subnet",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:SubnetID"
+  },
+  {
+    "action": "CreateVpcEndpointConnectionNotification",
+    "description": "Grants permission to create a connection notification for a VPC endpoint or VPC endpoint service"
+  },
+  {
+    "action": "vpc-endpoint-service",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:vpceMultiRegionec2:vpceServiceRegion"
+  },
+  {
+    "action": "CreateVpcEndpointServiceConfiguration",
+    "description": "Grants permission to create a VPC endpoint service configuration to which service consumers (AWS accounts, IAM users, and IAM roles) can connect"
+  },
+  {
+    "action": "CreateVpcPeeringConnection",
+    "description": "Grants permission to request a VPC peering connection between two VPCs"
+  },
+  {
+    "action": "vpc-peering-connection*",
+    "description": "aws:RequestTag/${TagKey}aws:TagKeysec2:AccepterVpcec2:RequesterVpcec2:VpcPeeringConnectionID"
+  },
+  {
+    "action": "CreateVpnConnection",
+    "description": "Grants permission to create a VPN connection between a virtual private gateway or transit gateway and a customer gateway"
+  },
+  {
+    "action": "vpn-connection*",
+    "description": "aws:RequestTag/${TagKey}aws:TagKeysec2:AuthenticationTypeec2:DPDTimeoutSecondsec2:GatewayTypeec2:IKEVersionsec2:InsideTunnelCidrec2:InsideTunnelIpv6Cidrec2:Phase1DHGroupec2:Phase1EncryptionAlgorithmsec2:Phase1IntegrityAlgorithmsec2:Phase1LifetimeSecondsec2:Phase2DHGroupec2:Phase2EncryptionAlgorithmsec2:Phase2IntegrityAlgorithmsec2:Phase2LifetimeSecondsec2:RekeyFuzzPercentageec2:RekeyMarginTimeSecondsec2:ReplayWindowSizePacketsec2:RoutingType"
+  },
+  {
+    "action": "transit-gateway",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:transitGatewayId"
+  },
+  {
+    "action": "transit-gateway-attachment",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:transitGatewayAttachmentId"
+  },
+  {
+    "action": "vpn-gateway",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "CreateVpnConnectionRoute",
+    "description": "Grants permission to create a static route for a VPN connection between a virtual private gateway and a customer gateway"
+  },
+  {
+    "action": "CreateVpnGateway",
+    "description": "Grants permission to create a virtual private gateway"
+  },
+  {
+    "action": "DeleteCarrierGateway",
+    "description": "Grants permission to delete a carrier gateway"
+  },
+  {
+    "action": "DeleteClientVpnEndpoint",
+    "description": "Grants permission to delete a Client VPN endpoint"
+  },
+  {
+    "action": "DeleteClientVpnRoute",
+    "description": "Grants permission to delete a route from a Client VPN endpoint"
+  },
+  {
+    "action": "subnet",
+    "description": "aws:ResourceTag/${TagKey}ec2:AvailabilityZoneec2:AvailabilityZoneIdec2:ResourceTag/${TagKey}ec2:SubnetIDec2:Vpc"
+  },
+  {
+    "action": "DeleteCoipCidr",
+    "description": "Grants permission to delete a range of customer-owned IP (CoIP) addresses"
+  },
+  {
+    "action": "DeleteCoipPool",
+    "description": "Grants permission to delete a pool of customer-owned IP (CoIP) addresses"
+  },
+  {
+    "action": "DeleteCoipPoolPermission[permission only]",
+    "description": "Grants permission to deny a service from accessing a customer-owned IP (CoIP) pool"
+  },
+  {
+    "action": "DeleteCustomerGateway",
+    "description": "Grants permission to delete a customer gateway"
+  },
+  {
+    "action": "DeleteDhcpOptions",
+    "description": "Grants permission to delete a set of DHCP options"
+  },
+  {
+    "action": "DeleteEgressOnlyInternetGateway",
+    "description": "Grants permission to delete an egress-only internet gateway"
+  },
+  {
+    "action": "DeleteFleets",
+    "description": "Grants permission to delete one or more EC2 Fleets"
+  },
+  {
+    "action": "DeleteFlowLogs",
+    "description": "Grants permission to delete one or more flow logs"
+  },
+  {
+    "action": "DeleteFpgaImage",
+    "description": "Grants permission to delete an Amazon FPGA Image (AFI)"
+  },
+  {
+    "action": "DeleteImageUsageReport",
+    "description": "Grants permission to delete an AMI usage report"
+  },
+  {
+    "action": "DeleteInstanceConnectEndpoint",
+    "description": "Grants permission to delete an EC2 Instance Connect Endpoint"
+  },
+  {
+    "action": "DeleteInstanceEventWindow",
+    "description": "Grants permission to delete the specified event window"
+  },
+  {
+    "action": "DeleteInternetGateway",
+    "description": "Grants permission to delete an internet gateway"
+  },
+  {
+    "action": "DeleteIpam",
+    "description": "Grants permission to delete an Amazon VPC IP Address Manager (IPAM) and remove all monitored data associated with the IPAM including the historical data for CIDRs"
+  },
+  {
+    "action": "DeleteIpamExternalResourceVerificationToken",
+    "description": "Grants permission to delete a verification token, which proves ownership of an external resource"
+  },
+  {
+    "action": "DeleteIpamPool",
+    "description": "Grants permission to delete an Amazon VPC IP Address Manager (IPAM) pool"
+  },
+  {
+    "action": "DeleteIpamResourceDiscovery",
+    "description": "Grants permission to delete an IPAM resource discovery"
+  },
+  {
+    "action": "DeleteIpamScope",
+    "description": "Grants permission to delete the scope for an Amazon VPC IP Address Manager (IPAM)"
+  },
+  {
+    "action": "DeleteKeyPair",
+    "description": "Grants permission to delete a  key pair by removing the public key from Amazon EC2"
+  },
+  {
+    "action": "DeleteLaunchTemplate",
+    "description": "Grants permission to delete a launch template and its associated versions"
+  },
+  {
+    "action": "DeleteLaunchTemplateVersions",
+    "description": "Grants permission to delete one or more versions of a launch template"
+  },
+  {
+    "action": "DeleteLocalGatewayRoute",
+    "description": "Grants permission to delete a route from a local gateway route table"
+  },
+  {
+    "action": "prefix-list",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "DeleteLocalGatewayRouteTable",
+    "description": "Grants permission to delete a local gateway route table"
+  },
+  {
+    "action": "DeleteLocalGatewayRouteTablePermission[permission only]",
+    "description": "Grants permission to deny a service from accessing a local gateway route table"
+  },
+  {
+    "action": "DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociation",
+    "description": "Grants permission to delete a local gateway route table virtual interface group association"
+  },
+  {
+    "action": "DeleteLocalGatewayRouteTableVpcAssociation",
+    "description": "Grants permission to delete an association between a VPC and local gateway route table"
+  },
+  {
+    "action": "DeleteLocalGatewayVirtualInterface",
+    "description": "Grants permission to delete a local gateway virtual interface"
+  },
+  {
+    "action": "DeleteLocalGatewayVirtualInterfaceGroup",
+    "description": "Grants permission to delete a local gateway virtual interface group"
+  },
+  {
+    "action": "DeleteManagedPrefixList",
+    "description": "Grants permission to delete a managed prefix list"
+  },
+  {
+    "action": "DeleteNatGateway",
+    "description": "Grants permission to delete a NAT gateway"
+  },
+  {
+    "action": "DeleteNetworkAcl",
+    "description": "Grants permission to delete a network ACL"
+  },
+  {
+    "action": "DeleteNetworkAclEntry",
+    "description": "Grants permission to delete an inbound or outbound entry (rule) from a network ACL"
+  },
+  {
+    "action": "DeleteNetworkInsightsAccessScope",
+    "description": "Grants permission to delete a Network Access Scope"
+  },
+  {
+    "action": "DeleteNetworkInsightsAccessScopeAnalysis",
+    "description": "Grants permission to delete a Network Access Scope analysis"
+  },
+  {
+    "action": "DeleteNetworkInsightsAnalysis",
+    "description": "Grants permission to delete a network insights analysis"
+  },
+  {
+    "action": "DeleteNetworkInsightsPath",
+    "description": "Grants permission to delete a network insights path"
+  },
+  {
+    "action": "DeleteNetworkInterface",
+    "description": "Grants permission to delete a detached network interface"
+  },
+  {
+    "action": "DeleteNetworkInterfacePermission",
+    "description": "Grants permission to delete a permission that is associated with a network interface"
+  },
+  {
+    "action": "DeletePlacementGroup",
+    "description": "Grants permission to delete a placement group"
+  },
+  {
+    "action": "DeletePublicIpv4Pool",
+    "description": "Grants permission to delete a public IPv4 address pool for public IPv4 CIDRs that you own and brought to Amazon to manage with Amazon VPC IP Address Manager (IPAM)"
+  },
+  {
+    "action": "DeleteQueuedReservedInstances",
+    "description": "Grants permission to delete the queued purchases for the specified Reserved Instances"
+  },
+  {
+    "action": "DeleteResourcePolicy[permission only]",
+    "description": "Grants permission to remove an IAM policy that enables cross-account sharing from a resource"
+  },
+  {
+    "action": "placement-group",
+    "description": "aws:ResourceTag/${TagKey}ec2:PlacementGroupNameec2:PlacementGroupStrategyec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "verified-access-group",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "DeleteRoute",
+    "description": "Grants permission to delete a route from a route table"
+  },
+  {
+    "action": "DeleteRouteServer",
+    "description": "Grants permission to delete a route server"
+  },
+  {
+    "action": "DeleteRouteServerEndpoint",
+    "description": "Grants permission to delete a route server endpoint"
+  },
+  {
+    "action": "DeleteRouteServerPeer",
+    "description": "Grants permission to delete a route server peer"
+  },
+  {
+    "action": "DeleteRouteTable",
+    "description": "Grants permission to delete a route table"
+  },
+  {
+    "action": "DeleteSecurityGroup",
+    "description": "Grants permission to delete a security group"
+  },
+  {
+    "action": "DeleteSnapshot",
+    "description": "Grants permission to delete a snapshot of an EBS volume"
+  },
+  {
+    "action": "DeleteSpotDatafeedSubscription",
+    "description": "Grants permission to delete a data feed for Spot Instances"
+  },
+  {
+    "action": "DeleteSubnet",
+    "description": "Grants permission to delete a subnet"
+  },
+  {
+    "action": "DeleteSubnetCidrReservation",
+    "description": "Grants permission to delete a subnet CIDR reservation"
+  },
+  {
+    "action": "DeleteTags",
+    "description": "Grants permission to delete one or more tags from Amazon EC2 resources"
+  },
+  {
+    "action": "capacity-reservation",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "capacity-reservation-fleet",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "carrier-gateway",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "client-vpn-endpoint",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "coip-pool",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "customer-gateway",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "declarative-policies-report",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "dedicated-host",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "dhcp-options",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "egress-only-internet-gateway",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "elastic-gpu",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "elastic-ip",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "export-image-task",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "export-instance-task",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "fleet",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "fpga-image",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "host-reservation",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "image",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "image-usage-report",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "import-image-task",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "import-snapshot-task",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "instance",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "instance-connect-endpoint",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "instance-event-window",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "internet-gateway",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "ipam",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "ipam-external-resource-verification-token",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "ipam-pool",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "ipam-resource-discovery",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "ipam-resource-discovery-association",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "ipam-scope",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "ipv4pool-ec2",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "ipv6pool-ec2",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "key-pair",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "launch-template",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "local-gateway",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "local-gateway-route-table",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "local-gateway-route-table-virtual-interface-group-association",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "local-gateway-route-table-vpc-association",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "local-gateway-virtual-interface",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "local-gateway-virtual-interface-group",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "natgateway",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "network-acl",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "network-insights-access-scope",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "network-insights-access-scope-analysis",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "network-insights-analysis",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "network-insights-path",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "network-interface",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "placement-group",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "prefix-list",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "replace-root-volume-task",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "reserved-instances",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "route-server",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "route-server-endpoint",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "route-server-peer",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "route-table",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "security-group",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "security-group-rule",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "snapshot",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "spot-fleet-request",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "spot-instances-request",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "subnet",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "subnet-cidr-reservation",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "traffic-mirror-filter",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "traffic-mirror-filter-rule",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "traffic-mirror-session",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "traffic-mirror-target",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "transit-gateway",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "transit-gateway-attachment",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "transit-gateway-connect-peer",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "transit-gateway-multicast-domain",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "transit-gateway-policy-table",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "transit-gateway-route-table",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "transit-gateway-route-table-announcement",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "verified-access-endpoint",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "verified-access-endpoint-target",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "verified-access-group",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "verified-access-instance",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "verified-access-policy",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "verified-access-trust-provider",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "volume",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "vpc",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "vpc-block-public-access-exclusion",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "vpc-endpoint",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "vpc-endpoint-connection",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "vpc-endpoint-service",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "vpc-endpoint-service-permission",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "vpc-flow-log",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "vpc-peering-connection",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "vpn-connection",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "vpn-gateway",
+    "description": "aws:RequestTag/${TagKey}aws:ResourceTag/${TagKey}aws:TagKeysec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "DeleteTrafficMirrorFilter",
+    "description": "Grants permission to delete a traffic mirror filter"
+  },
+  {
+    "action": "DeleteTrafficMirrorFilterRule",
+    "description": "Grants permission to delete a traffic mirror filter rule"
+  },
+  {
+    "action": "traffic-mirror-filter-rule*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "DeleteTrafficMirrorSession",
+    "description": "Grants permission to delete a traffic mirror session"
+  },
+  {
+    "action": "DeleteTrafficMirrorTarget",
+    "description": "Grants permission to delete a traffic mirror target"
+  },
+  {
+    "action": "DeleteTransitGateway",
+    "description": "Grants permission to delete a transit gateway"
+  },
+  {
+    "action": "DeleteTransitGatewayConnect",
+    "description": "Grants permission to delete a transit gateway connect attachment"
+  },
+  {
+    "action": "DeleteTransitGatewayConnectPeer",
+    "description": "Grants permission to delete a transit gateway connect peer"
+  },
+  {
+    "action": "DeleteTransitGatewayMulticastDomain",
+    "description": "Grants permission to delete a transit gateway multicast domain"
+  },
+  {
+    "action": "DeleteTransitGatewayPeeringAttachment",
+    "description": "Grants permission to delete a peering attachment from a transit gateway"
+  },
+  {
+    "action": "DeleteTransitGatewayPolicyTable",
+    "description": "Grants permission to delete a transit gateway policy table"
+  },
+  {
+    "action": "DeleteTransitGatewayPrefixListReference",
+    "description": "Grants permission to delete a transit gateway prefix list reference"
+  },
+  {
+    "action": "transit-gateway-route-table*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:transitGatewayRouteTableId"
+  },
+  {
+    "action": "DeleteTransitGatewayRoute",
+    "description": "Grants permission to delete a route from a transit gateway route table"
+  },
+  {
+    "action": "DeleteTransitGatewayRouteTable",
+    "description": "Grants permission to delete a transit gateway route table"
+  },
+  {
+    "action": "DeleteTransitGatewayRouteTableAnnouncement",
+    "description": "Grants permission to delete a transit gateway route table announcement"
+  },
+  {
+    "action": "DeleteTransitGatewayVpcAttachment",
+    "description": "Grants permission to delete a VPC attachment from a transit gateway"
+  },
+  {
+    "action": "DeleteVerifiedAccessEndpoint",
+    "description": "Grants permission to delete a Verified Access endpoint"
+  },
+  {
+    "action": "DeleteVerifiedAccessGroup",
+    "description": "Grants permission to delete a Verified Access group"
+  },
+  {
+    "action": "DeleteVerifiedAccessInstance",
+    "description": "Grants permission to delete a Verified Access instance"
+  },
+  {
+    "action": "DeleteVerifiedAccessTrustProvider",
+    "description": "Grants permission to delete a verified trust provider"
+  },
+  {
+    "action": "DeleteVolume",
+    "description": "Grants permission to delete an EBS volume"
+  },
+  {
+    "action": "DeleteVpc",
+    "description": "Grants permission to delete a VPC"
+  },
+  {
+    "action": "DeleteVpcBlockPublicAccessExclusion",
+    "description": "Grants permission to delete an exclusion list for blocked public access on a VPC"
+  },
+  {
+    "action": "DeleteVpcEndpointConnectionNotifications",
+    "description": "Grants permission to delete one or more VPC endpoint connection notifications"
+  },
+  {
+    "action": "vpc-endpoint-service",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:vpceMultiRegionec2:vpceSupportedRegion"
+  },
+  {
+    "action": "DeleteVpcEndpointServiceConfigurations",
+    "description": "Grants permission to delete one or more VPC endpoint service configurations"
+  },
+  {
+    "action": "DeleteVpcEndpoints",
+    "description": "Grants permission to delete one or more VPC endpoints"
+  },
+  {
+    "action": "DeleteVpcPeeringConnection",
+    "description": "Grants permission to delete a VPC peering connection"
+  },
+  {
+    "action": "DeleteVpnConnection",
+    "description": "Grants permission to delete a VPN connection"
+  },
+  {
+    "action": "DeleteVpnConnectionRoute",
+    "description": "Grants permission to delete a static route for a VPN connection between a virtual private gateway and a customer gateway"
+  },
+  {
+    "action": "DeleteVpnGateway",
+    "description": "Grants permission to delete a virtual private gateway"
+  },
+  {
+    "action": "DeprovisionByoipCidr",
+    "description": "Grants permission to release an IP address range that was provisioned through bring your own IP addresses (BYOIP), and to delete the corresponding address pool"
+  },
+  {
+    "action": "DeprovisionIpamByoasn",
+    "description": "Grants permission to deprovision an Autonomous System Number (ASN) from an Amazon Web Services account"
+  },
+  {
+    "action": "DeprovisionIpamPoolCidr",
+    "description": "Grants permission to deprovision a CIDR provisioned from an Amazon VPC IP Address Manager (IPAM) pool"
+  },
+  {
+    "action": "DeprovisionPublicIpv4PoolCidr",
+    "description": "Grants permission to deprovision a CIDR from a public IPv4 pool"
+  },
+  {
+    "action": "DeregisterImage",
+    "description": "Grants permission to deregister an Amazon Machine Image (AMI)"
+  },
+  {
+    "action": "DeregisterInstanceEventNotificationAttributes",
+    "description": "Grants permission to remove tags from the set of tags to include in notifications about scheduled events for your instances"
+  },
+  {
+    "action": "DeregisterTransitGatewayMulticastGroupMembers",
+    "description": "Grants permission to deregister one or more network interface members from a group IP address in a transit gateway multicast domain"
+  },
+  {
+    "action": "transit-gateway-multicast-domain",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:transitGatewayMulticastDomainId"
+  },
+  {
+    "action": "DeregisterTransitGatewayMulticastGroupSources",
+    "description": "Grants permission to deregister one or more network interface sources from a group IP address in a transit gateway multicast domain"
+  },
+  {
+    "action": "transit-gateway-multicast-domain",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:transitGatewayMulticastDomainId"
+  },
+  {
+    "action": "DescribeAccountAttributes",
+    "description": "Grants permission to describe the attributes of the AWS account"
+  },
+  {
+    "action": "DescribeAddressTransfers",
+    "description": "Grants permission to describe an Elastic IP address transfer"
+  },
+  {
+    "action": "DescribeAddresses",
+    "description": "Grants permission to describe one or more Elastic IP addresses"
+  },
+  {
+    "action": "DescribeAddressesAttribute",
+    "description": "Grants permission to describe the attributes of the specified Elastic IP addresses"
+  },
+  {
+    "action": "DescribeAggregateIdFormat",
+    "description": "Grants permission to describe the longer ID format settings for all resource types"
+  },
+  {
+    "action": "DescribeAvailabilityZones",
+    "description": "Grants permission to describe one or more of the Availability Zones that are available to you"
+  },
+  {
+    "action": "DescribeAwsNetworkPerformanceMetricSubscriptions",
+    "description": "Grants permission to describe the current infrastructure performance metric subscriptions"
+  },
+  {
+    "action": "DescribeBundleTasks",
+    "description": "Grants permission to describe one or more bundling tasks"
+  },
+  {
+    "action": "DescribeByoipCidrs",
+    "description": "Grants permission to describe the IP address ranges that were provisioned through bring your own IP addresses (BYOIP)"
+  },
+  {
+    "action": "DescribeCapacityBlockExtensionHistory",
+    "description": "Grants permission to describe Capacity Block extensions history"
+  },
+  {
+    "action": "DescribeCapacityBlockExtensionOfferings",
+    "description": "Grants permission to describe Capacity Block extensions offerings"
+  },
+  {
+    "action": "DescribeCapacityBlockOfferings",
+    "description": "Grants permission to describe Capacity Block offerings available for purchase"
+  },
+  {
+    "action": "DescribeCapacityBlockStatus",
+    "description": "Grants permission to describe the availability of capacity for the specified Capacity blocks, or all of your Capacity Blocks"
+  },
+  {
+    "action": "DescribeCapacityBlocks",
+    "description": "Grants permission to describe details about Capacity Blocks in the AWS Region that you're currently using"
+  },
+  {
+    "action": "DescribeCapacityReservationBillingRequests",
+    "description": "Grants permission to describe one or more requests to assign the billing of the unused capacity of a Capacity Reservation"
+  },
+  {
+    "action": "DescribeCapacityReservationFleets",
+    "description": "Grants permission to describe one or more Capacity Reservation Fleets"
+  },
+  {
+    "action": "DescribeCapacityReservations",
+    "description": "Grants permission to describe one or more Capacity Reservations"
+  },
+  {
+    "action": "DescribeCarrierGateways",
+    "description": "Grants permission to describe one or more Carrier Gateways"
+  },
+  {
+    "action": "DescribeClassicLinkInstances",
+    "description": "Grants permission to describe one or more linked EC2-Classic instances"
+  },
+  {
+    "action": "DescribeClientVpnAuthorizationRules",
+    "description": "Grants permission to describe the authorization rules for a Client VPN endpoint"
+  },
+  {
+    "action": "DescribeClientVpnConnections",
+    "description": "Grants permission to describe active client connections and connections that have been terminated within the last 60 minutes for a Client VPN endpoint"
+  },
+  {
+    "action": "DescribeClientVpnEndpoints",
+    "description": "Grants permission to describe one or more Client VPN endpoints"
+  },
+  {
+    "action": "DescribeClientVpnRoutes",
+    "description": "Grants permission to describe the routes for a Client VPN endpoint"
+  },
+  {
+    "action": "DescribeClientVpnTargetNetworks",
+    "description": "Grants permission to describe the target networks that are associated with a Client VPN endpoint"
+  },
+  {
+    "action": "DescribeCoipPools",
+    "description": "Grants permission to describe the specified customer-owned address pools or all of your customer-owned address pools"
+  },
+  {
+    "action": "DescribeConversionTasks",
+    "description": "Grants permission to describe one or more conversion tasks"
+  },
+  {
+    "action": "DescribeCustomerGateways",
+    "description": "Grants permission to describe one or more customer gateways"
+  },
+  {
+    "action": "DescribeDeclarativePoliciesReports",
+    "description": "Grants permission to describe one or more declarative policies reports"
+  },
+  {
+    "action": "DescribeDhcpOptions",
+    "description": "Grants permission to describe one or more DHCP options sets"
+  },
+  {
+    "action": "DescribeEgressOnlyInternetGateways",
+    "description": "Grants permission to describe one or more egress-only internet gateways"
+  },
+  {
+    "action": "DescribeElasticGpus",
+    "description": "Grants permission to describe an Elastic Graphics accelerator that is associated with an instance"
+  },
+  {
+    "action": "DescribeExportImageTasks",
+    "description": "Grants permission to describe one or more export image tasks"
+  },
+  {
+    "action": "DescribeExportTasks",
+    "description": "Grants permission to describe one or more export instance tasks"
+  },
+  {
+    "action": "DescribeFastLaunchImages",
+    "description": "Grants permission to describe fast-launch enabled Windows AMIs"
+  },
+  {
+    "action": "DescribeFastSnapshotRestores",
+    "description": "Grants permission to describe the state of fast snapshot restores for snapshots"
+  },
+  {
+    "action": "DescribeFleetHistory",
+    "description": "Grants permission to describe the events for an EC2 Fleet during a specified time"
+  },
+  {
+    "action": "DescribeFleetInstances",
+    "description": "Grants permission to describe the running instances for an EC2 Fleet"
+  },
+  {
+    "action": "DescribeFleets",
+    "description": "Grants permission to describe one or more EC2 Fleets"
+  },
+  {
+    "action": "DescribeFlowLogs",
+    "description": "Grants permission to describe one or more flow logs"
+  },
+  {
+    "action": "DescribeFpgaImageAttribute",
+    "description": "Grants permission to describe the attributes of an Amazon FPGA Image (AFI)"
+  },
+  {
+    "action": "DescribeFpgaImages",
+    "description": "Grants permission to describe one or more Amazon FPGA Images (AFIs)"
+  },
+  {
+    "action": "DescribeHostReservationOfferings",
+    "description": "Grants permission to describe the Dedicated Host Reservations that are available to purchase"
+  },
+  {
+    "action": "DescribeHostReservations",
+    "description": "Grants permission to describe the Dedicated Host Reservations that are associated with Dedicated Hosts in the AWS account"
+  },
+  {
+    "action": "DescribeHosts",
+    "description": "Grants permission to describe one or more Dedicated Hosts"
+  },
+  {
+    "action": "DescribeIamInstanceProfileAssociations",
+    "description": "Grants permission to describe the IAM instance profile associations"
+  },
+  {
+    "action": "DescribeIdFormat",
+    "description": "Grants permission to describe the ID format settings for resources"
+  },
+  {
+    "action": "DescribeIdentityIdFormat",
+    "description": "Grants permission to describe the ID format settings for resources for an IAM user, IAM role, or root user"
+  },
+  {
+    "action": "DescribeImageAttribute",
+    "description": "Grants permission to describe an attribute of an Amazon Machine Image (AMI)"
+  },
+  {
+    "action": "DescribeImageReferences",
+    "description": "Grants permission to describe your AWS resources that are referencing specified images"
+  },
+  {
+    "action": "DescribeImageUsageReportEntries",
+    "description": "Grants permission to describe the entries of an AMI usage report"
+  },
+  {
+    "action": "DescribeImageUsageReports",
+    "description": "Grants permission to describe the configuration and status of an AMI usage report"
+  },
+  {
+    "action": "DescribeImages",
+    "description": "Grants permission to describe one or more images (AMIs, AKIs, and ARIs)"
+  },
+  {
+    "action": "DescribeImportImageTasks",
+    "description": "Grants permission to describe import virtual machine or import snapshot tasks"
+  },
+  {
+    "action": "DescribeImportSnapshotTasks",
+    "description": "Grants permission to describe import snapshot tasks"
+  },
+  {
+    "action": "DescribeInstanceAttribute",
+    "description": "Grants permission to describe the attributes of an instance"
+  },
+  {
+    "action": "DescribeInstanceConnectEndpoints",
+    "description": "Grants permission to describe EC2 Instance Connect Endpoints"
+  },
+  {
+    "action": "DescribeInstanceCreditSpecifications",
+    "description": "Grants permission to describe the credit option for CPU usage of one or more burstable performance instances"
+  },
+  {
+    "action": "DescribeInstanceEventNotificationAttributes",
+    "description": "Grants permission to describe the set of tags to include in notifications about scheduled events for your instances"
+  },
+  {
+    "action": "DescribeInstanceEventWindows",
+    "description": "Grants permission to describe the specified event windows or all event windows"
+  },
+  {
+    "action": "DescribeInstanceImageMetadata",
+    "description": "Grants permission to describe the AMI that was used to launch an instance"
+  },
+  {
+    "action": "DescribeInstanceStatus",
+    "description": "Grants permission to describe the status of one or more instances"
+  },
+  {
+    "action": "DescribeInstanceTopology",
+    "description": "Grants permission to describe a tree-based hierarchy that represents the physical host placement of EC2 instances"
+  },
+  {
+    "action": "DescribeInstanceTypeOfferings",
+    "description": "Grants permission to describe the set of instance types that are offered in a location"
+  },
+  {
+    "action": "DescribeInstanceTypes",
+    "description": "Grants permission to describe the details of instance types that are offered in a location"
+  },
+  {
+    "action": "DescribeInstances",
+    "description": "Grants permission to describe one or more instances"
+  },
+  {
+    "action": "DescribeInternetGateways",
+    "description": "Grants permission to describe one or more internet gateways"
+  },
+  {
+    "action": "DescribeIpamByoasn",
+    "description": "Grants permission to describe a bring your own Autonomous System Number (BYOASN) that you've brought to IPAM"
+  },
+  {
+    "action": "DescribeIpamExternalResourceVerificationTokens",
+    "description": "Grants permission to describe verification tokens, which proves ownership of an external resource"
+  },
+  {
+    "action": "DescribeIpamPools",
+    "description": "Grants permission to describe Amazon VPC IP Address Manager (IPAM) pools"
+  },
+  {
+    "action": "DescribeIpamResourceDiscoveries",
+    "description": "Grants permission to describe IPAM resource discoveries"
+  },
+  {
+    "action": "DescribeIpamResourceDiscoveryAssociations",
+    "description": "Grants permission to describe resource discovery associations with an Amazon VPC IPAM"
+  },
+  {
+    "action": "DescribeIpamScopes",
+    "description": "Grants permission to describe Amazon VPC IP Address Manager (IPAM) scopes"
+  },
+  {
+    "action": "DescribeIpams",
+    "description": "Grants permission to describe an Amazon VPC IP Address Manager (IPAM)"
+  },
+  {
+    "action": "DescribeIpv6Pools",
+    "description": "Grants permission to describe one or more IPv6 address pools"
+  },
+  {
+    "action": "DescribeKeyPairs",
+    "description": "Grants permission to describe one or more key pairs"
+  },
+  {
+    "action": "DescribeLaunchTemplateVersions",
+    "description": "Grants permission to describe one or more launch template versions"
+  },
+  {
+    "action": "DescribeLaunchTemplates",
+    "description": "Grants permission to describe one or more launch templates"
+  },
+  {
+    "action": "DescribeLocalGatewayRouteTablePermissions[permission only]",
+    "description": "Grants permission to allow a service to describe local gateway route table permissions"
+  },
+  {
+    "action": "DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociations",
+    "description": "Grants permission to describe the associations between virtual interface groups and local gateway route tables"
+  },
+  {
+    "action": "DescribeLocalGatewayRouteTableVpcAssociations",
+    "description": "Grants permission to describe an association between VPCs and local gateway route tables"
+  },
+  {
+    "action": "DescribeLocalGatewayRouteTables",
+    "description": "Grants permission to describe one or more local gateway route tables"
+  },
+  {
+    "action": "DescribeLocalGatewayVirtualInterfaceGroups",
+    "description": "Grants permission to describe local gateway virtual interface groups"
+  },
+  {
+    "action": "DescribeLocalGatewayVirtualInterfaces",
+    "description": "Grants permission to describe local gateway virtual interfaces"
+  },
+  {
+    "action": "DescribeLocalGateways",
+    "description": "Grants permission to describe one or more local gateways"
+  },
+  {
+    "action": "DescribeLockedSnapshots",
+    "description": "Grants permission to describe the lock status for a snapshot"
+  },
+  {
+    "action": "DescribeMacHosts",
+    "description": "Grants permission to describe your EC2 Mac Dedicated hosts"
+  },
+  {
+    "action": "DescribeMacModificationTasks",
+    "description": "Grants permission to describe a System Integrity Protection (SIP) modification task or volume ownership delegation task for an Amazon EC2 Mac instance"
+  },
+  {
+    "action": "DescribeManagedPrefixLists",
+    "description": "Grants permission to describe your managed prefix lists and any AWS-managed prefix lists"
+  },
+  {
+    "action": "DescribeMovingAddresses",
+    "description": "Grants permission to describe Elastic IP addresses that are being moved to the EC2-VPC platform"
+  },
+  {
+    "action": "DescribeNatGateways",
+    "description": "Grants permission to describe one or more NAT gateways"
+  },
+  {
+    "action": "DescribeNetworkAcls",
+    "description": "Grants permission to describe one or more network ACLs"
+  },
+  {
+    "action": "DescribeNetworkInsightsAccessScopeAnalyses",
+    "description": "Grants permission to describe one or more Network Access Scope analyses"
+  },
+  {
+    "action": "DescribeNetworkInsightsAccessScopes",
+    "description": "Grants permission to describe the Network Access Scopes"
+  },
+  {
+    "action": "DescribeNetworkInsightsAnalyses",
+    "description": "Grants permission to describe one or more network insights analyses"
+  },
+  {
+    "action": "DescribeNetworkInsightsPaths",
+    "description": "Grants permission to describe one or more network insights paths"
+  },
+  {
+    "action": "DescribeNetworkInterfaceAttribute",
+    "description": "Grants permission to describe a network interface attribute"
+  },
+  {
+    "action": "DescribeNetworkInterfacePermissions",
+    "description": "Grants permission to describe the permissions that are associated with a network interface"
+  },
+  {
+    "action": "DescribeNetworkInterfaces",
+    "description": "Grants permission to describe one or more network interfaces"
+  },
+  {
+    "action": "DescribeOutpostLags",
+    "description": "Grants permission to describe Outpost LAGs"
+  },
+  {
+    "action": "DescribePlacementGroups",
+    "description": "Grants permission to describe one or more placement groups"
+  },
+  {
+    "action": "DescribePrefixLists",
+    "description": "Grants permission to describe available AWS services in a prefix list format"
+  },
+  {
+    "action": "DescribePrincipalIdFormat",
+    "description": "Grants permission to describe the ID format settings for the root user and all IAM roles and IAM users that have explicitly specified a longer ID (17-character ID) preference"
+  },
+  {
+    "action": "DescribePublicIpv4Pools",
+    "description": "Grants permission to describe one or more IPv4 address pools"
+  },
+  {
+    "action": "DescribeRegions",
+    "description": "Grants permission to describe one or more AWS Regions that are currently available in your account"
+  },
+  {
+    "action": "DescribeReplaceRootVolumeTasks",
+    "description": "Grants permission to describe a root volume replacement task"
+  },
+  {
+    "action": "DescribeReservedInstances",
+    "description": "Grants permission to describe one or more purchased Reserved Instances in your account"
+  },
+  {
+    "action": "DescribeReservedInstancesListings",
+    "description": "Grants permission to describe your account's Reserved Instance listings in the Reserved Instance Marketplace"
+  },
+  {
+    "action": "DescribeReservedInstancesModifications",
+    "description": "Grants permission to describe the modifications made to one or more Reserved Instances"
+  },
+  {
+    "action": "DescribeReservedInstancesOfferings",
+    "description": "Grants permission to describe the Reserved Instance offerings that are available for purchase"
+  },
+  {
+    "action": "DescribeRouteServerEndpoints",
+    "description": "Grants permission to describe one or more route server endpoints"
+  },
+  {
+    "action": "DescribeRouteServerPeers",
+    "description": "Grants permission to describe one or more route server peers"
+  },
+  {
+    "action": "DescribeRouteServers",
+    "description": "Grants permission to describe one or more route servers"
+  },
+  {
+    "action": "DescribeRouteTables",
+    "description": "Grants permission to describe one or more route tables"
+  },
+  {
+    "action": "DescribeScheduledInstanceAvailability",
+    "description": "Grants permission to find available schedules for Scheduled Instances"
+  },
+  {
+    "action": "DescribeScheduledInstances",
+    "description": "Grants permission to describe one or more Scheduled Instances in your account"
+  },
+  {
+    "action": "DescribeSecurityGroupReferences",
+    "description": "Grants permission to describe the VPCs on the other side of a VPC peering connection that are referencing specified VPC security groups"
+  },
+  {
+    "action": "DescribeSecurityGroupRules",
+    "description": "Grants permission to describe one or more of your security group rules"
+  },
+  {
+    "action": "DescribeSecurityGroupVpcAssociations",
+    "description": "Grants permission to describe security group VPC associations"
+  },
+  {
+    "action": "DescribeSecurityGroups",
+    "description": "Grants permission to describe one or more security groups"
+  },
+  {
+    "action": "DescribeServiceLinkVirtualInterfaces",
+    "description": "Grants permission to describe service link virtual interfaces"
+  },
+  {
+    "action": "DescribeSnapshotAttribute",
+    "description": "Grants permission to describe an attribute of a snapshot"
+  },
+  {
+    "action": "DescribeSnapshotTierStatus",
+    "description": "Grants permission to describe the storage tier status for Amazon EBS snapshots"
+  },
+  {
+    "action": "DescribeSnapshots",
+    "description": "Grants permission to describe one or more EBS snapshots"
+  },
+  {
+    "action": "DescribeSpotDatafeedSubscription",
+    "description": "Grants permission to describe the data feed for Spot Instances"
+  },
+  {
+    "action": "DescribeSpotFleetInstances",
+    "description": "Grants permission to describe the running instances for a Spot Fleet"
+  },
+  {
+    "action": "DescribeSpotFleetRequestHistory",
+    "description": "Grants permission to describe the events for a Spot Fleet request during a specified time"
+  },
+  {
+    "action": "DescribeSpotFleetRequests",
+    "description": "Grants permission to describe one or more Spot Fleet requests"
+  },
+  {
+    "action": "DescribeSpotInstanceRequests",
+    "description": "Grants permission to describe one or more Spot Instance requests"
+  },
+  {
+    "action": "DescribeSpotPriceHistory",
+    "description": "Grants permission to describe the Spot Instance price history"
+  },
+  {
+    "action": "DescribeStaleSecurityGroups",
+    "description": "Grants permission to describe the stale security group rules for security groups in a specified VPC"
+  },
+  {
+    "action": "DescribeStoreImageTasks",
+    "description": "Grants permission to describe the progress of the AMI store tasks"
+  },
+  {
+    "action": "DescribeSubnets",
+    "description": "Grants permission to describe one or more subnets"
+  },
+  {
+    "action": "DescribeTags",
+    "description": "Grants permission to describe one or more tags for an Amazon EC2 resource"
+  },
+  {
+    "action": "DescribeTrafficMirrorFilterRules",
+    "description": "Grants permission to describe traffic mirror filters that determine the traffic that is mirrored"
+  },
+  {
+    "action": "DescribeTrafficMirrorFilters",
+    "description": "Grants permission to describe one or more traffic mirror filters"
+  },
+  {
+    "action": "DescribeTrafficMirrorSessions",
+    "description": "Grants permission to describe one or more traffic mirror sessions"
+  },
+  {
+    "action": "DescribeTrafficMirrorTargets",
+    "description": "Grants permission to describe one or more traffic mirror targets"
+  },
+  {
+    "action": "DescribeTransitGatewayAttachments",
+    "description": "Grants permission to describe one or more attachments between resources and transit gateways"
+  },
+  {
+    "action": "DescribeTransitGatewayConnectPeers",
+    "description": "Grants permission to describe one or more transit gateway connect peers"
+  },
+  {
+    "action": "DescribeTransitGatewayConnects",
+    "description": "Grants permission to describe one or more transit gateway connect attachments"
+  },
+  {
+    "action": "DescribeTransitGatewayMulticastDomains",
+    "description": "Grants permission to describe one or more transit gateway multicast domains"
+  },
+  {
+    "action": "DescribeTransitGatewayPeeringAttachments",
+    "description": "Grants permission to describe one or more transit gateway peering attachments"
+  },
+  {
+    "action": "DescribeTransitGatewayPolicyTables",
+    "description": "Grants permission to describe a transit gateway policy table"
+  },
+  {
+    "action": "DescribeTransitGatewayRouteTableAnnouncements",
+    "description": "Grants permission to describe a transit gateway route table announcement"
+  },
+  {
+    "action": "DescribeTransitGatewayRouteTables",
+    "description": "Grants permission to describe one or more transit gateway route tables"
+  },
+  {
+    "action": "DescribeTransitGatewayVpcAttachments",
+    "description": "Grants permission to describe one or more VPC attachments on a transit gateway"
+  },
+  {
+    "action": "DescribeTransitGateways",
+    "description": "Grants permission to describe one or more transit gateways"
+  },
+  {
+    "action": "DescribeTrunkInterfaceAssociations",
+    "description": "Grants permission to describe one or more network interface trunk associations"
+  },
+  {
+    "action": "DescribeVerifiedAccessEndpoints",
+    "description": "Grants permission to describe the specified Verified Access endpoints or all Verified Access endpoints"
+  },
+  {
+    "action": "DescribeVerifiedAccessGroups",
+    "description": "Grants permission to describe the specified Verified Access groups or all Verified Access groups"
+  },
+  {
+    "action": "DescribeVerifiedAccessInstanceLoggingConfigurations",
+    "description": "Grants permission to describe the current logging configuration for the Verified Access instances"
+  },
+  {
+    "action": "DescribeVerifiedAccessInstanceWebAclAssociations[permission only]",
+    "description": "Grants permission to describe the AWS Web Application Firewall (WAF) web access control list (ACL) associations for a Verified Access instance"
+  },
+  {
+    "action": "DescribeVerifiedAccessInstances",
+    "description": "Grants permission to describe the specified Verified Access instances or all Verified Access instances"
+  },
+  {
+    "action": "DescribeVerifiedAccessTrustProviders",
+    "description": "Grants permission to describe details of existing Verified Access trust providers"
+  },
+  {
+    "action": "DescribeVolumeAttribute",
+    "description": "Grants permission to describe an attribute of an EBS volume"
+  },
+  {
+    "action": "DescribeVolumeStatus",
+    "description": "Grants permission to describe the status of one or more EBS volumes"
+  },
+  {
+    "action": "DescribeVolumes",
+    "description": "Grants permission to describe one or more EBS volumes"
+  },
+  {
+    "action": "DescribeVolumesModifications",
+    "description": "Grants permission to describe the current modification status of one or more EBS volumes"
+  },
+  {
+    "action": "DescribeVpcAttribute",
+    "description": "Grants permission to describe an attribute of a VPC"
+  },
+  {
+    "action": "DescribeVpcBlockPublicAccessExclusions",
+    "description": "Grants permission to describe an exclusion list for blocked public access on a VPC"
+  },
+  {
+    "action": "DescribeVpcBlockPublicAccessOptions",
+    "description": "Grants permission to describe options for blocked public access on a VPC"
+  },
+  {
+    "action": "DescribeVpcClassicLink",
+    "description": "Grants permission to describe the ClassicLink status of one or more VPCs"
+  },
+  {
+    "action": "DescribeVpcClassicLinkDnsSupport",
+    "description": "Grants permission to describe the ClassicLink DNS support status of one or more VPCs"
+  },
+  {
+    "action": "DescribeVpcEndpointAssociations",
+    "description": "Grants permission to describe the VPC endpoint associations"
+  },
+  {
+    "action": "DescribeVpcEndpointConnectionNotifications",
+    "description": "Grants permission to describe the connection notifications for VPC endpoints and VPC endpoint services"
+  },
+  {
+    "action": "DescribeVpcEndpointConnections",
+    "description": "Grants permission to describe the VPC endpoint connections to your VPC endpoint services"
+  },
+  {
+    "action": "DescribeVpcEndpointServiceConfigurations",
+    "description": "Grants permission to describe VPC endpoint service configurations (your services)"
+  },
+  {
+    "action": "DescribeVpcEndpointServicePermissions",
+    "description": "Grants permission to describe the principals (service consumers) that are permitted to discover your VPC endpoint service"
+  },
+  {
+    "action": "DescribeVpcEndpointServices",
+    "description": "Grants permission to describe all supported AWS services that can be specified when creating a VPC endpoint"
+  },
+  {
+    "action": "DescribeVpcEndpoints",
+    "description": "Grants permission to describe one or more VPC endpoints"
+  },
+  {
+    "action": "DescribeVpcPeeringConnections",
+    "description": "Grants permission to describe one or more VPC peering connections"
+  },
+  {
+    "action": "DescribeVpcs",
+    "description": "Grants permission to describe one or more VPCs"
+  },
+  {
+    "action": "DescribeVpnConnections",
+    "description": "Grants permission to describe one or more VPN connections"
+  },
+  {
+    "action": "DescribeVpnGateways",
+    "description": "Grants permission to describe one or more virtual private gateways"
+  },
+  {
+    "action": "DetachClassicLinkVpc",
+    "description": "Grants permission to unlink (detach) a linked EC2-Classic instance from a VPC"
+  },
+  {
+    "action": "vpc*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:Tenancyec2:VpcID"
+  },
+  {
+    "action": "DetachInternetGateway",
+    "description": "Grants permission to detach an internet gateway from a VPC"
+  },
+  {
+    "action": "vpc*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:Tenancyec2:VpcID"
+  },
+  {
+    "action": "DetachNetworkInterface",
+    "description": "Grants permission to detach a network interface from an instance"
+  },
+  {
+    "action": "network-interface*",
+    "description": "aws:ResourceTag/${TagKey}ec2:AvailabilityZoneec2:ManagedResourceOperatorec2:NetworkInterfaceIDec2:ResourceTag/${TagKey}ec2:Subnetec2:Vpc"
+  },
+  {
+    "action": "DetachVerifiedAccessTrustProvider",
+    "description": "Grants permission to detach a trust provider from a Verified Access instance"
+  },
+  {
+    "action": "verified-access-trust-provider*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "DetachVolume",
+    "description": "Grants permission to detach an EBS volume from an instance"
+  },
+  {
+    "action": "instance",
+    "description": "aws:ResourceTag/${TagKey}ec2:AvailabilityZoneec2:AvailabilityZoneIdec2:CpuOptionsAmdSevSnpec2:EbsOptimizedec2:InstanceAutoRecoveryec2:InstanceBandwidthWeightingec2:InstanceIDec2:InstanceMarketTypeec2:InstanceMetadataTagsec2:InstanceProfileec2:InstanceTypeec2:ManagedResourceOperatorec2:MetadataHttpEndpointec2:MetadataHttpPutResponseHopLimitec2:MetadataHttpTokensec2:PlacementGroupec2:ProductCodeec2:ResourceTag/${TagKey}ec2:RootDeviceTypeec2:Tenancy"
+  },
+  {
+    "action": "DetachVpnGateway",
+    "description": "Grants permission to detach a virtual private gateway from a VPC"
+  },
+  {
+    "action": "vpn-gateway*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "DisableAddressTransfer",
+    "description": "Grants permission to disable Elastic IP address transfer"
+  },
+  {
+    "action": "DisableAllowedImagesSettings",
+    "description": "Grants permission to disable allowed images settings"
+  },
+  {
+    "action": "DisableAwsNetworkPerformanceMetricSubscription",
+    "description": "Grants permission to disable infrastructure performance metric subscriptions"
+  },
+  {
+    "action": "DisableEbsEncryptionByDefault",
+    "description": "Grants permission to disable EBS encryption by default for your account"
+  },
+  {
+    "action": "DisableFastLaunch",
+    "description": "Grants permission to disable faster launching for Windows AMIs"
+  },
+  {
+    "action": "DisableFastSnapshotRestores",
+    "description": "Grants permission to disable fast snapshot restores for one or more snapshots in specified Availability Zones"
+  },
+  {
+    "action": "DisableImage",
+    "description": "Grants permission to disable an AMI"
+  },
+  {
+    "action": "DisableImageBlockPublicAccess",
+    "description": "Grants permission to disable block public access for AMIs at the account level in the specified AWS Region"
+  },
+  {
+    "action": "DisableImageDeprecation",
+    "description": "Grants permission to cancel the deprecation of the specified AMI"
+  },
+  {
+    "action": "DisableImageDeregistrationProtection",
+    "description": "Grants permission to disable deregistration protection for an AMI. When deregistration protection is disabled, the AMI can be deregistered"
+  },
+  {
+    "action": "DisableIpamOrganizationAdminAccount",
+    "description": "Grants permission to disable an AWS Organizations member account as an Amazon VPC IP Address Manager (IPAM) admin account"
+  },
+  {
+    "action": "DisableRouteServerPropagation",
+    "description": "Grants permission to disable route server propagation"
+  },
+  {
+    "action": "route-table*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:RouteTableIDec2:Vpc"
+  },
+  {
+    "action": "DisableSerialConsoleAccess",
+    "description": "Grants permission to disable access to the EC2 serial console of all instances for your account"
+  },
+  {
+    "action": "DisableSnapshotBlockPublicAccess",
+    "description": "Grants permission to disable the block public access for snapshots setting for a Region"
+  },
+  {
+    "action": "DisableTransitGatewayRouteTablePropagation",
+    "description": "Grants permission to disable a resource attachment from propagating routes to the specified propagation route table"
+  },
+  {
+    "action": "transit-gateway-attachment",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:transitGatewayAttachmentId"
+  },
+  {
+    "action": "transit-gateway-route-table-announcement",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:transitGatewayRouteTableAnnouncementId"
+  },
+  {
+    "action": "DisableVgwRoutePropagation",
+    "description": "Grants permission to disable a virtual private gateway from propagating routes to a specified route table of a VPC"
+  },
+  {
+    "action": "vpn-gateway*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "DisableVpcClassicLink",
+    "description": "Grants permission to disable ClassicLink for a VPC"
+  },
+  {
+    "action": "DisableVpcClassicLinkDnsSupport",
+    "description": "Grants permission to disable ClassicLink DNS support for a VPC"
+  },
+  {
+    "action": "DisassociateAddress",
+    "description": "Grants permission to disassociate an Elastic IP address from an instance or network interface"
+  },
+  {
+    "action": "network-interface",
+    "description": "aws:ResourceTag/${TagKey}ec2:AvailabilityZoneec2:ManagedResourceOperatorec2:NetworkInterfaceIDec2:ResourceTag/${TagKey}ec2:Subnetec2:Vpc"
+  },
+  {
+    "action": "DisassociateCapacityReservationBillingOwner",
+    "description": "Grants permission to cancel a pending request to assign billing of the unused capacity of a Capacity Reservation to a consumer account"
+  },
+  {
+    "action": "DisassociateClientVpnTargetNetwork",
+    "description": "Grants permission to disassociate a target network from a Client VPN endpoint"
+  },
+  {
+    "action": "DisassociateEnclaveCertificateIamRole",
+    "description": "Grants permission to disassociate an ACM certificate from a IAM role"
+  },
+  {
+    "action": "DisassociateIamInstanceProfile",
+    "description": "Grants permission to disassociate an IAM instance profile from a running or stopped instance"
+  },
+  {
+    "action": "DisassociateInstanceEventWindow",
+    "description": "Grants permission to disassociate one or more targets from an event window"
+  },
+  {
+    "action": "DisassociateIpamByoasn",
+    "description": "Grants permission to disassociate an Autonomous System Number (ASN) from a BYOIP CIDR"
+  },
+  {
+    "action": "DisassociateIpamResourceDiscovery",
+    "description": "Grants permission to disassociate a resource discovery from an Amazon VPC IPAM"
+  },
+  {
+    "action": "DisassociateNatGatewayAddress",
+    "description": "Grants permission to disassociate a secondary Elastic IP address from a public NAT gateway"
+  },
+  {
+    "action": "natgateway*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "network-interface",
+    "description": "aws:ResourceTag/${TagKey}ec2:AuthorizedUserec2:AvailabilityZoneec2:ManagedResourceOperatorec2:NetworkInterfaceIDec2:Permissionec2:ResourceTag/${TagKey}ec2:Subnetec2:Vpc"
+  },
+  {
+    "action": "DisassociateRouteServer",
+    "description": "Grants permission to disassociate a route server from a VPC"
+  },
+  {
+    "action": "vpc*",
+    "description": "aws:ResourceTag/${TagKey}ec2:Ipv4IpamPoolIdec2:Ipv6IpamPoolIdec2:ResourceTag/${TagKey}ec2:Tenancyec2:VpcID"
+  },
+  {
+    "action": "DisassociateRouteTable",
+    "description": "Grants permission to disassociate a subnet from a route table"
+  },
+  {
+    "action": "ipv4pool-ec2",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "ipv6pool-ec2",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "route-table",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:RouteTableIDec2:Vpc"
+  },
+  {
+    "action": "subnet",
+    "description": "aws:ResourceTag/${TagKey}ec2:AvailabilityZoneec2:AvailabilityZoneIdec2:ResourceTag/${TagKey}ec2:SubnetIDec2:Vpc"
+  },
+  {
+    "action": "vpn-gateway",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "DisassociateSecurityGroupVpc",
+    "description": "Grants permission to disassociate a security group from a VPC"
+  },
+  {
+    "action": "vpc",
+    "description": "aws:ResourceTag/${TagKey}ec2:Ipv4IpamPoolIdec2:Ipv6IpamPoolIdec2:ResourceTag/${TagKey}ec2:Tenancyec2:VpcID"
+  },
+  {
+    "action": "DisassociateSubnetCidrBlock",
+    "description": "Grants permission to disassociate a CIDR block from a subnet"
+  },
+  {
+    "action": "DisassociateTransitGatewayMulticastDomain",
+    "description": "Grants permission to disassociate one or more subnets from a transit gateway multicast domain"
+  },
+  {
+    "action": "transit-gateway-attachment*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:transitGatewayAttachmentId"
+  },
+  {
+    "action": "transit-gateway-multicast-domain*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:transitGatewayMulticastDomainId"
+  },
+  {
+    "action": "DisassociateTransitGatewayPolicyTable",
+    "description": "Grants permission to disassociate a policy table from a transit gateway"
+  },
+  {
+    "action": "transit-gateway-policy-table*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:transitGatewayPolicyTableId"
+  },
+  {
+    "action": "DisassociateTransitGatewayRouteTable",
+    "description": "Grants permission to disassociate a resource attachment from a transit gateway route table"
+  },
+  {
+    "action": "transit-gateway-route-table*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:transitGatewayRouteTableId"
+  },
+  {
+    "action": "DisassociateTrunkInterface",
+    "description": "Grants permission to disassociate a branch network interface to a trunk network interface"
+  },
+  {
+    "action": "DisassociateVerifiedAccessInstanceWebAcl[permission only]",
+    "description": "Grants permission to disassociate an AWS Web Application Firewall (WAF) web access control list (ACL) from a Verified Access instance"
+  },
+  {
+    "action": "DisassociateVpcCidrBlock",
+    "description": "Grants permission to disassociate a CIDR block from a VPC"
+  },
+  {
+    "action": "EnableAddressTransfer",
+    "description": "Grants permission to enable Elastic IP address transfer"
+  },
+  {
+    "action": "EnableAllowedImagesSettings",
+    "description": "Grants permission to enable allowed images settings"
+  },
+  {
+    "action": "EnableAwsNetworkPerformanceMetricSubscription",
+    "description": "Grants permission to enable infrastructure performance subscriptions"
+  },
+  {
+    "action": "EnableEbsEncryptionByDefault",
+    "description": "Grants permission to enable EBS encryption by default for your account"
+  },
+  {
+    "action": "EnableFastLaunch",
+    "description": "Grants permission to enable faster launching for Windows AMIs"
+  },
+  {
+    "action": "launch-template",
+    "description": "aws:ResourceTag/${TagKey}ec2:ManagedResourceOperatorec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "EnableFastSnapshotRestores",
+    "description": "Grants permission to enable fast snapshot restores for one or more snapshots in specified Availability Zones"
+  },
+  {
+    "action": "EnableImage",
+    "description": "Grants permission to re-enable a disabled AMI"
+  },
+  {
+    "action": "EnableImageBlockPublicAccess",
+    "description": "Grants permission to enable block public access for AMIs at the account level in the specified AWS Region"
+  },
+  {
+    "action": "EnableImageDeprecation",
+    "description": "Grants permission to enable deprecation of the specified AMI at the specified date and time"
+  },
+  {
+    "action": "EnableImageDeregistrationProtection",
+    "description": "Grants permission to enable deregistration protection for an AMI. When deregistration protection is enabled, the AMI can't be deregistered"
+  },
+  {
+    "action": "EnableIpamOrganizationAdminAccount",
+    "description": "Grants permission to enable an AWS Organizations member account as an Amazon VPC IP Address Manager (IPAM) admin account"
+  },
+  {
+    "action": "EnableReachabilityAnalyzerOrganizationSharing",
+    "description": "Grants permission to enable organization sharing of reachability analyzer"
+  },
+  {
+    "action": "EnableRouteServerPropagation",
+    "description": "Grants permission to enable route server propagation"
+  },
+  {
+    "action": "route-table*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:RouteTableIDec2:Vpc"
+  },
+  {
+    "action": "EnableSerialConsoleAccess",
+    "description": "Grants permission to enable access to the EC2 serial console of all instances for your account"
+  },
+  {
+    "action": "EnableSnapshotBlockPublicAccess",
+    "description": "Grants permission to enable or modify the block public access for snapshots setting for a Region"
+  },
+  {
+    "action": "EnableTransitGatewayRouteTablePropagation",
+    "description": "Grants permission to enable an attachment to propagate routes to a propagation route table"
+  },
+  {
+    "action": "transit-gateway-attachment",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:transitGatewayAttachmentId"
+  },
+  {
+    "action": "transit-gateway-route-table-announcement",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:transitGatewayRouteTableAnnouncementId"
+  },
+  {
+    "action": "EnableVgwRoutePropagation",
+    "description": "Grants permission to enable a virtual private gateway to propagate routes to a VPC route table"
+  },
+  {
+    "action": "vpn-gateway*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "EnableVolumeIO",
+    "description": "Grants permission to enable I/O operations for a volume that had I/O operations disabled"
+  },
+  {
+    "action": "EnableVpcClassicLink",
+    "description": "Grants permission to enable a VPC for ClassicLink"
+  },
+  {
+    "action": "EnableVpcClassicLinkDnsSupport",
+    "description": "Grants permission to enable a VPC to support DNS hostname resolution for ClassicLink"
+  },
+  {
+    "action": "ExportClientVpnClientCertificateRevocationList",
+    "description": "Grants permission to download the client certificate revocation list for a Client VPN endpoint"
+  },
+  {
+    "action": "ExportClientVpnClientConfiguration",
+    "description": "Grants permission to download the contents of the Client VPN endpoint configuration file for a Client VPN endpoint"
+  },
+  {
+    "action": "ExportImage",
+    "description": "Grants permission to export an Amazon Machine Image (AMI) to a VM file"
+  },
+  {
+    "action": "image*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ImageIDec2:ImageTypeec2:Ownerec2:Publicec2:ResourceTag/${TagKey}ec2:RootDeviceType"
+  },
+  {
+    "action": "ExportTransitGatewayRoutes",
+    "description": "Grants permission to export routes from a transit gateway route table to an Amazon S3 bucket"
+  },
+  {
+    "action": "ExportVerifiedAccessInstanceClientConfiguration",
+    "description": "Grants permission to export a verified access instance client configuration"
+  },
+  {
+    "action": "GetActiveVpnTunnelStatus",
+    "description": "Grants permission to retrieve the current security parameters for an active VPN tunnel"
+  },
+  {
+    "action": "GetAllowedImagesSettings",
+    "description": "Grants permission to get the allowed settings for images"
+  },
+  {
+    "action": "GetAssociatedEnclaveCertificateIamRoles",
+    "description": "Grants permission to get the list of roles associated with an ACM certificate"
+  },
+  {
+    "action": "GetAssociatedIpv6PoolCidrs",
+    "description": "Grants permission to get information about the IPv6 CIDR block associations for a specified IPv6 address pool"
+  },
+  {
+    "action": "GetAwsNetworkPerformanceData",
+    "description": "Grants permission to get network performance data"
+  },
+  {
+    "action": "GetCapacityReservationUsage",
+    "description": "Grants permission to get usage information about a Capacity Reservation"
+  },
+  {
+    "action": "GetCoipPoolUsage",
+    "description": "Grants permission to describe the allocations from the specified customer-owned address pool"
+  },
+  {
+    "action": "GetConsoleOutput",
+    "description": "Grants permission to get the console output for an instance"
+  },
+  {
+    "action": "GetConsoleScreenshot",
+    "description": "Grants permission to retrieve a JPG-format screenshot of a running instance"
+  },
+  {
+    "action": "GetDeclarativePoliciesReportSummary",
+    "description": "Grants permission to get the report summary of declarative policies"
+  },
+  {
+    "action": "GetDefaultCreditSpecification",
+    "description": "Grants permission to get the default credit option for CPU usage of a burstable performance instance family"
+  },
+  {
+    "action": "GetEbsDefaultKmsKeyId",
+    "description": "Grants permission to get the ID of the default customer master key (CMK) for EBS encryption by default"
+  },
+  {
+    "action": "GetEbsEncryptionByDefault",
+    "description": "Grants permission to describe whether EBS encryption by default is enabled for your account"
+  },
+  {
+    "action": "GetFlowLogsIntegrationTemplate",
+    "description": "Grants permission to generate a CloudFormation template to streamline the integration of VPC flow logs with Amazon Athena"
+  },
+  {
+    "action": "GetGroupsForCapacityReservation",
+    "description": "Grants permission to list the resource groups to which a Capacity Reservation has been added"
+  },
+  {
+    "action": "GetHostReservationPurchasePreview",
+    "description": "Grants permission to preview a reservation purchase with configurations that match those of a Dedicated Host"
+  },
+  {
+    "action": "GetImageBlockPublicAccessState",
+    "description": "Grants permission to get the current state of block public access for AMIs at the account level in the specified AWS Region"
+  },
+  {
+    "action": "GetInstanceMetadataDefaults",
+    "description": "Grants permission to view the default instance metadata service (IMDS) settings set for your account in the specified Region"
+  },
+  {
+    "action": "GetInstanceTpmEkPub",
+    "description": "Grants permission to get the public endorsement key associated with the Nitro Trusted Platform Module (NitroTPM) for the specified instance"
+  },
+  {
+    "action": "GetInstanceTypesFromInstanceRequirements",
+    "description": "Grants permission to view a list of instance types with specified instance attributes"
+  },
+  {
+    "action": "GetInstanceUefiData",
+    "description": "Grants permission to retrieve the binary representation of the UEFI variable store"
+  },
+  {
+    "action": "GetIpamAddressHistory",
+    "description": "Grants permission to retrieve historical information about a CIDR within an Amazon VPC IP Address Manager (IPAM) scope"
+  },
+  {
+    "action": "GetIpamDiscoveredAccounts",
+    "description": "Grants permission to retrieve IPAM discovered accounts"
+  },
+  {
+    "action": "GetIpamDiscoveredPublicAddresses",
+    "description": "Grants permission to retrieve the public IP addresses that have been discovered by IPAM"
+  },
+  {
+    "action": "GetIpamDiscoveredResourceCidrs",
+    "description": "Grants permission to retrieve the resource CIDRs that are monitored as part of a resource discovery"
+  },
+  {
+    "action": "GetIpamPoolAllocations",
+    "description": "Grants permission to get a list of all the CIDR allocations in an Amazon VPC IP Address Manager (IPAM) pool"
+  },
+  {
+    "action": "GetIpamPoolCidrs",
+    "description": "Grants permission to get the CIDRs provisioned to an Amazon VPC IP Address Manager (IPAM) pool"
+  },
+  {
+    "action": "GetIpamResourceCidrs",
+    "description": "Grants permission to get information about the resources in an Amazon VPC IP Address Manager (IPAM) scope"
+  },
+  {
+    "action": "ipam-pool",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "GetLaunchTemplateData",
+    "description": "Grants permission to get the configuration data of the specified instance for use with a new launch template or launch template version"
+  },
+  {
+    "action": "GetManagedPrefixListAssociations",
+    "description": "Grants permission to get information about the resources that are associated with the specified managed prefix list"
+  },
+  {
+    "action": "GetManagedPrefixListEntries",
+    "description": "Grants permission to get information about the entries for a specified managed prefix list"
+  },
+  {
+    "action": "GetNetworkInsightsAccessScopeAnalysisFindings",
+    "description": "Grants permission to get the findings for one or more Network Access Scope analyses"
+  },
+  {
+    "action": "GetNetworkInsightsAccessScopeContent",
+    "description": "Grants permission to get the content for a specified Network Access Scope"
+  },
+  {
+    "action": "GetPasswordData",
+    "description": "Grants permission to retrieve the encrypted administrator password for a running Windows instance"
+  },
+  {
+    "action": "GetReservedInstancesExchangeQuote",
+    "description": "Grants permission to return a quote and exchange information for exchanging one or more Convertible Reserved Instances for a new Convertible Reserved Instance"
+  },
+  {
+    "action": "GetResourcePolicy[permission only]",
+    "description": "Grants permission to describe an IAM policy that enables cross-account sharing"
+  },
+  {
+    "action": "placement-group",
+    "description": "aws:ResourceTag/${TagKey}ec2:PlacementGroupNameec2:PlacementGroupStrategyec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "verified-access-group",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "GetRouteServerAssociations",
+    "description": "Grants permission to get associations for a route server"
+  },
+  {
+    "action": "GetRouteServerPropagations",
+    "description": "Grants permission to get propagations for a route server"
+  },
+  {
+    "action": "route-table",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:RouteTableIDec2:Vpc"
+  },
+  {
+    "action": "GetRouteServerRoutingDatabase",
+    "description": "Grants permission to get the routing database for a route server"
+  },
+  {
+    "action": "GetSecurityGroupsForVpc",
+    "description": "Grants permission to retrieve a list of security groups for a specified VPC"
+  },
+  {
+    "action": "GetSerialConsoleAccessStatus",
+    "description": "Grants permission to retrieve the access status of your account to the EC2 serial console of all instances"
+  },
+  {
+    "action": "GetSnapshotBlockPublicAccessState",
+    "description": "Grants permission to retrieve the current state of the block public access for snapshots setting for a Region"
+  },
+  {
+    "action": "GetSpotPlacementScores",
+    "description": "Grants permission to calculate the Spot placement score for a Region or Availability Zone based on the specified target capacity and compute requirements"
+  },
+  {
+    "action": "GetSubnetCidrReservations",
+    "description": "Grants permission to retrieve information about the subnet CIDR reservations"
+  },
+  {
+    "action": "GetTransitGatewayAttachmentPropagations",
+    "description": "Grants permission to list the route tables to which a resource attachment propagates routes"
+  },
+  {
+    "action": "GetTransitGatewayMulticastDomainAssociations",
+    "description": "Grants permission to get information about the associations for a transit gateway multicast domain"
+  },
+  {
+    "action": "GetTransitGatewayPolicyTableAssociations",
+    "description": "Grants permission to get information about associations for a transit gateway policy table"
+  },
+  {
+    "action": "GetTransitGatewayPolicyTableEntries",
+    "description": "Grants permission to get information about associations for a transit gateway policy table entry"
+  },
+  {
+    "action": "GetTransitGatewayPrefixListReferences",
+    "description": "Grants permission to get information about prefix list references for a transit gateway route table"
+  },
+  {
+    "action": "GetTransitGatewayRouteTableAssociations",
+    "description": "Grants permission to get information about associations for a transit gateway route table"
+  },
+  {
+    "action": "GetTransitGatewayRouteTablePropagations",
+    "description": "Grants permission to get information about the route table propagations for a transit gateway route table"
+  },
+  {
+    "action": "GetVerifiedAccessEndpointPolicy",
+    "description": "Grants permission to show the Verified Access policy associated with the endpoint"
+  },
+  {
+    "action": "GetVerifiedAccessEndpointTargets",
+    "description": "Grants permission to get verified access endpoint targets"
+  },
+  {
+    "action": "GetVerifiedAccessGroupPolicy",
+    "description": "Grants permission to show the contents of the Verified Access policy associated with the group"
+  },
+  {
+    "action": "GetVerifiedAccessInstanceWebAcl[permission only]",
+    "description": "Grants permission to show the AWS Web Application Firewall (WAF) web access control list (ACL) for a Verified Access instance"
+  },
+  {
+    "action": "GetVpnConnectionDeviceSampleConfiguration",
+    "description": "Grants permission to download an AWS-provided sample configuration file to be used with the customer gateway device"
+  },
+  {
+    "action": "GetVpnConnectionDeviceTypes",
+    "description": "Grants permission to obtain a list of customer gateway devices for which sample configuration files can be provided"
+  },
+  {
+    "action": "GetVpnTunnelReplacementStatus",
+    "description": "Grants permission to view available tunnel endpoint maintenance events"
+  },
+  {
+    "action": "ImportByoipCidrToIpam[permission only]",
+    "description": "Grants permission to transfer existing BYOIP IPv4 CIDRs to IPAM"
+  },
+  {
+    "action": "ImportClientVpnClientCertificateRevocationList",
+    "description": "Grants permission to upload a client certificate revocation list to a Client VPN endpoint"
+  },
+  {
+    "action": "ImportImage",
+    "description": "Grants permission to import single or multi-volume disk images or EBS snapshots into an Amazon Machine Image (AMI)"
+  },
+  {
+    "action": "import-image-task*",
+    "description": "aws:RequestTag/${TagKey}aws:TagKeys"
+  },
+  {
+    "action": "snapshot",
+    "description": "aws:ResourceTag/${TagKey}ec2:Ownerec2:ParentVolumeec2:ResourceTag/${TagKey}ec2:SnapshotIDec2:SnapshotTimeec2:VolumeSize"
+  },
+  {
+    "action": "ImportInstance",
+    "description": "Grants permission to create an import instance task using metadata from a disk image"
+  },
+  {
+    "action": "volume*",
+    "description": "aws:ResourceTag/${TagKey}ec2:AvailabilityZoneec2:Encryptedec2:ManagedResourceOperatorec2:ParentSnapshotec2:ResourceTag/${TagKey}ec2:VolumeIDec2:VolumeIopsec2:VolumeSizeec2:VolumeThroughputec2:VolumeType"
+  },
+  {
+    "action": "security-group",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:SecurityGroupIDec2:Vpc"
+  },
+  {
+    "action": "subnet",
+    "description": "aws:ResourceTag/${TagKey}ec2:AvailabilityZoneec2:ResourceTag/${TagKey}ec2:SubnetIDec2:Vpc"
+  },
+  {
+    "action": "ImportKeyPair",
+    "description": "Grants permission to import a public key from an RSA key pair that was created with a third-party tool"
+  },
+  {
+    "action": "ImportSnapshot",
+    "description": "Grants permission to import a disk into an EBS snapshot"
+  },
+  {
+    "action": "snapshot*",
+    "description": "aws:RequestTag/${TagKey}aws:TagKeysec2:Ownerec2:ParentVolumeec2:SnapshotIDec2:SnapshotTimeec2:VolumeSize"
+  },
+  {
+    "action": "ImportVolume",
+    "description": "Grants permission to create an import volume task using metadata from a disk image"
+  },
+  {
+    "action": "InjectApiError[permission only]",
+    "description": "Grants permission to temporarily inject errors for target API requests"
+  },
+  {
+    "action": "ListImagesInRecycleBin",
+    "description": "Grants permission to list Amazon Machine Images (AMIs) that are currently in the Recycle Bin"
+  },
+  {
+    "action": "ListSnapshotsInRecycleBin",
+    "description": "Grants permission to list the Amazon EBS snapshots that are currently in the Recycle Bin"
+  },
+  {
+    "action": "LockSnapshot",
+    "description": "Grants permission to lock an Amazon EBS snapshot in either governance or compliance mode to protect it against accidental or malicious deletions"
+  },
+  {
+    "action": "ModifyAddressAttribute",
+    "description": "Grants permission to modify an attribute of the specified Elastic IP address"
+  },
+  {
+    "action": "ModifyAvailabilityZoneGroup",
+    "description": "Grants permission to modify the opt-in status of the Local Zone and Wavelength Zone group for your account"
+  },
+  {
+    "action": "ModifyCapacityReservation",
+    "description": "Grants permission to modify a Capacity Reservation's capacity and the conditions under which it is to be released"
+  },
+  {
+    "action": "ModifyCapacityReservationFleet",
+    "description": "Grants permission to modify a Capacity Reservation Fleet"
+  },
+  {
+    "action": "ModifyClientVpnEndpoint",
+    "description": "Grants permission to modify a Client VPN endpoint"
+  },
+  {
+    "action": "security-group",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:SecurityGroupIDec2:Vpc"
+  },
+  {
+    "action": "vpc",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:Tenancyec2:VpcID"
+  },
+  {
+    "action": "ModifyDefaultCreditSpecification",
+    "description": "Grants permission to change the account level default credit option for CPU usage of burstable performance instances"
+  },
+  {
+    "action": "ModifyEbsDefaultKmsKeyId",
+    "description": "Grants permission to change the default customer master key (CMK) for EBS encryption by default for your account"
+  },
+  {
+    "action": "ModifyFleet",
+    "description": "Grants permission to modify an EC2 Fleet"
+  },
+  {
+    "action": "image",
+    "description": "aws:ResourceTag/${TagKey}ec2:ImageIDec2:ImageTypeec2:Ownerec2:Publicec2:ResourceTag/${TagKey}ec2:RootDeviceType"
+  },
+  {
+    "action": "launch-template",
+    "description": "aws:ResourceTag/${TagKey}ec2:ManagedResourceOperatorec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "subnet",
+    "description": "aws:ResourceTag/${TagKey}ec2:AvailabilityZoneec2:AvailabilityZoneIdec2:ResourceTag/${TagKey}ec2:SubnetIDec2:Vpc"
+  },
+  {
+    "action": "ModifyFpgaImageAttribute",
+    "description": "Grants permission to modify an attribute of an Amazon FPGA Image (AFI)"
+  },
+  {
+    "action": "ModifyHosts",
+    "description": "Grants permission to modify a Dedicated Host"
+  },
+  {
+    "action": "ModifyIdFormat",
+    "description": "Grants permission to modify the ID format for a resource"
+  },
+  {
+    "action": "ModifyIdentityIdFormat",
+    "description": "Grants permission to modify the ID format of a resource for a specific principal in your account"
+  },
+  {
+    "action": "ModifyImageAttribute",
+    "description": "Grants permission to modify an attribute of an Amazon Machine Image (AMI)"
+  },
+  {
+    "action": "ModifyInstanceAttribute",
+    "description": "Grants permission to modify an attribute of an instance"
+  },
+  {
+    "action": "security-group",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:SecurityGroupIDec2:Vpc"
+  },
+  {
+    "action": "volume",
+    "description": "aws:ResourceTag/${TagKey}ec2:AvailabilityZoneec2:AvailabilityZoneIdec2:Encryptedec2:ManagedResourceOperatorec2:ParentSnapshotec2:ResourceTag/${TagKey}ec2:VolumeIDec2:VolumeInitializationRateec2:VolumeIopsec2:VolumeSizeec2:VolumeThroughputec2:VolumeType"
+  },
+  {
+    "action": "ModifyInstanceCapacityReservationAttributes",
+    "description": "Grants permission to modify the Capacity Reservation settings for a stopped instance"
+  },
+  {
+    "action": "capacity-reservation",
+    "description": "aws:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "ModifyInstanceConnectEndpoint",
+    "description": "Grants permission to modify an existing EC2 Instance Connect Endpoint"
+  },
+  {
+    "action": "security-group",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:SecurityGroupIDec2:Vpc"
+  },
+  {
+    "action": "ModifyInstanceCpuOptions",
+    "description": "Grants permission to modify the CPU options on an instance"
+  },
+  {
+    "action": "ModifyInstanceCreditSpecification",
+    "description": "Grants permission to modify the credit option for CPU usage on an instance"
+  },
+  {
+    "action": "ModifyInstanceEventStartTime",
+    "description": "Grants permission to modify the start time for a scheduled EC2 instance event"
+  },
+  {
+    "action": "ModifyInstanceEventWindow",
+    "description": "Grants permission to modify the specified event window"
+  },
+  {
+    "action": "ModifyInstanceMaintenanceOptions",
+    "description": "Grants permission to modify the recovery behaviour for an instance"
+  },
+  {
+    "action": "ModifyInstanceMetadataDefaults",
+    "description": "Grants permission to modify the default instance metadata service (IMDS) settings for your account in the specified Region"
+  },
+  {
+    "action": "ModifyInstanceMetadataOptions",
+    "description": "Grants permission to modify the metadata options for an instance"
+  },
+  {
+    "action": "ModifyInstanceNetworkPerformanceOptions",
+    "description": "Grants permission to modify the network performance options for an instance"
+  },
+  {
+    "action": "ModifyInstancePlacement",
+    "description": "Grants permission to modify the placement attributes for an instance"
+  },
+  {
+    "action": "dedicated-host",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "placement-group",
+    "description": "aws:ResourceTag/${TagKey}ec2:PlacementGroupNameec2:PlacementGroupStrategyec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "ModifyIpam",
+    "description": "Grants permission to modify the configurations of an Amazon VPC IP Address Manager (IPAM)"
+  },
+  {
+    "action": "ModifyIpamPool",
+    "description": "Grants permission to modify the configurations of an Amazon VPC IP Address Manager (IPAM) pool"
+  },
+  {
+    "action": "ModifyIpamResourceCidr",
+    "description": "Grants permission to modify the configurations of an Amazon VPC IP Address Manager (IPAM) resource CIDR"
+  },
+  {
+    "action": "ModifyIpamResourceDiscovery",
+    "description": "Grants permission to modify a resource discovery"
+  },
+  {
+    "action": "ModifyIpamScope",
+    "description": "Grants permission to modify the configurations of an Amazon VPC IP Address Manager (IPAM) scope"
+  },
+  {
+    "action": "ModifyLaunchTemplate",
+    "description": "Grants permission to modify a launch template"
+  },
+  {
+    "action": "ModifyLocalGatewayRoute",
+    "description": "Grants permission to modify a local gateway route"
+  },
+  {
+    "action": "local-gateway-virtual-interface-group",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "network-interface",
+    "description": "aws:ResourceTag/${TagKey}ec2:AuthorizedUserec2:AvailabilityZoneec2:ManagedResourceOperatorec2:NetworkInterfaceIDec2:Permissionec2:ResourceTag/${TagKey}ec2:Subnetec2:Vpc"
+  },
+  {
+    "action": "prefix-list",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "ModifyManagedPrefixList",
+    "description": "Grants permission to modify a managed prefix list"
+  },
+  {
+    "action": "ModifyNetworkInterfaceAttribute",
+    "description": "Grants permission to modify an attribute of a network interface"
+  },
+  {
+    "action": "instance",
+    "description": "aws:ResourceTag/${TagKey}ec2:AvailabilityZoneec2:AvailabilityZoneIdec2:CpuOptionsAmdSevSnpec2:EbsOptimizedec2:InstanceAutoRecoveryec2:InstanceBandwidthWeightingec2:InstanceIDec2:InstanceMarketTypeec2:InstanceMetadataTagsec2:InstanceProfileec2:InstanceTypeec2:ManagedResourceOperatorec2:MetadataHttpEndpointec2:MetadataHttpPutResponseHopLimitec2:MetadataHttpTokensec2:PlacementGroupec2:ProductCodeec2:ResourceTag/${TagKey}ec2:RootDeviceTypeec2:Tenancy"
+  },
+  {
+    "action": "security-group",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:SecurityGroupIDec2:Vpc"
+  },
+  {
+    "action": "subnet",
+    "description": "aws:ResourceTag/${TagKey}ec2:AvailabilityZoneec2:AvailabilityZoneIdec2:ResourceTag/${TagKey}ec2:Vpc"
+  },
+  {
+    "action": "ModifyPrivateDnsNameOptions",
+    "description": "Grants permission to modify the options for instance hostnames for the specified instance"
+  },
+  {
+    "action": "ModifyPublicIpDnsNameOptions",
+    "description": "Grants permission to modify public hostname options for a network interface"
+  },
+  {
+    "action": "ModifyReservedInstances",
+    "description": "Grants permission to modify attributes of one or more Reserved Instances"
+  },
+  {
+    "action": "ModifyRouteServer",
+    "description": "Grants permission to modify a route server"
+  },
+  {
+    "action": "ModifySecurityGroupRules",
+    "description": "Grants permission to modify the rules of a security group"
+  },
+  {
+    "action": "security-group-rule*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "prefix-list",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "ModifySnapshotAttribute",
+    "description": "Grants permission to add or remove permission settings for a snapshot"
+  },
+  {
+    "action": "ModifySnapshotTier",
+    "description": "Grants permission to archive Amazon EBS snapshots"
+  },
+  {
+    "action": "ModifySpotFleetRequest",
+    "description": "Grants permission to modify a Spot Fleet request"
+  },
+  {
+    "action": "launch-template",
+    "description": "aws:ResourceTag/${TagKey}ec2:ManagedResourceOperatorec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "subnet",
+    "description": "aws:ResourceTag/${TagKey}ec2:AvailabilityZoneec2:AvailabilityZoneIdec2:ResourceTag/${TagKey}ec2:SubnetIDec2:Vpc"
+  },
+  {
+    "action": "ModifySubnetAttribute",
+    "description": "Grants permission to modify an attribute of a subnet"
+  },
+  {
+    "action": "ModifyTrafficMirrorFilterNetworkServices",
+    "description": "Grants permission to allow or restrict mirroring network services"
+  },
+  {
+    "action": "ModifyTrafficMirrorFilterRule",
+    "description": "Grants permission to modify a traffic mirror rule"
+  },
+  {
+    "action": "traffic-mirror-filter-rule*",
+    "description": "aws:ResourceTag/${TagKey}ec2:Attributeec2:Attribute/${AttributeName}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "ModifyTrafficMirrorSession",
+    "description": "Grants permission to modify a traffic mirror session"
+  },
+  {
+    "action": "traffic-mirror-filter",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "traffic-mirror-target",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "ModifyTransitGateway",
+    "description": "Grants permission to modify a transit gateway"
+  },
+  {
+    "action": "transit-gateway-route-table",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:transitGatewayRouteTableId"
+  },
+  {
+    "action": "ModifyTransitGatewayPrefixListReference",
+    "description": "Grants permission to modify a transit gateway prefix list reference"
+  },
+  {
+    "action": "transit-gateway-route-table*",
+    "description": "aws:ResourceTag/${TagKey}ec2:Attributeec2:Attribute/${AttributeName}ec2:ResourceTag/${TagKey}ec2:transitGatewayRouteTableId"
+  },
+  {
+    "action": "transit-gateway-attachment",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:transitGatewayAttachmentId"
+  },
+  {
+    "action": "ModifyTransitGatewayVpcAttachment",
+    "description": "Grants permission to modify a VPC attachment on a transit gateway"
+  },
+  {
+    "action": "subnet",
+    "description": "aws:ResourceTag/${TagKey}ec2:AvailabilityZoneec2:AvailabilityZoneIdec2:ResourceTag/${TagKey}ec2:SubnetIDec2:Vpc"
+  },
+  {
+    "action": "ModifyVerifiedAccessEndpoint",
+    "description": "Grants permission to modify the configuration of a Verified Access endpoint"
+  },
+  {
+    "action": "subnet",
+    "description": "aws:ResourceTag/${TagKey}ec2:AvailabilityZoneec2:AvailabilityZoneIdec2:ResourceTag/${TagKey}ec2:SubnetIDec2:Vpc"
+  },
+  {
+    "action": "verified-access-group",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "ModifyVerifiedAccessEndpointPolicy",
+    "description": "Grants permission to modify the specified Verified Access endpoint policy"
+  },
+  {
+    "action": "ModifyVerifiedAccessGroup",
+    "description": "Grants permission to modify the specified Verified Access Group configuration"
+  },
+  {
+    "action": "verified-access-instance",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "ModifyVerifiedAccessGroupPolicy",
+    "description": "Grants permission to modify the specified Verified Access group policy"
+  },
+  {
+    "action": "ModifyVerifiedAccessInstance",
+    "description": "Grants permission to modify the configuration of the specified Verified Access instance"
+  },
+  {
+    "action": "ModifyVerifiedAccessInstanceLoggingConfiguration",
+    "description": "Grants permission to modify the logging configuration for the specified Verified Access instance"
+  },
+  {
+    "action": "ModifyVerifiedAccessTrustProvider",
+    "description": "Grants permission to modify the configuration of the specified Verified Access trust provider"
+  },
+  {
+    "action": "ModifyVolume",
+    "description": "Grants permission to modify the parameters of an EBS volume"
+  },
+  {
+    "action": "ModifyVolumeAttribute",
+    "description": "Grants permission to modify an attribute of a volume"
+  },
+  {
+    "action": "ModifyVpcAttribute",
+    "description": "Grants permission to modify an attribute of a VPC"
+  },
+  {
+    "action": "ModifyVpcBlockPublicAccessExclusion",
+    "description": "Grants permission to modify an exclusion list for blocked public access on a VPC"
+  },
+  {
+    "action": "ModifyVpcBlockPublicAccessOptions",
+    "description": "Grants permission to modify options for blocked public access on a VPC"
+  },
+  {
+    "action": "ModifyVpcEndpoint",
+    "description": "Grants permission to modify an attribute of a VPC endpoint"
+  },
+  {
+    "action": "route-table",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:RouteTableID"
+  },
+  {
+    "action": "security-group",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:SecurityGroupIDec2:Vpc"
+  },
+  {
+    "action": "subnet",
+    "description": "aws:ResourceTag/${TagKey}ec2:AvailabilityZoneec2:AvailabilityZoneIdec2:ResourceTag/${TagKey}ec2:SubnetIDec2:Vpc"
+  },
+  {
+    "action": "ModifyVpcEndpointConnectionNotification",
+    "description": "Grants permission to modify a connection notification for a VPC endpoint or VPC endpoint service"
+  },
+  {
+    "action": "vpc-endpoint-service",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:vpceMultiRegionec2:vpceSupportedRegion"
+  },
+  {
+    "action": "ModifyVpcEndpointServiceConfiguration",
+    "description": "Grants permission to modify the attributes of a VPC endpoint service configuration"
+  },
+  {
+    "action": "ModifyVpcEndpointServicePayerResponsibility",
+    "description": "Grants permission to modify the payer responsibility for a VPC endpoint service"
+  },
+  {
+    "action": "ModifyVpcEndpointServicePermissions",
+    "description": "Grants permission to modify the permissions for a VPC endpoint service"
+  },
+  {
+    "action": "ModifyVpcPeeringConnectionOptions",
+    "description": "Grants permission to modify the VPC peering connection options on one side of a VPC peering connection"
+  },
+  {
+    "action": "ModifyVpcTenancy",
+    "description": "Grants permission to modify the instance tenancy attribute of a VPC"
+  },
+  {
+    "action": "ModifyVpnConnection",
+    "description": "Grants permission to modify the target gateway of a Site-to-Site VPN connection"
+  },
+  {
+    "action": "ModifyVpnConnectionOptions",
+    "description": "Grants permission to modify the connection options for your Site-to-Site VPN connection"
+  },
+  {
+    "action": "ModifyVpnTunnelCertificate",
+    "description": "Grants permission to modify the certificate for a Site-to-Site VPN connection"
+  },
+  {
+    "action": "ModifyVpnTunnelOptions",
+    "description": "Grants permission to modify the options for a Site-to-Site VPN connection"
+  },
+  {
+    "action": "MonitorInstances",
+    "description": "Grants permission to enable detailed monitoring for a running instance"
+  },
+  {
+    "action": "MoveAddressToVpc",
+    "description": "Grants permission to move an Elastic IP address from the EC2-Classic platform to the EC2-VPC platform"
+  },
+  {
+    "action": "MoveByoipCidrToIpam",
+    "description": "Grants permission to move a BYOIP IPv4 CIDR to Amazon VPC IP Address Manager (IPAM) from a public IPv4 pool"
+  },
+  {
+    "action": "MoveCapacityReservationInstances",
+    "description": "Grants permission to move available capacity from a source Capacity Reservation to a destination Capacity Reservation"
+  },
+  {
+    "action": "PauseVolumeIO[permission only]",
+    "description": "Grants permission to temporarily pause I/O operations for a target Amazon EBS volume"
+  },
+  {
+    "action": "instance",
+    "description": "aws:ResourceTag/${TagKey}ec2:AvailabilityZoneec2:CpuOptionsAmdSevSnpec2:EbsOptimizedec2:InstanceAutoRecoveryec2:InstanceBandwidthWeightingec2:InstanceIDec2:InstanceMarketTypeec2:InstanceMetadataTagsec2:InstanceProfileec2:InstanceTypeec2:ManagedResourceOperatorec2:MetadataHttpEndpointec2:MetadataHttpPutResponseHopLimitec2:MetadataHttpTokensec2:ResourceTag/${TagKey}ec2:RootDeviceTypeec2:Tenancy"
+  },
+  {
+    "action": "ProvisionByoipCidr",
+    "description": "Grants permission to provision an address range for use in AWS through bring your own IP addresses (BYOIP), and to create a corresponding address pool"
+  },
+  {
+    "action": "ProvisionIpamByoasn",
+    "description": "Grants permission to provision an Autonomous System Number (ASN) for use in an Amazon Web Services account"
+  },
+  {
+    "action": "ProvisionIpamPoolCidr",
+    "description": "Grants permission to provision a CIDR to an Amazon VPC IP Address Manager (IPAM) pool"
+  },
+  {
+    "action": "ipam-external-resource-verification-token",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "ProvisionPublicIpv4PoolCidr",
+    "description": "Grants permission to provision a CIDR to a public IPv4 pool"
+  },
+  {
+    "action": "ipv4pool-ec2*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "PurchaseCapacityBlock",
+    "description": "Grants permission to purchase a Capacity Block offering"
+  },
+  {
+    "action": "PurchaseCapacityBlockExtension",
+    "description": "Grants permission to purchase a Capacity Block extension"
+  },
+  {
+    "action": "PurchaseHostReservation",
+    "description": "Grants permission to purchase a reservation with configurations that match those of a Dedicated Host"
+  },
+  {
+    "action": "PurchaseReservedInstancesOffering",
+    "description": "Grants permission to purchase a Reserved Instance offering"
+  },
+  {
+    "action": "PurchaseScheduledInstances",
+    "description": "Grants permission to purchase one or more Scheduled Instances with a specified schedule"
+  },
+  {
+    "action": "PutResourcePolicy[permission only]",
+    "description": "Grants permission to attach an IAM policy that enables cross-account sharing to a resource"
+  },
+  {
+    "action": "placement-group",
+    "description": "aws:ResourceTag/${TagKey}ec2:PlacementGroupNameec2:PlacementGroupStrategyec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "verified-access-group",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "RebootInstances",
+    "description": "Grants permission to request a reboot of one or more instances"
+  },
+  {
+    "action": "RegisterImage",
+    "description": "Grants permission to register an Amazon Machine Image (AMI)"
+  },
+  {
+    "action": "snapshot",
+    "description": "aws:ResourceTag/${TagKey}ec2:OutpostArnec2:Ownerec2:ParentVolumeec2:ResourceTag/${TagKey}ec2:SnapshotIDec2:SnapshotTimeec2:SourceOutpostArnec2:VolumeSize"
+  },
+  {
+    "action": "RegisterInstanceEventNotificationAttributes",
+    "description": "Grants permission to add tags to the set of tags to include in notifications about scheduled events for your instances"
+  },
+  {
+    "action": "RegisterTransitGatewayMulticastGroupMembers",
+    "description": "Grants permission to register one or more network interfaces as a member of a group IP address in a transit gateway multicast domain"
+  },
+  {
+    "action": "transit-gateway-multicast-domain*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:transitGatewayMulticastDomainId"
+  },
+  {
+    "action": "RegisterTransitGatewayMulticastGroupSources",
+    "description": "Grants permission to register one or more network interfaces as a source of a group IP address in a transit gateway multicast domain"
+  },
+  {
+    "action": "transit-gateway-multicast-domain*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:transitGatewayMulticastDomainId"
+  },
+  {
+    "action": "RejectCapacityReservationBillingOwnership",
+    "description": "Grants permission to reject a request to assign billing of the available capacity of a shared Capacity Reservation to your account"
+  },
+  {
+    "action": "RejectTransitGatewayMulticastDomainAssociations",
+    "description": "Grants permission to reject requests to associate cross-account subnets with a transit gateway multicast domain"
+  },
+  {
+    "action": "transit-gateway-multicast-domain",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:transitGatewayMulticastDomainId"
+  },
+  {
+    "action": "RejectTransitGatewayPeeringAttachment",
+    "description": "Grants permission to reject a transit gateway peering attachment request"
+  },
+  {
+    "action": "RejectTransitGatewayVpcAttachment",
+    "description": "Grants permission to reject a request to attach a VPC to a transit gateway"
+  },
+  {
+    "action": "RejectVpcEndpointConnections",
+    "description": "Grants permission to reject one or more VPC endpoint connection requests to a VPC endpoint service"
+  },
+  {
+    "action": "RejectVpcPeeringConnection",
+    "description": "Grants permission to reject a VPC peering connection request"
+  },
+  {
+    "action": "ReleaseAddress",
+    "description": "Grants permission to release an Elastic IP address"
+  },
+  {
+    "action": "ReleaseHosts",
+    "description": "Grants permission to release one or more On-Demand Dedicated Hosts"
+  },
+  {
+    "action": "ReleaseIpamPoolAllocation",
+    "description": "Grants permission to release an allocation within an Amazon VPC IP Address Manager (IPAM) pool"
+  },
+  {
+    "action": "ReplaceIamInstanceProfileAssociation",
+    "description": "Grants permission to replace an IAM instance profile for an instance"
+  },
+  {
+    "action": "ReplaceImageCriteriaInAllowedImagesSettings",
+    "description": "Grants permission to replace image criteria in allowed images settings"
+  },
+  {
+    "action": "ReplaceNetworkAclAssociation",
+    "description": "Grants permission to change which network ACL a subnet is associated with"
+  },
+  {
+    "action": "subnet*",
+    "description": "aws:ResourceTag/${TagKey}ec2:AvailabilityZoneec2:AvailabilityZoneIdec2:ResourceTag/${TagKey}ec2:SubnetIDec2:Vpc"
+  },
+  {
+    "action": "ReplaceNetworkAclEntry",
+    "description": "Grants permission to replace an entry (rule) in a network ACL"
+  },
+  {
+    "action": "ReplaceRoute",
+    "description": "Grants permission to replace a route within a route table in a VPC"
+  },
+  {
+    "action": "ReplaceRouteTableAssociation",
+    "description": "Grants permission to change the route table that is associated with a subnet"
+  },
+  {
+    "action": "internet-gateway",
+    "description": "aws:ResourceTag/${TagKey}ec2:InternetGatewayIDec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "ipv4pool-ec2",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "ipv6pool-ec2",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "subnet",
+    "description": "aws:ResourceTag/${TagKey}ec2:AvailabilityZoneec2:AvailabilityZoneIdec2:ResourceTag/${TagKey}ec2:SubnetIDec2:Vpc"
+  },
+  {
+    "action": "vpn-gateway",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "ReplaceTransitGatewayRoute",
+    "description": "Grants permission to replace a route in a transit gateway route table"
+  },
+  {
+    "action": "transit-gateway-attachment",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:transitGatewayAttachmentId"
+  },
+  {
+    "action": "ReplaceVpnTunnel",
+    "description": "Grants permission to replace a VPN tunnel"
+  },
+  {
+    "action": "ReportInstanceStatus",
+    "description": "Grants permission to submit feedback about the status of an instance"
+  },
+  {
+    "action": "RequestSpotFleet",
+    "description": "Grants permission to create a Spot Fleet request"
+  },
+  {
+    "action": "image",
+    "description": "aws:ResourceTag/${TagKey}ec2:ImageIDec2:ImageTypeec2:Ownerec2:Publicec2:ResourceTag/${TagKey}ec2:RootDeviceType"
+  },
+  {
+    "action": "key-pair",
+    "description": "aws:ResourceTag/${TagKey}ec2:KeyPairNameec2:KeyPairTypeec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "launch-template",
+    "description": "aws:ResourceTag/${TagKey}ec2:ManagedResourceOperatorec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "placement-group",
+    "description": "aws:ResourceTag/${TagKey}ec2:PlacementGroupNameec2:PlacementGroupStrategyec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "security-group",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:SecurityGroupIDec2:Vpc"
+  },
+  {
+    "action": "snapshot",
+    "description": "aws:ResourceTag/${TagKey}ec2:OutpostArnec2:Ownerec2:ParentVolumeec2:ResourceTag/${TagKey}ec2:SnapshotIDec2:SnapshotTimeec2:SourceOutpostArnec2:VolumeSize"
+  },
+  {
+    "action": "subnet",
+    "description": "aws:ResourceTag/${TagKey}ec2:AvailabilityZoneec2:AvailabilityZoneIdec2:ResourceTag/${TagKey}ec2:SubnetIDec2:Vpc"
+  },
+  {
+    "action": "RequestSpotInstances",
+    "description": "Grants permission to create a Spot Instance request"
+  },
+  {
+    "action": "image",
+    "description": "aws:ResourceTag/${TagKey}ec2:ImageIDec2:ImageTypeec2:Ownerec2:Publicec2:ResourceTag/${TagKey}ec2:RootDeviceType"
+  },
+  {
+    "action": "key-pair",
+    "description": "aws:ResourceTag/${TagKey}ec2:KeyPairNameec2:KeyPairTypeec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "network-interface",
+    "description": "aws:ResourceTag/${TagKey}ec2:AuthorizedUserec2:AvailabilityZoneec2:ManagedResourceOperatorec2:NetworkInterfaceIDec2:Permissionec2:ResourceTag/${TagKey}ec2:Subnetec2:Vpc"
+  },
+  {
+    "action": "placement-group",
+    "description": "aws:ResourceTag/${TagKey}ec2:PlacementGroupNameec2:PlacementGroupStrategyec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "security-group",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}ec2:SecurityGroupIDec2:Vpc"
+  },
+  {
+    "action": "snapshot",
+    "description": "aws:ResourceTag/${TagKey}ec2:OutpostArnec2:Ownerec2:ParentVolumeec2:ResourceTag/${TagKey}ec2:SnapshotIDec2:SnapshotTimeec2:SourceOutpostArnec2:VolumeSize"
+  },
+  {
+    "action": "subnet",
+    "description": "aws:ResourceTag/${TagKey}ec2:AvailabilityZoneec2:AvailabilityZoneIdec2:ResourceTag/${TagKey}ec2:SubnetIDec2:Vpc"
+  },
+  {
+    "action": "ResetAddressAttribute",
+    "description": "Grants permission to reset the attribute of the specified IP address"
+  },
+  {
+    "action": "ResetEbsDefaultKmsKeyId",
+    "description": "Grants permission to reset the default customer master key (CMK) for EBS encryption for your account to use the AWS-managed CMK for EBS"
+  },
+  {
+    "action": "ResetFpgaImageAttribute",
+    "description": "Grants permission to reset an attribute of an Amazon FPGA Image (AFI) to its default value"
+  },
+  {
+    "action": "ResetImageAttribute",
+    "description": "Grants permission to reset an attribute of an Amazon Machine Image (AMI) to its default value"
+  },
+  {
+    "action": "ResetInstanceAttribute",
+    "description": "Grants permission to reset an attribute of an instance to its default value"
+  },
+  {
+    "action": "ResetNetworkInterfaceAttribute",
+    "description": "Grants permission to reset an attribute of a network interface"
+  },
+  {
+    "action": "ResetSnapshotAttribute",
+    "description": "Grants permission to reset permission settings for a snapshot"
+  },
+  {
+    "action": "RestoreAddressToClassic",
+    "description": "Grants permission to restore an Elastic IP address that was previously moved to the EC2-VPC platform back to the EC2-Classic platform"
+  },
+  {
+    "action": "RestoreImageFromRecycleBin",
+    "description": "Grants permission to restore an Amazon Machine Image (AMI) from the Recycle Bin"
+  },
+  {
+    "action": "RestoreManagedPrefixListVersion",
+    "description": "Grants permission to restore the entries from a previous version of a managed prefix list to a new version of the prefix list"
+  },
+  {
+    "action": "RestoreSnapshotFromRecycleBin",
+    "description": "Grants permission to restore an Amazon EBS snapshot from the Recycle Bin"
+  },
+  {
+    "action": "RestoreSnapshotTier",
+    "description": "Grants permission to restore an archived Amazon EBS snapshot for use temporarily or permanently, or modify the restore period or restore type for a snapshot that was previously temporarily restored"
+  },
+  {
+    "action": "RevokeClientVpnIngress",
+    "description": "Grants permission to remove an inbound authorization rule from a Client VPN endpoint"
+  },
+  {
+    "action": "RevokeSecurityGroupEgress",
+    "description": "Grants permission to remove one or more outbound rules from a VPC security group"
+  },
+  {
+    "action": "RevokeSecurityGroupIngress",
+    "description": "Grants permission to remove one or more inbound rules from a security group"
+  },
+  {
+    "action": "RunInstances",
+    "description": "Grants permission to launch one or more instances"
+  },
+  {
+    "action": "instance*",
+    "description": "aws:RequestTag/${TagKey}aws:TagKeysec2:AvailabilityZoneec2:AvailabilityZoneIdec2:CpuOptionsAmdSevSnpec2:EbsOptimizedec2:InstanceAutoRecoveryec2:InstanceBandwidthWeightingec2:InstanceIDec2:InstanceMarketTypeec2:InstanceMetadataTagsec2:InstanceProfileec2:InstanceTypeec2:IsLaunchTemplateResourceec2:LaunchTemplateec2:ManagedResourceOperatorec2:MetadataHttpEndpointec2:MetadataHttpPutResponseHopLimitec2:MetadataHttpTokensec2:PlacementGroupec2:ProductCodeec2:RootDeviceTypeec2:Tenancy"
+  },
+  {
+    "action": "network-interface*",
+    "description": "aws:RequestTag/${TagKey}aws:TagKeysec2:AssociatePublicIpAddressec2:AuthorizedServiceec2:AvailabilityZoneec2:IsLaunchTemplateResourceec2:LaunchTemplateec2:ManagedResourceOperatorec2:NetworkInterfaceIDec2:Subnetec2:Vpc"
+  },
+  {
+    "action": "security-group*",
+    "description": "aws:ResourceTag/${TagKey}ec2:IsLaunchTemplateResourceec2:LaunchTemplateec2:ResourceTag/${TagKey}ec2:SecurityGroupIDec2:Vpc"
+  },
+  {
+    "action": "subnet*",
+    "description": "aws:ResourceTag/${TagKey}ec2:AvailabilityZoneec2:AvailabilityZoneIdec2:IsLaunchTemplateResourceec2:LaunchTemplateec2:ResourceTag/${TagKey}ec2:SubnetIDec2:Vpc"
+  },
+  {
+    "action": "capacity-reservation",
+    "description": "aws:ResourceTag/${TagKey}ec2:IsLaunchTemplateResourceec2:LaunchTemplate"
+  },
+  {
+    "action": "elastic-gpu",
+    "description": "aws:ResourceTag/${TagKey}ec2:ElasticGpuTypeec2:IsLaunchTemplateResourceec2:LaunchTemplateec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "key-pair",
+    "description": "aws:ResourceTag/${TagKey}ec2:IsLaunchTemplateResourceec2:KeyPairNameec2:KeyPairTypeec2:LaunchTemplateec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "launch-template",
+    "description": "aws:ResourceTag/${TagKey}ec2:IsLaunchTemplateResourceec2:LaunchTemplateec2:ManagedResourceOperatorec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "placement-group",
+    "description": "aws:ResourceTag/${TagKey}ec2:IsLaunchTemplateResourceec2:LaunchTemplateec2:PlacementGroupNameec2:PlacementGroupStrategyec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "snapshot",
+    "description": "aws:ResourceTag/${TagKey}ec2:IsLaunchTemplateResourceec2:LaunchTemplateec2:Ownerec2:ParentVolumeec2:ResourceTag/${TagKey}ec2:SnapshotIDec2:SnapshotTimeec2:VolumeSize"
+  },
+  {
+    "action": "volume",
+    "description": "aws:RequestTag/${TagKey}aws:TagKeysec2:AvailabilityZoneec2:AvailabilityZoneIdec2:Encryptedec2:IsLaunchTemplateResourceec2:LaunchTemplateec2:ManagedResourceOperatorec2:ParentSnapshotec2:VolumeIDec2:VolumeInitializationRateec2:VolumeIopsec2:VolumeSizeec2:VolumeThroughputec2:VolumeType"
+  },
+  {
+    "action": "RunScheduledInstances",
+    "description": "Grants permission to launch one or more Scheduled Instances"
+  },
+  {
+    "action": "SearchLocalGatewayRoutes",
+    "description": "Grants permission to search for routes in a local gateway route table"
+  },
+  {
+    "action": "SearchTransitGatewayMulticastGroups",
+    "description": "Grants permission to search for groups, sources, and members in a transit gateway multicast domain"
+  },
+  {
+    "action": "SearchTransitGatewayRoutes",
+    "description": "Grants permission to search for routes in a transit gateway route table"
+  },
+  {
+    "action": "SendDiagnosticInterrupt",
+    "description": "Grants permission to send a diagnostic interrupt to an Amazon EC2 instance"
+  },
+  {
+    "action": "SendSpotInstanceInterruptions[permission only]",
+    "description": "Grants permission to interrupt a Spot Instance"
+  },
+  {
+    "action": "StartDeclarativePoliciesReport",
+    "description": "Grants permission to start a declarative policies report"
+  },
+  {
+    "action": "StartInstances",
+    "description": "Grants permission to start a stopped instance"
+  },
+  {
+    "action": "StartNetworkInsightsAccessScopeAnalysis",
+    "description": "Grants permission to start a Network Access Scope analysis"
+  },
+  {
+    "action": "network-insights-access-scope-analysis*",
+    "description": "aws:RequestTag/${TagKey}aws:TagKeys"
+  },
+  {
+    "action": "StartNetworkInsightsAnalysis",
+    "description": "Grants permission to start analyzing a specified path"
+  },
+  {
+    "action": "network-insights-path*",
+    "description": "aws:ResourceTag/${TagKey}ec2:ResourceTag/${TagKey}"
+  },
+  {
+    "action": "StartVpcEndpointServicePrivateDnsVerification",
+    "description": "Grants permission to start the private DNS verification process for a VPC endpoint service"
+  },
+  {
+    "action": "StopInstances",
+    "description": "Grants permission to stop an Amazon EBS-backed instance"
+  },
+  {
+    "action": "TerminateClientVpnConnections",
+    "description": "Grants permission to terminate active Client VPN endpoint connections"
+  },
+  {
+    "action": "TerminateInstances",
+    "description": "Grants permission to shut down one or more instances"
+  },
+  {
+    "action": "UnassignIpv6Addresses",
+    "description": "Grants permission to unassign one or more IPv6 addresses from a network interface"
+  },
+  {
+    "action": "UnassignPrivateIpAddresses",
+    "description": "Grants permission to unassign one or more secondary private IP addresses from a network interface"
+  },
+  {
+    "action": "UnassignPrivateNatGatewayAddress",
+    "description": "Grants permission to unassign secondary private IPv4 addresses from a private NAT gateway"
+  },
+  {
+    "action": "UnlockSnapshot",
+    "description": "Grants permission to unlock a snapshot that is locked in governance mode or in compliance mode while still in the cooling-off period"
+  },
+  {
+    "action": "UnmonitorInstances",
+    "description": "Grants permission to disable detailed monitoring for a running instance"
+  },
+  {
+    "action": "UpdateSecurityGroupRuleDescriptionsEgress",
+    "description": "Grants permission to update descriptions for one or more outbound rules in a VPC security group"
+  },
+  {
+    "action": "UpdateSecurityGroupRuleDescriptionsIngress",
+    "description": "Grants permission to update descriptions for one or more inbound rules in a security group"
+  },
+  {
+    "action": "WithdrawByoipCidr",
+    "description": "Grants permission to stop advertising an address range that was provisioned for use in AWS through bring your own IP addresses (BYOIP)"
+  }
+]

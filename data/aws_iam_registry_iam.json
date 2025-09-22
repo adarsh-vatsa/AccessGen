@@ -1,0 +1,3820 @@
+{
+  "iam": {
+    "service_name": "AWS Identity and Access Management",
+    "service_prefix": "iam",
+    "page_url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+    "version": "v1.3",
+    "actions": [
+      {
+        "action": "AddClientIDToOpenIDConnectProvider",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "oidc-provider",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 0
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 0
+        }
+      },
+      {
+        "action": "AddRoleToInstanceProfile",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "instance-profile",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 1
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 1
+        }
+      },
+      {
+        "action": "AddUserToGroup",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "group",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 2
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 2
+        }
+      },
+      {
+        "action": "AttachGroupPolicy",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "group",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 3
+            }
+          }
+        ],
+        "condition_keys": [
+          "iam:PolicyARN"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 3
+        }
+      },
+      {
+        "action": "AttachRolePolicy",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 4
+            }
+          }
+        ],
+        "condition_keys": [
+          "iam:PermissionsBoundary",
+          "iam:PolicyARN"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 4
+        }
+      },
+      {
+        "action": "AttachUserPolicy",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 5
+            }
+          }
+        ],
+        "condition_keys": [
+          "iam:PermissionsBoundary",
+          "iam:PolicyARN"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 5
+        }
+      },
+      {
+        "action": "ChangePassword",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 6
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 6
+        }
+      },
+      {
+        "action": "CreateAccessKey",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 7
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 7
+        }
+      },
+      {
+        "action": "CreateAccountAlias",
+        "access_level": "Write",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 8
+        }
+      },
+      {
+        "action": "CreateGroup",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "group",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 9
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 9
+        }
+      },
+      {
+        "action": "CreateInstanceProfile",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "instance-profile",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 10
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 10
+        }
+      },
+      {
+        "action": "CreateLoginProfile",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 11
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 11
+        }
+      },
+      {
+        "action": "CreateOpenIDConnectProvider",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "oidc-provider",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 12
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 12
+        }
+      },
+      {
+        "action": "CreatePolicy",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "policy",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 13
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 13
+        }
+      },
+      {
+        "action": "CreatePolicyVersion",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "policy",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 14
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 14
+        }
+      },
+      {
+        "action": "CreateRole",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 15
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "iam:PermissionsBoundary"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 15
+        }
+      },
+      {
+        "action": "CreateSAMLProvider",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "saml-provider",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 16
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 16
+        }
+      },
+      {
+        "action": "CreateServiceLinkedRole",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 17
+            }
+          }
+        ],
+        "condition_keys": [
+          "iam:AWSServiceName"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 17
+        }
+      },
+      {
+        "action": "CreateServiceSpecificCredential",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 18
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 18
+        }
+      },
+      {
+        "action": "CreateUser",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 19
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "iam:PermissionsBoundary"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 19
+        }
+      },
+      {
+        "action": "CreateVirtualMFADevice",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "mfa",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 20
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 20
+        }
+      },
+      {
+        "action": "DeactivateMFADevice",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 21
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 21
+        }
+      },
+      {
+        "action": "DeleteAccessKey",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 22
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 22
+        }
+      },
+      {
+        "action": "DeleteAccountAlias",
+        "access_level": "Write",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 23
+        }
+      },
+      {
+        "action": "DeleteAccountPasswordPolicy",
+        "access_level": "Permissions management",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 24
+        }
+      },
+      {
+        "action": "DeleteCloudFrontPublicKey",
+        "access_level": "Write",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 25
+        }
+      },
+      {
+        "action": "DeleteGroup",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "group",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 26
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 26
+        }
+      },
+      {
+        "action": "DeleteGroupPolicy",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "group",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 27
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 27
+        }
+      },
+      {
+        "action": "DeleteInstanceProfile",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "instance-profile",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 28
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 28
+        }
+      },
+      {
+        "action": "DeleteLoginProfile",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 29
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 29
+        }
+      },
+      {
+        "action": "DeleteOpenIDConnectProvider",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "oidc-provider",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 30
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 30
+        }
+      },
+      {
+        "action": "DeletePolicy",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "policy",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 31
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 31
+        }
+      },
+      {
+        "action": "DeletePolicyVersion",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "policy",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 32
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 32
+        }
+      },
+      {
+        "action": "DeleteRole",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 33
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 33
+        }
+      },
+      {
+        "action": "DeleteRolePermissionsBoundary",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 34
+            }
+          }
+        ],
+        "condition_keys": [
+          "iam:PermissionsBoundary"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 34
+        }
+      },
+      {
+        "action": "DeleteRolePolicy",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 35
+            }
+          }
+        ],
+        "condition_keys": [
+          "iam:PermissionsBoundary"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 35
+        }
+      },
+      {
+        "action": "DeleteSAMLProvider",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "saml-provider",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 36
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 36
+        }
+      },
+      {
+        "action": "DeleteServerCertificate",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "server-certificate",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 38
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 38
+        }
+      },
+      {
+        "action": "DeleteServiceLinkedRole",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 39
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 39
+        }
+      },
+      {
+        "action": "DeleteServiceSpecificCredential",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 40
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 40
+        }
+      },
+      {
+        "action": "DeleteSigningCertificate",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 41
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 41
+        }
+      },
+      {
+        "action": "DeleteSSHPublicKey",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 37
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 37
+        }
+      },
+      {
+        "action": "DeleteUser",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 42
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 42
+        }
+      },
+      {
+        "action": "DeleteUserPermissionsBoundary",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 43
+            }
+          }
+        ],
+        "condition_keys": [
+          "iam:PermissionsBoundary"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 43
+        }
+      },
+      {
+        "action": "DeleteUserPolicy",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 44
+            }
+          }
+        ],
+        "condition_keys": [
+          "iam:PermissionsBoundary"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 44
+        }
+      },
+      {
+        "action": "DeleteVirtualMFADevice",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "mfa",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 45
+            }
+          },
+          {
+            "type": "sms-mfa",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 45
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 45
+        }
+      },
+      {
+        "action": "DetachGroupPolicy",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "group",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 46
+            }
+          }
+        ],
+        "condition_keys": [
+          "iam:PolicyARN"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 46
+        }
+      },
+      {
+        "action": "DetachRolePolicy",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 47
+            }
+          }
+        ],
+        "condition_keys": [
+          "iam:PermissionsBoundary",
+          "iam:PolicyARN"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 47
+        }
+      },
+      {
+        "action": "DetachUserPolicy",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 48
+            }
+          }
+        ],
+        "condition_keys": [
+          "iam:PermissionsBoundary",
+          "iam:PolicyARN"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 48
+        }
+      },
+      {
+        "action": "DisableOrganizationsRootCredentialsManagement",
+        "access_level": "Write",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 49
+        }
+      },
+      {
+        "action": "DisableOrganizationsRootSessions",
+        "access_level": "Write",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 50
+        }
+      },
+      {
+        "action": "EnableMFADevice",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 51
+            }
+          }
+        ],
+        "condition_keys": [
+          "iam:FIDO-FIPS-140-2-certification",
+          "iam:FIDO-FIPS-140-3-certification",
+          "iam:FIDO-certification",
+          "iam:RegisterSecurityKey"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 51
+        }
+      },
+      {
+        "action": "EnableOrganizationsRootCredentialsManagement",
+        "access_level": "Write",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 52
+        }
+      },
+      {
+        "action": "EnableOrganizationsRootSessions",
+        "access_level": "Write",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 53
+        }
+      },
+      {
+        "action": "GenerateCredentialReport",
+        "access_level": "Read",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 54
+        }
+      },
+      {
+        "action": "GenerateOrganizationsAccessReport",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "access-report",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 55
+            }
+          }
+        ],
+        "condition_keys": [
+          "iam:OrganizationsPolicyId"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 55
+        }
+      },
+      {
+        "action": "GenerateServiceLastAccessedDetails",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "group",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 56
+            }
+          },
+          {
+            "type": "policy",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 56
+            }
+          },
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 56
+            }
+          },
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 56
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 56
+        }
+      },
+      {
+        "action": "GetAccessKeyLastUsed",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 57
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 57
+        }
+      },
+      {
+        "action": "GetAccountAuthorizationDetails",
+        "access_level": "Read",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 58
+        }
+      },
+      {
+        "action": "GetAccountEmailAddress",
+        "access_level": "Read",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 59
+        }
+      },
+      {
+        "action": "GetAccountName",
+        "access_level": "Read",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 60
+        }
+      },
+      {
+        "action": "GetAccountPasswordPolicy",
+        "access_level": "Read",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 61
+        }
+      },
+      {
+        "action": "GetAccountSummary",
+        "access_level": "List",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 62
+        }
+      },
+      {
+        "action": "GetCloudFrontPublicKey",
+        "access_level": "Read",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 63
+        }
+      },
+      {
+        "action": "GetContextKeysForCustomPolicy",
+        "access_level": "Read",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 64
+        }
+      },
+      {
+        "action": "GetContextKeysForPrincipalPolicy",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "group",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 65
+            }
+          },
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 65
+            }
+          },
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 65
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 65
+        }
+      },
+      {
+        "action": "GetCredentialReport",
+        "access_level": "Read",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 66
+        }
+      },
+      {
+        "action": "GetGroup",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "group",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 67
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 67
+        }
+      },
+      {
+        "action": "GetGroupPolicy",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "group",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 68
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 68
+        }
+      },
+      {
+        "action": "GetInstanceProfile",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "instance-profile",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 69
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 69
+        }
+      },
+      {
+        "action": "GetLoginProfile",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 70
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 70
+        }
+      },
+      {
+        "action": "GetMFADevice",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 71
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 71
+        }
+      },
+      {
+        "action": "GetOpenIDConnectProvider",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "oidc-provider",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 72
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 72
+        }
+      },
+      {
+        "action": "GetOrganizationsAccessReport",
+        "access_level": "Read",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 73
+        }
+      },
+      {
+        "action": "GetPolicy",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "policy",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 74
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 74
+        }
+      },
+      {
+        "action": "GetPolicyVersion",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "policy",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 75
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 75
+        }
+      },
+      {
+        "action": "GetRole",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 76
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 76
+        }
+      },
+      {
+        "action": "GetRolePolicy",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 77
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 77
+        }
+      },
+      {
+        "action": "GetSAMLProvider",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "saml-provider",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 78
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 78
+        }
+      },
+      {
+        "action": "GetServerCertificate",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "server-certificate",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 80
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 80
+        }
+      },
+      {
+        "action": "GetServiceLastAccessedDetails",
+        "access_level": "Read",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 81
+        }
+      },
+      {
+        "action": "GetServiceLastAccessedDetailsWithEntities",
+        "access_level": "Read",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 82
+        }
+      },
+      {
+        "action": "GetServiceLinkedRoleDeletionStatus",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 83
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 83
+        }
+      },
+      {
+        "action": "GetSSHPublicKey",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 79
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 79
+        }
+      },
+      {
+        "action": "GetUser",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 84
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 84
+        }
+      },
+      {
+        "action": "GetUserPolicy",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 85
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 85
+        }
+      },
+      {
+        "action": "ListAccessKeys",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 86
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 86
+        }
+      },
+      {
+        "action": "ListAccountAliases",
+        "access_level": "List",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 87
+        }
+      },
+      {
+        "action": "ListAttachedGroupPolicies",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "group",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 88
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 88
+        }
+      },
+      {
+        "action": "ListAttachedRolePolicies",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 89
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 89
+        }
+      },
+      {
+        "action": "ListAttachedUserPolicies",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 90
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 90
+        }
+      },
+      {
+        "action": "ListCloudFrontPublicKeys",
+        "access_level": "List",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 91
+        }
+      },
+      {
+        "action": "ListEntitiesForPolicy",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "policy",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 92
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 92
+        }
+      },
+      {
+        "action": "ListGroupPolicies",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "group",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 93
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 93
+        }
+      },
+      {
+        "action": "ListGroups",
+        "access_level": "List",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 94
+        }
+      },
+      {
+        "action": "ListGroupsForUser",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 95
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 95
+        }
+      },
+      {
+        "action": "ListInstanceProfiles",
+        "access_level": "List",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 97
+        }
+      },
+      {
+        "action": "ListInstanceProfilesForRole",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 98
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 98
+        }
+      },
+      {
+        "action": "ListInstanceProfileTags",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "instance-profile",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 96
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 96
+        }
+      },
+      {
+        "action": "ListMFADevices",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 100
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 100
+        }
+      },
+      {
+        "action": "ListMFADeviceTags",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "mfa",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 99
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 99
+        }
+      },
+      {
+        "action": "ListOpenIDConnectProviders",
+        "access_level": "List",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 102
+        }
+      },
+      {
+        "action": "ListOpenIDConnectProviderTags",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "oidc-provider",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 101
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 101
+        }
+      },
+      {
+        "action": "ListOrganizationsFeatures",
+        "access_level": "List",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 103
+        }
+      },
+      {
+        "action": "ListPolicies",
+        "access_level": "List",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 104
+        }
+      },
+      {
+        "action": "ListPoliciesGrantingServiceAccess",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "group",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 105
+            }
+          },
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 105
+            }
+          },
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 105
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 105
+        }
+      },
+      {
+        "action": "ListPolicyTags",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "policy",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 106
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 106
+        }
+      },
+      {
+        "action": "ListPolicyVersions",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "policy",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 107
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 107
+        }
+      },
+      {
+        "action": "ListRolePolicies",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 108
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 108
+        }
+      },
+      {
+        "action": "ListRoles",
+        "access_level": "List",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 110
+        }
+      },
+      {
+        "action": "ListRoleTags",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 109
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 109
+        }
+      },
+      {
+        "action": "ListSAMLProviders",
+        "access_level": "List",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 112
+        }
+      },
+      {
+        "action": "ListSAMLProviderTags",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "saml-provider",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 111
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 111
+        }
+      },
+      {
+        "action": "ListServerCertificates",
+        "access_level": "List",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 116
+        }
+      },
+      {
+        "action": "ListServerCertificateTags",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "server-certificate",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 115
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 115
+        }
+      },
+      {
+        "action": "ListServiceSpecificCredentials",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 117
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 117
+        }
+      },
+      {
+        "action": "ListSigningCertificates",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 118
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 118
+        }
+      },
+      {
+        "action": "ListSSHPublicKeys",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 113
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 113
+        }
+      },
+      {
+        "action": "ListSTSRegionalEndpointsStatus",
+        "access_level": "List",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 114
+        }
+      },
+      {
+        "action": "ListUserPolicies",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 119
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 119
+        }
+      },
+      {
+        "action": "ListUsers",
+        "access_level": "List",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 121
+        }
+      },
+      {
+        "action": "ListUserTags",
+        "access_level": "List",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 120
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 120
+        }
+      },
+      {
+        "action": "ListVirtualMFADevices",
+        "access_level": "List",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 122
+        }
+      },
+      {
+        "action": "PassRole",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 123
+            }
+          }
+        ],
+        "condition_keys": [
+          "iam:AssociatedResourceArn",
+          "iam:PassedToService"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 123
+        }
+      },
+      {
+        "action": "PutGroupPolicy",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "group",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 124
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 124
+        }
+      },
+      {
+        "action": "PutRolePermissionsBoundary",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 125
+            }
+          }
+        ],
+        "condition_keys": [
+          "iam:PermissionsBoundary"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 125
+        }
+      },
+      {
+        "action": "PutRolePolicy",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 126
+            }
+          }
+        ],
+        "condition_keys": [
+          "iam:PermissionsBoundary"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 126
+        }
+      },
+      {
+        "action": "PutUserPermissionsBoundary",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 127
+            }
+          }
+        ],
+        "condition_keys": [
+          "iam:PermissionsBoundary"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 127
+        }
+      },
+      {
+        "action": "PutUserPolicy",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 128
+            }
+          }
+        ],
+        "condition_keys": [
+          "iam:PermissionsBoundary"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 128
+        }
+      },
+      {
+        "action": "RemoveClientIDFromOpenIDConnectProvider",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "oidc-provider",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 129
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 129
+        }
+      },
+      {
+        "action": "RemoveRoleFromInstanceProfile",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "instance-profile",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 130
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 130
+        }
+      },
+      {
+        "action": "RemoveUserFromGroup",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "group",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 131
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 131
+        }
+      },
+      {
+        "action": "ResetServiceSpecificCredential",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 132
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 132
+        }
+      },
+      {
+        "action": "ResyncMFADevice",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 133
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 133
+        }
+      },
+      {
+        "action": "SetDefaultPolicyVersion",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "policy",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 134
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 134
+        }
+      },
+      {
+        "action": "SetSecurityTokenServicePreferences",
+        "access_level": "Write",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 136
+        }
+      },
+      {
+        "action": "SetSTSRegionalEndpointStatus",
+        "access_level": "Write",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 135
+        }
+      },
+      {
+        "action": "SimulateCustomPolicy",
+        "access_level": "Read",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 137
+        }
+      },
+      {
+        "action": "SimulatePrincipalPolicy",
+        "access_level": "Read",
+        "resource_types": [
+          {
+            "type": "group",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 138
+            }
+          },
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 138
+            }
+          },
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 138
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 138
+        }
+      },
+      {
+        "action": "TagInstanceProfile",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "instance-profile",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 139
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 139
+        }
+      },
+      {
+        "action": "TagMFADevice",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "mfa",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 140
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 140
+        }
+      },
+      {
+        "action": "TagOpenIDConnectProvider",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "oidc-provider",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 141
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 141
+        }
+      },
+      {
+        "action": "TagPolicy",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "policy",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 142
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 142
+        }
+      },
+      {
+        "action": "TagRole",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 143
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 143
+        }
+      },
+      {
+        "action": "TagSAMLProvider",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "saml-provider",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 144
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 144
+        }
+      },
+      {
+        "action": "TagServerCertificate",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "server-certificate",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 145
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 145
+        }
+      },
+      {
+        "action": "TagUser",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 146
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 146
+        }
+      },
+      {
+        "action": "UntagInstanceProfile",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "instance-profile",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 147
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:TagKeys"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 147
+        }
+      },
+      {
+        "action": "UntagMFADevice",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "mfa",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 148
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:TagKeys"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 148
+        }
+      },
+      {
+        "action": "UntagOpenIDConnectProvider",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "oidc-provider",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 149
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:TagKeys"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 149
+        }
+      },
+      {
+        "action": "UntagPolicy",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "policy",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 150
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:TagKeys"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 150
+        }
+      },
+      {
+        "action": "UntagRole",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 151
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:TagKeys"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 151
+        }
+      },
+      {
+        "action": "UntagSAMLProvider",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "saml-provider",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 152
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:TagKeys"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 152
+        }
+      },
+      {
+        "action": "UntagServerCertificate",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "server-certificate",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 153
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:TagKeys"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 153
+        }
+      },
+      {
+        "action": "UntagUser",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 154
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:TagKeys"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 154
+        }
+      },
+      {
+        "action": "UpdateAccessKey",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 155
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 155
+        }
+      },
+      {
+        "action": "UpdateAccountEmailAddress",
+        "access_level": "Write",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 156
+        }
+      },
+      {
+        "action": "UpdateAccountName",
+        "access_level": "Write",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 157
+        }
+      },
+      {
+        "action": "UpdateAccountPasswordPolicy",
+        "access_level": "Write",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 158
+        }
+      },
+      {
+        "action": "UpdateAssumeRolePolicy",
+        "access_level": "Permissions management",
+        "resource_types": [
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 159
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 159
+        }
+      },
+      {
+        "action": "UpdateCloudFrontPublicKey",
+        "access_level": "Write",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 160
+        }
+      },
+      {
+        "action": "UpdateGroup",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "group",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 161
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 161
+        }
+      },
+      {
+        "action": "UpdateLoginProfile",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 162
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 162
+        }
+      },
+      {
+        "action": "UpdateOpenIDConnectProviderThumbprint",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "oidc-provider",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 163
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 163
+        }
+      },
+      {
+        "action": "UpdateRole",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 164
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 164
+        }
+      },
+      {
+        "action": "UpdateRoleDescription",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "role",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 165
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 165
+        }
+      },
+      {
+        "action": "UpdateSAMLProvider",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "saml-provider",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 166
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 166
+        }
+      },
+      {
+        "action": "UpdateServerCertificate",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "server-certificate",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 168
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 168
+        }
+      },
+      {
+        "action": "UpdateServiceSpecificCredential",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 169
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 169
+        }
+      },
+      {
+        "action": "UpdateSigningCertificate",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 170
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 170
+        }
+      },
+      {
+        "action": "UpdateSSHPublicKey",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 167
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 167
+        }
+      },
+      {
+        "action": "UpdateUser",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 171
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 171
+        }
+      },
+      {
+        "action": "UploadCloudFrontPublicKey",
+        "access_level": "Write",
+        "resource_types": [],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 172
+        }
+      },
+      {
+        "action": "UploadServerCertificate",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "server-certificate",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 174
+            }
+          }
+        ],
+        "condition_keys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 174
+        }
+      },
+      {
+        "action": "UploadSigningCertificate",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 175
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 175
+        }
+      },
+      {
+        "action": "UploadSSHPublicKey",
+        "access_level": "Write",
+        "resource_types": [
+          {
+            "type": "user",
+            "required": false,
+            "source": {
+              "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+              "table": "actions",
+              "row_index": 173
+            }
+          }
+        ],
+        "condition_keys": [],
+        "dependent_actions": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "actions",
+          "row_index": 173
+        }
+      }
+    ],
+    "resource_types": [
+      {
+        "type": "access-report",
+        "arn_template": "arn:${Partition}:iam::${Account}:access-report/${EntityPath}",
+        "condition_keys": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "resource_types",
+          "row_index": 0
+        }
+      },
+      {
+        "type": "assumed-role",
+        "arn_template": "arn:${Partition}:iam::${Account}:assumed-role/${RoleName}/${RoleSessionName}",
+        "condition_keys": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "resource_types",
+          "row_index": 1
+        }
+      },
+      {
+        "type": "federated-user",
+        "arn_template": "arn:${Partition}:iam::${Account}:federated-user/${UserName}",
+        "condition_keys": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "resource_types",
+          "row_index": 2
+        }
+      },
+      {
+        "type": "group",
+        "arn_template": "arn:${Partition}:iam::${Account}:group/${GroupNameWithPath}",
+        "condition_keys": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "resource_types",
+          "row_index": 3
+        }
+      },
+      {
+        "type": "instance-profile",
+        "arn_template": "arn:${Partition}:iam::${Account}:instance-profile/${InstanceProfileNameWithPath}",
+        "condition_keys": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "resource_types",
+          "row_index": 4
+        }
+      },
+      {
+        "type": "mfa",
+        "arn_template": "arn:${Partition}:iam::${Account}:mfa/${MfaTokenIdWithPath}",
+        "condition_keys": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "resource_types",
+          "row_index": 5
+        }
+      },
+      {
+        "type": "oidc-provider",
+        "arn_template": "arn:${Partition}:iam::${Account}:oidc-provider/${OidcProviderName}",
+        "condition_keys": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "resource_types",
+          "row_index": 6
+        }
+      },
+      {
+        "type": "policy",
+        "arn_template": "arn:${Partition}:iam::${Account}:policy/${PolicyNameWithPath}",
+        "condition_keys": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "resource_types",
+          "row_index": 7
+        }
+      },
+      {
+        "type": "role",
+        "arn_template": "arn:${Partition}:iam::${Account}:role/${RoleNameWithPath}",
+        "condition_keys": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "resource_types",
+          "row_index": 8
+        }
+      },
+      {
+        "type": "saml-provider",
+        "arn_template": "arn:${Partition}:iam::${Account}:saml-provider/${SamlProviderName}",
+        "condition_keys": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "resource_types",
+          "row_index": 9
+        }
+      },
+      {
+        "type": "server-certificate",
+        "arn_template": "arn:${Partition}:iam::${Account}:server-certificate/${CertificateNameWithPath}",
+        "condition_keys": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "resource_types",
+          "row_index": 10
+        }
+      },
+      {
+        "type": "sms-mfa",
+        "arn_template": "arn:${Partition}:iam::${Account}:sms-mfa/${MfaTokenIdWithPath}",
+        "condition_keys": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "resource_types",
+          "row_index": 11
+        }
+      },
+      {
+        "type": "user",
+        "arn_template": "arn:${Partition}:iam::${Account}:user/${UserNameWithPath}",
+        "condition_keys": [],
+        "source": {
+          "url": "https://servicereference.us-east-1.amazonaws.com/v1/iam/iam.json",
+          "table": "resource_types",
+          "row_index": 12
+        }
+      }
+    ],
+    "service_condition_keys": [
+      "aws:RequestTag/${TagKey}",
+      "aws:ResourceTag/${TagKey}",
+      "aws:TagKeys",
+      "iam:AWSServiceName",
+      "iam:AssociatedResourceArn",
+      "iam:FIDO-FIPS-140-2-certification",
+      "iam:FIDO-FIPS-140-3-certification",
+      "iam:FIDO-certification",
+      "iam:OrganizationsPolicyId",
+      "iam:PassedToService",
+      "iam:PermissionsBoundary",
+      "iam:PolicyARN",
+      "iam:RegisterSecurityKey",
+      "iam:ResourceTag/${TagKey}"
+    ]
+  }
+}
