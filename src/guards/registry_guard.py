@@ -171,6 +171,7 @@ class RegistryGuard:
                     if row:
                         provenance[can] = {
                             "service": row.service,
+                            "description": row.description,
                             "access_level": row.access_level,
                             "resource_types": row.resource_types,
                             "condition_keys": row.condition_keys,
@@ -193,6 +194,7 @@ class RegistryGuard:
                         if row:
                             provenance[can] = {
                                 "service": row.service,
+                                "description": row.description,
                                 "access_level": row.access_level,
                                 "resource_types": row.resource_types,
                                 "condition_keys": row.condition_keys,
@@ -214,4 +216,3 @@ class RegistryGuard:
             facts_text=facts,
             policy_canonical=policy_canonical,
         )
-

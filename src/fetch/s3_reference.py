@@ -1,6 +1,8 @@
 import hashlib
 import json
 from pathlib import Path
+import os
+import time
 import requests
 
 RAW_DIR = Path("data/raw")
@@ -18,10 +20,30 @@ def fetch_s3_reference_json(force: bool=False, timeout: int=30) -> dict:
     """Fetches the AWS Service Reference JSON for S3 with a simple file cache."""
     path = _cache_path(S3_REF_URL)
     if path.exists() and not force:
-        return json.loads(path.read_text(encoding="utf-8", errors="ignore"))
+        # Robust read with small retries to tolerate concurrent writes
+        attempts = 0
+        while True:
+            try:
+                return json.loads(path.read_text(encoding="utf-8", errors="ignore"))
+            except json.JSONDecodeError:
+                attempts += 1
+                if attempts >= 5:
+                    raise
+                time.sleep(0.02)
 
     r = requests.get(S3_REF_URL, headers=HEADERS, timeout=timeout)
     r.raise_for_status()
     data = r.json()
-    path.write_text(json.dumps(data, indent=2), encoding="utf-8")
+    # Atomic write: write to temp then rename
+    import threading
+    tmp_path = path.with_suffix(path.suffix + f".tmp.{os.getpid()}.{threading.get_ident()}.{time.time_ns()}" )
+    tmp_path.write_text(json.dumps(data, indent=2), encoding="utf-8")
+    try:
+        tmp_path.replace(path)
+    finally:
+        if tmp_path.exists():
+            try:
+                tmp_path.unlink()
+            except Exception:
+                pass
     return data

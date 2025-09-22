@@ -18,6 +18,13 @@ import hashlib
 sys.path.insert(0, str(Path(__file__).parent.parent / "pinecone"))
 
 from query_unified import UnifiedQueryEngine
+try:
+    from src.guards.registry_guard import RegistryGuard
+except Exception:
+    try:
+        from guards.registry_guard import RegistryGuard  # fallback when running as module
+    except Exception:
+        RegistryGuard = None  # type: ignore
 from dotenv import load_dotenv
 
 try:
@@ -397,6 +404,20 @@ Generate the output JSON with both 'iam_policy' and 'test_config' fields:"""
                     ] if self.use_vector_search else [])
                 }
             }
+
+            # Add registry provenance for all included actions (all modes)
+            try:
+                if RegistryGuard is not None:
+                    guard = RegistryGuard()
+                    gres = guard.guard(output["iam_policy"])  # type: ignore
+                    result["metadata"]["registry"] = {
+                        "mismatches": gres.get("out_of_registry", []),
+                        "replacements": gres.get("replacements", {}),
+                        "provenance": gres.get("provenance", {}),
+                    }
+            except Exception as _e:
+                # Non-fatal; provenance unavailable
+                pass
             
             # Step 4: Save to files if requested
             if save_to_file:

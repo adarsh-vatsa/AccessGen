@@ -223,6 +223,7 @@ function QueryForm() {
           <JsonCard title="IAM Policy" data={result.iam_policy} />
           <JsonCard title="Test Config" data={result.test_config} />
           <JsonCard title="Metadata" data={result.metadata} />
+          <ProvenanceCard result={result} />
           {result.metadata?.mode === "adversarial" && (
             <div className="rounded-lg border border-neutral-200 dark:border-neutral-700 p-4 bg-white dark:bg-neutral-900 shadow-sm w-full md:col-span-2">
               <h2 className="font-semibold mb-2 text-neutral-900 dark:text-neutral-100">Debate & Registry</h2>
@@ -252,6 +253,74 @@ function JsonCard({ title, data }: { title: string; data: any }) {
       <pre className="text-xs overflow-auto max-h-[60vh] whitespace-pre-wrap text-neutral-900 dark:text-neutral-100">
         {JSON.stringify(data, null, 2)}
       </pre>
+    </div>
+  );
+}
+
+function ProvenanceCard({ result }: { result: any }) {
+  const policy = result?.iam_policy;
+  const prov = result?.metadata?.registry?.provenance || {};
+  const [open, setOpen] = React.useState(true);
+  if (!policy || !Array.isArray(policy?.Statement)) return null;
+
+  // Collect unique actions from policy
+  const actions: string[] = [];
+  for (const st of policy.Statement) {
+    let acts = st?.Action;
+    if (!acts) continue;
+    if (typeof acts === "string") acts = [acts];
+    for (const a of acts) {
+      if (typeof a === "string" && !actions.includes(a)) actions.push(a);
+    }
+  }
+  if (actions.length === 0) return null;
+
+  const truncate = (s: string, n = 140) => (s && s.length > n ? s.slice(0, n - 1) + "…" : s || "");
+
+  return (
+    <div className="rounded-lg border border-neutral-200 dark:border-neutral-700 p-4 bg-white dark:bg-neutral-900 shadow-sm w-full md:col-span-2">
+      <div className="flex items-center justify-between">
+        <h2 className="font-semibold text-neutral-900 dark:text-neutral-100">Provenance</h2>
+        <button
+          type="button"
+          onClick={() => setOpen((v) => !v)}
+          className="text-xs px-2 py-1 rounded border border-neutral-300 dark:border-neutral-700 hover:bg-neutral-50 dark:hover:bg-neutral-800"
+        >
+          {open ? "Collapse" : "Expand"}
+        </button>
+      </div>
+      {open && (
+        <div className="mt-3 text-xs space-y-2 text-neutral-900 dark:text-neutral-100">
+          {actions.map((act) => {
+            const meta = prov[act] || {};
+            const svc = meta?.service || (typeof act === "string" ? act.split(":")[0] : "");
+            const src = meta?.source || {};
+            const table = src?.table ?? "actions";
+            const row = src?.row_index ?? "?";
+            const url = src?.url || "";
+            const why = truncate(meta?.description || "");
+            return (
+              <div key={act} className="flex items-start justify-between gap-3 border border-neutral-200 dark:border-neutral-700 rounded p-2">
+                <div>
+                  <div className="font-mono font-semibold">{act}</div>
+                  <div className="opacity-80">Service: {svc}</div>
+                  <div className="opacity-80">Table: {table} • Row: {row}</div>
+                  {why && (
+                    <div className="mt-1 opacity-90"><span className="font-semibold">Why:</span> {why}</div>
+                  )}
+                </div>
+                {url ? (
+                  <a className="text-blue-600 hover:underline break-all" href={url} target="_blank" rel="noreferrer">
+                    source
+                  </a>
+                ) : (
+                  <span className="opacity-60">no source url</span>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 }
