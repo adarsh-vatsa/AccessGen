@@ -21,7 +21,6 @@ function QueryForm() {
   const [threshold, setThreshold] = React.useState<string>("");
   const [maxActions, setMaxActions] = React.useState<string>("15");
   const [expand, setExpand] = React.useState<boolean>(true);
-  const [raw, setRaw] = React.useState<boolean>(false);
   const [mode, setMode] = React.useState<"vector" | "raw" | "adversarial">("vector");
   const [rounds, setRounds] = React.useState<string>("1");
   const [judgeModel, setJudgeModel] = React.useState<string>("");
@@ -29,6 +28,9 @@ function QueryForm() {
   const [conModel, setConModel] = React.useState<string>("");
   const [draftModel, setDraftModel] = React.useState<string>("");
   const [useDSPy, setUseDSPy] = React.useState<boolean>(false);
+  const [live, setLive] = React.useState<boolean>(false);
+  const [liveTrace, setLiveTrace] = React.useState<any[]>([]);
+  const [liveRaw, setLiveRaw] = React.useState<any[]>([]);
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
   const [result, setResult] = React.useState<any>(null);
@@ -48,7 +50,7 @@ function QueryForm() {
       if (threshold) payload.threshold = parseFloat(threshold);
       if (maxActions) payload.maxActions = parseInt(maxActions, 10);
       if (!expand) payload.noExpand = true;
-      if (raw) payload.raw = true;
+      if (mode === "raw") payload.raw = true;
       payload.mode = mode;
       if (mode === "adversarial") {
         if (rounds) payload.rounds = Math.max(1, Math.min(3, parseInt(rounds, 10) || 1));
@@ -59,18 +61,129 @@ function QueryForm() {
         if (useDSPy) payload.useDSPy = true;
       }
 
-      const res = await fetch("/api/generate", {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify(payload),
-      });
-      const json = await res.json();
-      if (!res.ok) throw new Error(json.error || "Request failed");
-      setResult(json);
+      if (live && mode === "adversarial") {
+        await runLive(payload);
+      } else if (live && mode === "raw") {
+        await runLiveRaw(payload);
+      } else {
+        const res = await fetch("/api/generate", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+        let json: any = null;
+        try {
+          json = await res.json();
+        } catch {}
+        if (!res.ok) {
+          // Surface error details in the UI panel
+          setResult({
+            status: "error",
+            message: (json && (json.error || json.message)) || `HTTP ${res.status}`,
+            raw_output: json && json.details ? (json.details.stdout || json.details.stderr || JSON.stringify(json.details)) : "",
+          });
+        } else {
+          // If backend reports an error payload, show error panel instead of empty cards
+          if (json && json.status === "error") {
+            setResult(json);
+          } else {
+            setResult(json);
+          }
+        }
+      }
     } catch (err: any) {
       setError(err.message || String(err));
     } finally {
       setLoading(false);
+    }
+  }
+
+  async function runLive(payload: any) {
+    setLiveTrace([]);
+    const res = await fetch("/api/generate/stream", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({
+        query: payload.query,
+        rounds: payload.rounds,
+        judgeModel: payload.judgeModel,
+        proModel: payload.proModel,
+        conModel: payload.conModel,
+        draftModel: payload.draftModel,
+        useDSPy: payload.useDSPy,
+      }),
+    });
+    if (!res.ok || !res.body) throw new Error("Failed to start live stream");
+    const reader = res.body.getReader();
+    const decoder = new TextDecoder();
+    let buf = "";
+    while (true) {
+      const { value, done } = await reader.read();
+      if (done) break;
+      buf += decoder.decode(value, { stream: true });
+      let idx;
+      while ((idx = buf.indexOf("\n\n")) !== -1) {
+        const raw = buf.slice(0, idx);
+        buf = buf.slice(idx + 2);
+        const lines = raw.split(/\r?\n/);
+        let event = "message";
+        let data = "";
+        for (const line of lines) {
+          if (!line) continue;
+          if (line.startsWith(":")) continue; // comment
+          if (line.startsWith("event:")) event = line.slice(6).trim();
+          if (line.startsWith("data:")) data += line.slice(5).trim();
+        }
+        if (!data) continue;
+        try {
+          const obj = JSON.parse(data);
+          if (event === "trace") {
+            setLiveTrace((prev) => [...prev, obj]);
+          } else if (event === "done") {
+            setResult(obj);
+          }
+        } catch {
+          // ignore parse errors
+        }
+      }
+    }
+  }
+
+  async function runLiveRaw(payload: any) {
+    setLiveRaw([]);
+    const res = await fetch("/api/generate/raw/stream", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ query: payload.query, model: draftModel || "models/gemini-2.5-pro" }),
+    });
+    if (!res.ok || !res.body) throw new Error("Failed to start raw live stream");
+    const reader = res.body.getReader();
+    const decoder = new TextDecoder();
+    let buf = "";
+    while (true) {
+      const { value, done } = await reader.read();
+      if (done) break;
+      buf += decoder.decode(value, { stream: true });
+      let idx;
+      while ((idx = buf.indexOf("\n\n")) !== -1) {
+        const raw = buf.slice(0, idx);
+        buf = buf.slice(idx + 2);
+        const lines = raw.split(/\r?\n/);
+        let event = "message";
+        let data = "";
+        for (const line of lines) {
+          if (!line) continue;
+          if (line.startsWith(":")) continue;
+          if (line.startsWith("event:")) event = line.slice(6).trim();
+          if (line.startsWith("data:")) data += line.slice(5).trim();
+        }
+        if (!data) continue;
+        try {
+          const obj = JSON.parse(data);
+          if (event === "trace") setLiveRaw((p) => [...p, obj]);
+          else if (event === "done") setResult(obj);
+        } catch {}
+      }
     }
   }
 
@@ -129,10 +242,7 @@ function QueryForm() {
         Enable query expansion
       </label>
 
-      <label className="inline-flex items-center gap-2 text-sm text-neutral-900 dark:text-neutral-100">
-        <input type="checkbox" checked={raw} onChange={(e) => setRaw(e.target.checked)} />
-        RAW mode (no vector search context)
-      </label>
+      {/* RAW mode is controlled by the Mode selector below */}
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div>
@@ -164,7 +274,7 @@ function QueryForm() {
 
       {mode === "adversarial" && (
         <details className="rounded-md border border-neutral-300 dark:border-neutral-700 p-3">
-          <summary className="cursor-pointer text-sm font-medium text-neutral-900 dark:text-neutral-100">Advanced Models</summary>
+          <summary className="cursor-pointer text-sm font-medium text-neutral-900 dark:text-neutral-100">Adversarial Advanced Models</summary>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
             <div>
               <label className="block text-xs mb-1">Draft model</label>
@@ -188,18 +298,46 @@ function QueryForm() {
                 Use DSPy debate (if installed)
               </label>
             </div>
-            {/* Shared datalist for quick model selection, still allows free text */}
+            <div className="md:col-span-2">
+              <label className="inline-flex items-center gap-2 text-sm">
+                <input type="checkbox" checked={live} onChange={(e) => setLive(e.target.checked)} />
+                Live stream (SSE)
+              </label>
+            </div>
             <datalist id="modelOptions">
-              {/* Google Gemini generation */}
               <option value="models/gemini-2.5-pro" />
               <option value="models/gemini-2.5-flash" />
               <option value="models/gemini-2.0-flash-exp" />
-              {/* OpenAI common */}
               <option value="gpt-4o" />
               <option value="gpt-4o-mini" />
               <option value="gpt-4.1" />
               <option value="gpt-4.1-mini" />
-              {/* Others (Anthropic/OpenRouter style - optional examples) */}
+              <option value="claude-3-5-sonnet" />
+              <option value="claude-3-haiku" />
+            </datalist>
+          </div>
+        </details>
+      )}
+
+      {mode === "raw" && (
+        <details className="rounded-md border border-neutral-300 dark:border-neutral-700 p-3">
+          <summary className="cursor-pointer text-sm font-medium text-neutral-900 dark:text-neutral-100">RAW Settings</summary>
+          <div className="grid grid-cols-1 gap-4 mt-3">
+            <div>
+              <label className="block text-xs mb-1">Model</label>
+              <input list="modelOptionsRaw" value={draftModel} onChange={(e) => setDraftModel(e.target.value)} className="w-full rounded-md border border-neutral-300 dark:border-neutral-700 p-2 text-sm bg-white dark:bg-neutral-900" placeholder="models/gemini-2.5-pro" />
+            </div>
+            <div>
+              <label className="inline-flex items-center gap-2 text-sm">
+                <input type="checkbox" checked={live} onChange={(e) => setLive(e.target.checked)} />
+                Live stream (SSE)
+              </label>
+            </div>
+            <datalist id="modelOptionsRaw">
+              <option value="models/gemini-2.5-pro" />
+              <option value="models/gemini-2.5-flash" />
+              <option value="gpt-4o" />
+              <option value="gpt-4o-mini" />
               <option value="claude-3-5-sonnet" />
               <option value="claude-3-haiku" />
             </datalist>
@@ -218,12 +356,20 @@ function QueryForm() {
         {error && <span className="text-red-600 text-sm">{error}</span>}
       </div>
 
-      {result && (
+      {/* Show live trace immediately when streaming */}
+      {live && ((mode === 'adversarial' && liveTrace.length > 0) || (mode === 'raw' && liveRaw.length > 0)) && (
+        <div className="grid grid-cols-1 gap-6">
+          <TraceCard result={{}} liveTrace={mode === 'adversarial' ? liveTrace : liveRaw} />
+        </div>
+      )}
+
+      {result && result.status !== 'error' && (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <JsonCard title="IAM Policy" data={result.iam_policy} />
           <JsonCard title="Test Config" data={result.test_config} />
           <JsonCard title="Metadata" data={result.metadata} />
           <ProvenanceCard result={result} />
+          <TraceCard result={result} liveTrace={(mode === 'adversarial' ? liveTrace : liveRaw)} />
           {result.metadata?.mode === "adversarial" && (
             <div className="rounded-lg border border-neutral-200 dark:border-neutral-700 p-4 bg-white dark:bg-neutral-900 shadow-sm w-full md:col-span-2">
               <h2 className="font-semibold mb-2 text-neutral-900 dark:text-neutral-100">Debate & Registry</h2>
@@ -239,6 +385,29 @@ function QueryForm() {
                 </div>
               </div>
             </div>
+          )}
+          {result.metadata?.registry_validation && (
+            <div className="rounded-lg border border-neutral-200 dark:border-neutral-700 p-4 bg-white dark:bg-neutral-900 shadow-sm w-full md:col-span-2">
+              <h2 className="font-semibold mb-2 text-neutral-900 dark:text-neutral-100">Validation Findings</h2>
+              <div className="text-xs text-neutral-900 dark:text-neutral-100">
+                <div className="font-semibold">Policy Errors</div>
+                <pre className="whitespace-pre-wrap overflow-auto max-h-60">{JSON.stringify(result.metadata.registry_validation.policy?.errors || [], null, 2)}</pre>
+                <div className="font-semibold mt-2">Policy Warnings</div>
+                <pre className="whitespace-pre-wrap overflow-auto max-h-60">{JSON.stringify(result.metadata.registry_validation.policy?.warnings || [], null, 2)}</pre>
+              </div>
+            </div>
+          )}
+        </div>
+      )}
+      {result && result.status === 'error' && (
+        <div className="rounded-lg border border-red-300 p-4 bg-red-50 text-red-900 w-full">
+          <div className="font-semibold mb-1">Generation Error</div>
+          <div className="text-sm">{result.message || 'Unknown error'}</div>
+          {result.raw_output && (
+            <details className="mt-2">
+              <summary className="cursor-pointer text-sm">Raw model output</summary>
+              <pre className="text-xs whitespace-pre-wrap overflow-auto max-h-64">{result.raw_output}</pre>
+            </details>
           )}
         </div>
       )}
@@ -280,7 +449,7 @@ function ProvenanceCard({ result }: { result: any }) {
   return (
     <div className="rounded-lg border border-neutral-200 dark:border-neutral-700 p-4 bg-white dark:bg-neutral-900 shadow-sm w-full md:col-span-2">
       <div className="flex items-center justify-between">
-        <h2 className="font-semibold text-neutral-900 dark:text-neutral-100">Provenance</h2>
+        <h2 className="font-semibold text-neutral-900 dark:text-neutral-100">Registry Validation</h2>
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
@@ -319,6 +488,98 @@ function ProvenanceCard({ result }: { result: any }) {
               </div>
             );
           })}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function TraceCard({ result, liveTrace }: { result: any; liveTrace?: any[] }) {
+  const trace = (liveTrace && liveTrace.length > 0 ? liveTrace : (result?.metadata?.trace as any[] | undefined));
+  const [open, setOpen] = React.useState(true);
+  const [showFull, setShowFull] = React.useState(false);
+  if (!trace || !Array.isArray(trace) || trace.length === 0) return null;
+
+  const short = (s: any, n = 800) => {
+    const t = typeof s === "string" ? s : JSON.stringify(s, null, 2);
+    return t.length > n ? t.slice(0, n) + "\n…(truncated)…" : t;
+  };
+
+  const renderText = (s: any) => (showFull ? (typeof s === "string" ? s : JSON.stringify(s, null, 2)) : short(s));
+
+  function downloadTrace() {
+    try {
+      const blob = new Blob([JSON.stringify(trace, null, 2)], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      const ts = new Date().toISOString().replace(/[:.]/g, "-");
+      a.href = url;
+      a.download = `trace-${ts}.json`;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    } catch {}
+  }
+
+  return (
+    <div className="rounded-lg border border-neutral-200 dark:border-neutral-700 p-4 bg-white dark:bg-neutral-900 shadow-sm w-full md:col-span-2">
+      <div className="flex items-center justify-between">
+        <h2 className="font-semibold text-neutral-900 dark:text-neutral-100">Adversarial Trace</h2>
+        <div className="flex items-center gap-2">
+          <button
+            type="button"
+            onClick={downloadTrace}
+            className="text-xs px-2 py-1 rounded border border-neutral-300 dark:border-neutral-700 hover:bg-neutral-50 dark:hover:bg-neutral-800"
+            title="Download full JSON trace"
+          >
+            Download Trace
+          </button>
+          <button
+            type="button"
+            onClick={() => setShowFull((v) => !v)}
+            className="text-xs px-2 py-1 rounded border border-neutral-300 dark:border-neutral-700 hover:bg-neutral-50 dark:hover:bg-neutral-800"
+            title="Toggle full text vs truncated"
+          >
+            {showFull ? "Truncate" : "Show Full"}
+          </button>
+          <button
+            type="button"
+            onClick={() => setOpen((v) => !v)}
+            className="text-xs px-2 py-1 rounded border border-neutral-300 dark:border-neutral-700 hover:bg-neutral-50 dark:hover:bg-neutral-800"
+          >
+            {open ? "Collapse" : "Expand"}
+          </button>
+        </div>
+      </div>
+      {open && (
+        <div className="mt-3 space-y-3">
+          {trace.map((step, idx) => (
+            <details key={idx} className="text-xs border border-neutral-200 dark:border-neutral-700 rounded p-2" open>
+              <summary className="cursor-pointer">
+                <span className="font-semibold">{step.stage || `step-${idx + 1}`}</span>
+                {step.model ? <span className="ml-2 opacity-80">model: {step.model}</span> : null}
+              </summary>
+              {step.input ? (
+                <div className="mt-2">
+                  <div className="opacity-80 mb-1">Input</div>
+                  <pre className="whitespace-pre-wrap overflow-auto max-h-64">{renderText(step.input)}</pre>
+                </div>
+              ) : null}
+              {step.output_text ? (
+                <div className="mt-2">
+                  <div className="opacity-80 mb-1">Output (raw)</div>
+                  <pre className="whitespace-pre-wrap overflow-auto max-h-64">{renderText(step.output_text)}</pre>
+                </div>
+              ) : null}
+              {step.output ? (
+                <div className="mt-2">
+                  <div className="opacity-80 mb-1">Output</div>
+                  <pre className="whitespace-pre-wrap overflow-auto max-h-64">{renderText(step.output)}</pre>
+                </div>
+              ) : null}
+            </details>
+          ))}
         </div>
       )}
     </div>

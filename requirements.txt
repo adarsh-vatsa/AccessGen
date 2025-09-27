@@ -10,6 +10,10 @@ pinecone-text>=0.7.0
 google-genai>=0.1.0
 google-generativeai>=0.8.3
 
+# Additional LLM SDKs for router
+openai>=1.40.0
+anthropic>=0.31.0
+
 # Enrichment utilities
 beautifulsoup4>=4.12.0
 

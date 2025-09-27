@@ -1,0 +1,4 @@
+{
+  "error": "Structured output present but empty. Check model/response_format and org settings.",
+  "prompt": "Produce {\"iam_policy\":..., \"test_config\":...} for: allow listing S3 buckets. Least privilege; valid AWS policy JSON; test_config mirrors statements."
+}

@@ -1,5 +1,7 @@
 import { NextRequest } from "next/server";
 import { spawn } from "child_process";
+import fs from "node:fs";
+import path from "node:path";
 
 type GenerateBody = {
   query?: string;
@@ -19,6 +21,16 @@ type GenerateBody = {
 };
 
 const REPO_ROOT = "/Users/zeitgeist/Documents/SPT/vector_search/Alpha/01_source_fetcher";
+function resolvePythonBin(): string {
+  if (process.env.PYTHON_BIN) return process.env.PYTHON_BIN;
+  const venv = path.join(REPO_ROOT, ".venv");
+  const posix = path.join(venv, "bin", "python");
+  const win = path.join(venv, "Scripts", "python.exe");
+  if (fs.existsSync(posix)) return posix;
+  if (fs.existsSync(win)) return win;
+  return "python3";
+}
+const PYTHON_BIN = resolvePythonBin();
 
 export async function POST(req: NextRequest) {
   try {
@@ -31,16 +43,61 @@ export async function POST(req: NextRequest) {
     const services = Array.isArray(body.services) ? body.services : null;
     const threshold = typeof body.threshold === "number" ? String(body.threshold) : undefined;
     const maxActions = typeof body.maxActions === "number" ? String(body.maxActions) : undefined;
-    const model = typeof body.model === "string" ? body.model : undefined;
+    const norm = (m?: string) => {
+      if (!m) return undefined;
+      const mm = m.trim();
+      if (/^gemini/i.test(mm) && !mm.startsWith("models/")) return `models/${mm}`;
+      return mm;
+    };
+    const model = norm(typeof body.model === "string" ? body.model : undefined);
     const useExpand = body.noExpand ? "0" : "1";
     const useRaw = body.raw ? "1" : "0";
     const mode = body.mode || (body.raw ? "raw" : "vector");
     const rounds = typeof body.rounds === "number" ? String(Math.max(1, Math.min(3, body.rounds))) : undefined;
-    const judgeModel = typeof body.judgeModel === "string" ? body.judgeModel : "";
-    const proModel = typeof body.proModel === "string" ? body.proModel : "";
-    const conModel = typeof body.conModel === "string" ? body.conModel : "";
-    const draftModel = typeof body.draftModel === "string" ? body.draftModel : "";
+    const judgeModel = norm(typeof body.judgeModel === "string" ? body.judgeModel : "") || "";
+    const proModel = norm(typeof body.proModel === "string" ? body.proModel : "") || "";
+    const conModel = norm(typeof body.conModel === "string" ? body.conModel : "") || "";
+    const draftModel = norm(typeof body.draftModel === "string" ? body.draftModel : "") || "";
     const useDSPy = body.useDSPy ? "1" : "0";
+
+    // If OpenAI/GPT-5 is requested, route to the OpenAI router script
+    const wantsOpenAI = !!model && (/^gpt/i.test(model) || /openai/i.test(model));
+    if (wantsOpenAI) {
+      const venvDir = path.join(REPO_ROOT, ".venv");
+      const env = {
+        ...process.env,
+        OPENAI_MODEL: model || "gpt-5",
+        QUERY: query,
+        VIRTUAL_ENV: fs.existsSync(venvDir) ? venvDir : (process.env.VIRTUAL_ENV || ""),
+        PATH: fs.existsSync(path.join(venvDir, "bin"))
+          ? `${path.join(venvDir, "bin")}:${process.env.PATH || ""}`
+          : process.env.PATH,
+        PWD: REPO_ROOT,
+      } as NodeJS.ProcessEnv;
+
+      const result = await new Promise<{ status: number; stdout: string; stderr: string }>((resolve) => {
+        const child = spawn(PYTHON_BIN, [path.join(REPO_ROOT, "src/llm/openai_router.py"), query], {
+          cwd: REPO_ROOT,
+          env,
+        });
+        let stdout = "";
+        let stderr = "";
+        child.stdout.on("data", (d) => (stdout += d.toString()));
+        child.stderr.on("data", (d) => (stderr += d.toString()));
+        child.on("close", (code) => resolve({ status: code ?? 1, stdout, stderr }));
+        child.on("error", (err) => resolve({ status: 1, stdout: "", stderr: String(err) }));
+      });
+
+      try {
+        const json = JSON.parse(result.stdout);
+        return new Response(JSON.stringify(json), { status: 200, headers: { "content-type": "application/json" } });
+      } catch {
+        return new Response(
+          JSON.stringify({ error: "OpenAI router failed", details: { status: result.status, stdout: result.stdout, stderr: result.stderr } }),
+          { status: 500, headers: { "content-type": "application/json" } }
+        );
+      }
+    }
 
     const pyCode = `
 import json, os, sys
@@ -100,6 +157,7 @@ else:
     print(json.dumps(res))
 `;
 
+    const venvDir = path.join(REPO_ROOT, ".venv");
     const env = {
       ...process.env,
       QUERY: query,
@@ -116,12 +174,17 @@ else:
       CON_MODEL: conModel,
       DRAFT_MODEL: draftModel,
       USE_DSPY: useDSPy,
+      GENAI_FORCE_LEGACY: "1",
+      VIRTUAL_ENV: fs.existsSync(venvDir) ? venvDir : (process.env.VIRTUAL_ENV || ""),
+      PATH: fs.existsSync(path.join(venvDir, "bin"))
+        ? `${path.join(venvDir, "bin")}:${process.env.PATH || ""}`
+        : process.env.PATH,
       // Ensure Python can see repo root for any relative file IO
       PWD: REPO_ROOT,
     } as NodeJS.ProcessEnv;
 
     const result = await new Promise<{ status: number; stdout: string; stderr: string }>((resolve) => {
-      const child = spawn("python3", ["-c", pyCode], {
+      const child = spawn(PYTHON_BIN, ["-c", pyCode], {
         cwd: REPO_ROOT,
         env,
       });

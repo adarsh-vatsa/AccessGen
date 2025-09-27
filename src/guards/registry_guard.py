@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import json
 from dataclasses import dataclass, field
+import logging
 from pathlib import Path
 from typing import Any, Dict, List, Tuple, TypedDict
 
@@ -76,6 +77,10 @@ class RegistryGuard:
         def load_service(service: str, p: str):
             path = Path(p)
             if not path.exists():
+                try:
+                    logging.getLogger(__name__).warning(f"Registry file not found for {service}: {path}")
+                except Exception:
+                    pass
                 return
             with open(path, "r", encoding="utf-8") as f:
                 data = json.load(f)

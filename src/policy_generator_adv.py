@@ -14,33 +14,56 @@ from __future__ import annotations
 
 import json
 import os
-from typing import Any, Dict, List, Tuple
+from typing import Any, Dict, List, Tuple, Callable, Optional
 from datetime import datetime
 
 from dotenv import load_dotenv
 
+import os as _os
 try:
-    from google import genai
-    from google.genai import types
+    from google import genai  # type: ignore
+    from google.genai import types  # type: ignore
 except Exception:
-    import google.generativeai as genai  # type: ignore
+    genai = None  # type: ignore
     types = None  # type: ignore
+_FORCE_LEGACY = (_os.getenv("GENAI_FORCE_LEGACY", "0") == "1")
+try:
+    import google.generativeai as legacy_genai  # type: ignore
+except Exception:
+    legacy_genai = None  # type: ignore
 
 from src.guards.registry_guard import RegistryGuard
 from src.guards.static_checker import StaticChecker
-from src.debate.dspy_program import DebateOrchestrator
-from src.debate.dspy_llm import DSpyDebateOrchestrator
+from src.debate.trace_digest import build_trace_digest
+from src.debate.patch_gate import light_patch_gate
+from src.debate.policy_patcher import apply_patches, PatchError
+from src.debate.llm_roles import LLMRoleClient, RoleOutputError
 from src.scoring import compute_policy_scores
+from src.guards.registry_validator import RegistryValidator
+from src.policy_generator import IAMPolicyGeneratorV2
 
 
 RAW_SYSTEM = (
-    "You are an AWS IAM policy expert. Output only JSON with fields iam_policy and test_config. "
+    "You are an AWS IAM policy expert. Output only a valid AWS policy JSON when asked. "
     "Use least-privilege principles, avoid wildcards if ARNs exist, add restrictive conditions where appropriate."
 )
 
 
-def _draft_raw_policy(nl_prompt: str, model: str) -> Tuple[Dict[str, Any], Dict[str, Any], Dict[str, int], int]:
-    """Call Gemini (or fallback no-op) to draft a policy + test_config. Returns (policy, test_config, tokens, latency_ms)."""
+def _build_policy_only_prompt(nl_prompt: str) -> str:
+    return (
+        "Return only one valid AWS S3 bucket policy as pure JSON. "
+        "No comments. No code fences. No explanations.\n\n"
+        "Rules:\n"
+        "- Use S3 actions only and least privilege.\n"
+        "- Use precise ARNs: bucket arn:aws:s3:::{{BUCKET_NAME}} and objects arn:aws:s3:::{{BUCKET_NAME}}/* .\n"
+        "- Apply required conditions and explicit Deny statements as described.\n\n"
+        f"Input:\n{nl_prompt}\n\n"
+        "Output: a single JSON object with keys Version and Statement only."
+    )
+
+
+def _draft_policy_only(nl_prompt: str, model: str) -> Tuple[Dict[str, Any], Dict[str, int], int, Dict[str, Any]]:
+    """Draft a policy only."""
     load_dotenv()
     api_key = os.getenv("GEMINI_API_KEY")
     tokens = {"draft": 0}
@@ -53,36 +76,65 @@ def _draft_raw_policy(nl_prompt: str, model: str) -> Tuple[Dict[str, Any], Dict[
                 {"Effect": "Allow", "Action": ["s3:PutObject", "s3:GetObject"], "Resource": "*"}
             ],
         }
-        return policy, _policy_to_test_config(policy, default_service="s3"), tokens, latency_ms
-    if types:
-        client = genai.Client(api_key=api_key)
-        prompt = f"{RAW_SYSTEM}\n\nNatural Language Requirement:\n{nl_prompt}\n\nOutput the JSON object with iam_policy and test_config."
-        resp = client.models.generate_content(
-            model=model,
-            contents=prompt,
-            config=types.GenerateContentConfig(temperature=0.3, max_output_tokens=3000),
-        )
-        text = (resp.text or "{}").strip()
-    else:
-        genai.configure(api_key=api_key)
-        gm = genai.GenerativeModel(model)
-        resp = gm.generate_content(prompt := f"{RAW_SYSTEM}\n\nNatural Language Requirement:\n{nl_prompt}\n\nOutput the JSON object with iam_policy and test_config.")
-        text = getattr(resp, "text", "{}")
-    text = text.strip().lstrip("```json").rstrip("```")
-    try:
-        obj = json.loads(text)
-        policy = obj.get("iam_policy") or {}
-        test_cfg = obj.get("test_config") or _policy_to_test_config(policy)
-    except Exception:
-        # fallback naïve
-        policy = {
-            "Version": "2012-10-17",
-            "Statement": [
-                {"Effect": "Allow", "Action": ["s3:PutObject", "s3:GetObject"], "Resource": "*"}
-            ],
+        trace = {
+            "stage": "draft",
+            "model": model,
+            "input": {"system": RAW_SYSTEM, "nl_prompt": nl_prompt},
+            "output_text": json.dumps(policy),
+            "note": "offline stub (no GEMINI_API_KEY)",
         }
-        test_cfg = _policy_to_test_config(policy, default_service="s3")
-    return policy, test_cfg, tokens, latency_ms
+        return policy, tokens, latency_ms, trace
+
+    full_prompt = _build_policy_only_prompt(nl_prompt)
+    text = ""
+    try:
+        if _FORCE_LEGACY and legacy_genai is not None:
+            legacy_genai.configure(api_key=api_key)
+            gm = legacy_genai.GenerativeModel(model)
+            resp = gm.generate_content(full_prompt)
+            text = IAMPolicyGeneratorV2._extract_text_from_response(resp)  # type: ignore
+        elif types is not None and genai is not None:
+            client = genai.Client(api_key=api_key)  # type: ignore
+            resp = client.models.generate_content(
+                model=model,
+                contents=full_prompt,
+                config=types.GenerateContentConfig(temperature=0.3, max_output_tokens=10000),
+            )
+            text = IAMPolicyGeneratorV2._extract_text_from_response(resp)  # type: ignore
+        elif legacy_genai is not None:
+            legacy_genai.configure(api_key=api_key)
+            gm = legacy_genai.GenerativeModel(model)
+            resp = gm.generate_content(full_prompt)
+            text = IAMPolicyGeneratorV2._extract_text_from_response(resp)  # type: ignore
+        else:
+            raise RuntimeError("No usable Gemini client: install google-generativeai or google-genai")
+    except Exception as _e:
+        text = ""
+
+    tclean = text.strip().lstrip("```json").rstrip("```")
+    policy: Dict[str, Any] = {}
+    try:
+        obj = json.loads(tclean)
+        if isinstance(obj, dict) and "Version" in obj and "Statement" in obj:
+            policy = obj
+        elif isinstance(obj, dict):
+            for k in ("iam_policy", "policy", "bucket_policy", "bucketPolicy"):
+                v = obj.get(k)
+                if isinstance(v, dict) and "Version" in v and "Statement" in v:
+                    policy = v
+                    break
+    except Exception:
+        policy = {}
+
+    if not policy:
+        policy = {"Version": "2012-10-17", "Statement": []}
+    trace = {
+        "stage": "draft",
+        "model": model,
+        "input": {"system": RAW_SYSTEM, "nl_prompt": nl_prompt},
+        "output_text": text,
+    }
+    return policy, tokens, latency_ms, trace
 
 
 def _policy_to_test_config(policy: Dict[str, Any], default_service: str | None = None) -> Dict[str, Any]:
@@ -114,10 +166,17 @@ def _policy_to_test_config(policy: Dict[str, Any], default_service: str | None =
     return {"service": service, "rules": rules}
 
 
+def _score(summary: Dict[str, Any], hints: List[str] | None) -> int:
+    wildcard_penalty = int(bool(summary.get("has_action_wildcard"))) + int(bool(summary.get("has_resource_wildcard")))
+    hint_penalty = len(hints or [])
+    return -(wildcard_penalty + hint_penalty)
+
+
 def generate_adversarial(nl_prompt: str,
                          rounds: int = 1,
                          models: Dict[str, str] | None = None,
-                         settings: Dict[str, Any] | None = None) -> Dict[str, Any]:
+                         settings: Dict[str, Any] | None = None,
+                         trace_cb: Optional[Callable[[Dict[str, Any]], None]] = None) -> Dict[str, Any]:
     models = models or {}
     draft_model = models.get("draft", "models/gemini-2.5-pro")
     judge_model = models.get("judge", models.get("pro", models.get("con", "models/gemini-2.5-flash")))
@@ -126,81 +185,293 @@ def generate_adversarial(nl_prompt: str,
     settings = settings or {}
 
     # 1) Draft
-    policy, test_cfg, tokens1, lat1 = _draft_raw_policy(nl_prompt, draft_model)
+    trace: List[Dict[str, Any]] = []
+    policy, tokens1, lat1, draft_trace = _draft_policy_only(nl_prompt, draft_model)
+    trace.append(draft_trace)
+    if trace_cb:
+        trace_cb(draft_trace)
 
     # 2) Guard
     guard = RegistryGuard()
     guard_res = guard.guard(policy)
+    _t = {
+        "stage": "registry_guard",
+        "input": {"policy": policy},
+        "output": {
+            "in_registry": guard_res.get("in_registry", []),
+            "out_of_registry": guard_res.get("out_of_registry", []),
+            "replacements": guard_res.get("replacements", {}),
+        },
+    }
+    trace.append(_t)
+    if trace_cb:
+        trace_cb(_t)
 
     # 3) Static checker
     checker = StaticChecker(provenance=guard_res["provenance"])
     check_res = checker.check_and_repair(guard_res["policy_canonical"])
+    _t = {
+        "stage": "static_checker",
+        "input": {"policy": guard_res["policy_canonical"]},
+        "output": {"repairs": check_res.get("repairs", []), "messages": check_res.get("messages", [])},
+    }
+    trace.append(_t)
+    if trace_cb:
+        trace_cb(_t)
 
-    # 4) Debate loop (apply patches)
-    use_dspy = bool(settings.get("use_dspy"))
-    dspy_orch = DSpyDebateOrchestrator(draft_model=draft_model, judge_model=judge_model, pro_model=pro_model, con_model=con_model)
-    orchestrator = DebateOrchestrator(draft_model=draft_model, judge_model=judge_model, pro_model=pro_model, con_model=con_model)
-    all_patches: List[Dict[str, Any]] = []
+    # 4) Debate loop using LLM-backed roles
+    try:
+        roles = LLMRoleClient(pro_model=pro_model, con_model=con_model, judge_model=judge_model)
+    except RoleOutputError as exc:
+        return {"status": "error", "message": str(exc), "stage": "roles_init", "query": nl_prompt}
+
+    prior_patch_records: List[Dict[str, Any]] = []
+    gate_rejections: List[Dict[str, Any]] = []
     debate_summary: List[str] = []
+
     working_policy = guard_res["policy_canonical"]
-    for r in range(max(1, min(3, rounds))):
-        if use_dspy and dspy_orch.available():
-            round_res = dspy_orch.run_round(nl_prompt, working_policy, registry_facts=guard_res["facts_text"])  # type: ignore
-            # If DSPy produced no patches, fall back to static checker patches
-            if not round_res["patches_applied"]:
-                round_res = orchestrator.run_round(
-                    nl_prompt,
-                    working_policy,
-                    registry_facts=guard_res["facts_text"],
-                    guard_replacements=guard_res["replacements"],
-                    checker_patches=check_res["repairs"],
-                )
-        else:
-            round_res = orchestrator.run_round(
-                nl_prompt,
-                working_policy,
-                registry_facts=guard_res["facts_text"],
-                guard_replacements=guard_res["replacements"],
-                checker_patches=check_res["repairs"],
+    round_cap = max(1, min(3, rounds))
+
+    initial_digest = build_trace_digest(nl_prompt, working_policy, guard_res, check_res, prior_patch_records, 0)
+    trace.append({"stage": "trace_digest_0", "output": initial_digest})
+    if trace_cb:
+        trace_cb(trace[-1])
+
+    prev_score = _score(initial_digest["policy_summary"], initial_digest["static_hints"])
+
+    for round_idx in range(round_cap):
+        round_no = round_idx + 1
+
+        digest = build_trace_digest(nl_prompt, working_policy, guard_res, check_res, prior_patch_records, round_no)
+        trace.append({"stage": f"trace_digest_{round_no}", "output": digest})
+        if trace_cb:
+            trace_cb(trace[-1])
+
+        try:
+            pro_resp = roles.pro(digest, working_policy)
+        except RoleOutputError as exc:
+            return {"status": "error", "message": str(exc), "stage": f"pro_round_{round_no}", "query": nl_prompt}
+
+        try:
+            con_resp = roles.con(digest, working_policy)
+        except RoleOutputError as exc:
+            return {"status": "error", "message": str(exc), "stage": f"con_round_{round_no}", "query": nl_prompt}
+
+        try:
+            judge_resp = roles.judge(digest, working_policy, pro_resp, con_resp)
+        except RoleOutputError as exc:
+            return {"status": "error", "message": str(exc), "stage": f"judge_round_{round_no}", "query": nl_prompt}
+
+        trace.extend([
+            {
+                "stage": f"pro_round_{round_no}",
+                "model": roles.pro_model,
+                "output": {
+                    "patches": pro_resp.get("patches", []),
+                    "rationale": pro_resp.get("rationale", ""),
+                },
+                "raw": pro_resp.get("raw"),
+            },
+            {
+                "stage": f"con_round_{round_no}",
+                "model": roles.con_model,
+                "output": {
+                    "patches": con_resp.get("patches", []),
+                    "rationale": con_resp.get("rationale", ""),
+                },
+                "raw": con_resp.get("raw"),
+            },
+            {
+                "stage": f"judge_round_{round_no}",
+                "model": roles.judge_model,
+                "output": {
+                    "decision": judge_resp.get("decision"),
+                    "patches": judge_resp.get("patches", []),
+                    "reason": judge_resp.get("reason", ""),
+                },
+                "raw": judge_resp.get("raw"),
+            },
+        ])
+        if trace_cb:
+            for entry in trace[-3:]:
+                trace_cb(entry)
+
+        score_current = _score(digest["policy_summary"], digest["static_hints"])
+
+        if judge_resp.get("decision") == "no-change":
+            debate_summary.append(f"Round {round_no}: no-change ({judge_resp.get('reason', '')})")
+            prior_patch_records.append(
+                {
+                    "patch_id": f"R{round_no}-NC",
+                    "accepted": False,
+                    "reason": judge_resp.get("reason", ""),
+                    "reject_reason": "no-change",
+                }
             )
-        if round_res["patches_applied"]:
-            working_policy = _apply_patches(working_policy, round_res["patches_applied"])  # type: ignore
-            all_patches.extend(round_res["patches_applied"])  # type: ignore
-        debate_summary.append(round_res["summary"])  # type: ignore
-        # Re-run guard/checker after patch
+            if not check_res.get("messages") and not check_res.get("repairs"):
+                break
+            prev_score = score_current
+            continue
+
+        def _registry_validate(patch: Dict[str, Any]) -> bool:
+            try:
+                candidate = apply_patches(working_policy, [patch])
+            except PatchError:
+                return False
+            result = guard.guard(candidate)
+            return not result.get("out_of_registry")
+
+        accepted, rejected = light_patch_gate(nl_prompt, judge_resp.get("patches", []), _registry_validate)
+
+        gate_log = {"stage": f"light_patch_gate_{round_no}", "output": {"accepted": accepted, "rejected": rejected}}
+        trace.append(gate_log)
+        if trace_cb:
+            trace_cb(gate_log)
+
+        # Record patch outcomes
+        for idx, patch in enumerate(accepted, 1):
+            prior_patch_records.append(
+                {
+                    "patch_id": f"R{round_no}-{idx:03d}",
+                    "accepted": True,
+                    "reason": judge_resp.get("reason", ""),
+                    "reject_reason": None,
+                }
+            )
+        for ridx, rej in enumerate(rejected, 1):
+            gate_rejections.append(
+                {
+                    "round": round_no,
+                    "rule": rej.get("rule"),
+                    "reason": rej.get("reason"),
+                }
+            )
+            prior_patch_records.append(
+                {
+                    "patch_id": f"R{round_no}-X{ridx:02d}",
+                    "accepted": False,
+                    "reason": judge_resp.get("reason", ""),
+                    "reject_reason": rej.get("reason"),
+                }
+            )
+
+        if not accepted:
+            debate_summary.append(
+                f"Round {round_no}: patches rejected ({len(rejected)}) - {judge_resp.get('reason', '')}"
+            )
+            if score_current <= prev_score:
+                break
+            prev_score = score_current
+            continue
+
+        try:
+            working_policy = apply_patches(working_policy, accepted)
+        except PatchError as exc:
+            return {"status": "error", "message": f"Failed to apply patches: {exc}", "stage": f"apply_round_{round_no}", "query": nl_prompt}
+
         guard_res = guard.guard(working_policy)
         checker = StaticChecker(provenance=guard_res["provenance"])
         check_res = checker.check_and_repair(guard_res["policy_canonical"])
+        working_policy = guard_res["policy_canonical"]
 
-    final_policy = guard_res["policy_canonical"]
+        trace.append(
+            {
+                "stage": f"registry_guard_post_{round_no}",
+                "input": {"policy": working_policy},
+                "output": {
+                    "in_registry": guard_res.get("in_registry", []),
+                    "out_of_registry": guard_res.get("out_of_registry", []),
+                    "replacements": guard_res.get("replacements", {}),
+                },
+            }
+        )
+        trace.append(
+            {
+                "stage": f"static_checker_post_{round_no}",
+                "input": {"policy": working_policy},
+                "output": {
+                    "repairs": check_res.get("repairs", []),
+                    "messages": check_res.get("messages", []),
+                },
+            }
+        )
+        if trace_cb:
+            trace_cb(trace[-2])
+            trace_cb(trace[-1])
+
+        updated_digest = build_trace_digest(
+            nl_prompt, working_policy, guard_res, check_res, prior_patch_records, round_no
+        )
+        trace.append({"stage": f"trace_digest_post_{round_no}", "output": updated_digest})
+        if trace_cb:
+            trace_cb(trace[-1])
+
+        new_score = _score(updated_digest["policy_summary"], updated_digest["static_hints"])
+        debate_summary.append(
+            f"Round {round_no}: applied {len(accepted)} patches ({judge_resp.get('reason', '')})"
+        )
+        prev_score = new_score
+
+        if not check_res.get("messages") and not check_res.get("repairs"):
+            break
+
+    final_guard = guard.guard(working_policy)
+    final_checker = StaticChecker(provenance=final_guard["provenance"])
+    final_check = final_checker.check_and_repair(final_guard["policy_canonical"])
+    final_policy = final_guard["policy_canonical"]
     final_test = _policy_to_test_config(final_policy)
+    _tfin = {
+        "stage": "finalize",
+        "output": {"policy": final_policy, "test_config": final_test},
+    }
+    trace.append(_tfin)
+    if trace_cb:
+        trace_cb(_tfin)
 
     # Scores
     scores = compute_policy_scores(final_policy)
 
+    # Registry validation
+    validator = RegistryValidator()
+    reg_checks = validator.validate_policy(final_policy, final_guard.get("provenance", {}))
+    test_checks = validator.validate_test_config(final_test)
+
     # Metadata assembly
     metadata = {
         "mode": "adversarial",
-        "rounds": max(1, min(3, rounds)),
+        "rounds": len(debate_summary),
         "models": {"draft": draft_model, "judge": judge_model, "pro": pro_model, "con": con_model},
         "registry": {
-            "mismatches": guard_res["out_of_registry"],
-            "replacements": guard_res["replacements"],
-            "provenance": guard_res["provenance"],
+            "mismatches": final_guard.get("out_of_registry", []),
+            "replacements": final_guard.get("replacements", {}),
+            "provenance": final_guard.get("provenance", {}),
         },
         "debate": {
-            "summary": "; ".join(debate_summary),
-            "patches_applied": all_patches,
+            "summary": "; ".join(debate_summary) if debate_summary else "no debate rounds",
+            "rounds_run": len(debate_summary),
+            "gate_rejections": gate_rejections,
         },
         "static_checker": {
-            "repairs": check_res["repairs"],
-            "status": check_res["status"],
-            "messages": check_res["messages"],
+            "repairs": final_check.get("repairs", []),
+            "status": final_check.get("status", "pass"),
+            "messages": final_check.get("messages", []),
         },
-        "tokens": {"draft": tokens1.get("draft", 0), "pro": 0, "con": 0, "judge": 0, "total": tokens1.get("draft", 0)},
+        "tokens": {
+            "draft": tokens1.get("draft", 0),
+            "pro": 0,
+            "con": 0,
+            "judge": 0,
+            "total": tokens1.get("draft", 0),
+        },
         "latency_ms": {"draft": lat1, "debate": 0, "checker": 0, "total": lat1},
         "score": scores,
         "timestamp": datetime.now().isoformat(),
+        "trace": trace,
+        "registry_validation": {
+            "policy": reg_checks,
+            "test_config": test_checks,
+        },
+        "patch_records": prior_patch_records,
     }
 
     return {

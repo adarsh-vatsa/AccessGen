@@ -10,7 +10,7 @@
   
 ### Service Routing
 - **service_router.py**: Identifies AWS services and expands queries
-  - Uses Gemini-2.0-flash-exp for fast service detection
+  - Uses Gemini-2.5-flash for fast service detection
   - Expands queries to include implicit requirements
   - Returns service list and expanded query
 

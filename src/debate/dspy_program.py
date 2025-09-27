@@ -71,7 +71,8 @@ class DebateOrchestrator:
                   policy: Dict[str, Any],
                   registry_facts: str,
                   guard_replacements: Dict[str, str],
-                  checker_patches: List[Dict[str, Any]]) -> DebateResult:
+                  checker_patches: List[Dict[str, Any]],
+                  trace_context: List[Dict[str, Any]] | None = None) -> DebateResult:
         # Proponent: accept canonicalized actions, propose applying checker patches, replace unknowns
         pros: List[str] = []
         patches: List[Dict[str, Any]] = []
@@ -83,7 +84,63 @@ class DebateOrchestrator:
             pros.append("Apply static checker patches to tighten resources/conditions.")
             patches.extend(checker_patches)
 
-        pro_case = ("\n".join(pros) or "No changes needed; draft aligns with registry facts.")
+        # Heuristic: derive target deltas from NL prompt
+        nl_lower = (nl_prompt or "").lower()
+        stmt0 = None
+        try:
+            stmts = policy.get("Statement", []) if isinstance(policy, dict) else []
+            if isinstance(stmts, list) and stmts:
+                stmt0 = stmts[0]
+        except Exception:
+            stmt0 = None
+
+        def ensure_actions(actions_needed: List[str]):
+            if not stmt0:
+                return
+            cur = stmt0.get("Action")
+            cur_list: List[str] = []
+            if isinstance(cur, str):
+                cur_list = [cur]
+            elif isinstance(cur, list):
+                cur_list = [a for a in cur if isinstance(a, str)]
+            else:
+                cur_list = []
+            changed = False
+            for act in actions_needed:
+                if act not in cur_list:
+                    cur_list.append(act)
+                    changed = True
+            if changed:
+                pros.append(f"Include required actions: {', '.join([a for a in actions_needed if a not in (stmt0.get('Action') if isinstance(stmt0.get('Action'), list) else [])])}.")
+                patches.append({"op": "replace", "path": "/Statement/0/Action", "value": cur_list})
+
+        def ensure_principal_for_cross_account():
+            if not stmt0:
+                return
+            if "Principal" not in stmt0 and ("another account" in nl_lower or "account" in nl_lower):
+                # Add placeholder principal for external account root or role
+                pros.append("Add explicit principal for external account to enable cross-account access.")
+                patches.append({"op": "add", "path": "/Statement/0/Principal", "value": {"AWS": "arn:aws:iam::${ACCOUNT_A_ID}:root"}})
+
+        def tighten_resource_bucket():
+            if not stmt0:
+                return
+            res = stmt0.get("Resource")
+            if res == "*":
+                pros.append("Tighten Resource from '*' to specific bucket ARN.")
+                patches.append({"op": "replace", "path": "/Statement/0/Resource", "value": "arn:aws:s3:::${BUCKET_NAME}"})
+
+        # Apply heuristics for common S3 bucket policy edits
+        if "bucket" in nl_lower or "s3" in nl_lower:
+            if ("write" in nl_lower or "modify" in nl_lower or "policy" in nl_lower):
+                ensure_actions(["s3:GetBucketPolicy", "s3:PutBucketPolicy"])  # minimal set for bucket policy edits
+                ensure_principal_for_cross_account()
+                tighten_resource_bucket()
+
+        # Pro case incorporates context and NL goal
+        context_note = f"Context length: {len(trace_context or [])} steps." if trace_context is not None else ""
+        pros.insert(0, f"Goal: satisfy NL requirement while adhering to registry facts. {context_note}".strip())
+        pro_case = ("\n".join([p for p in pros if p]) or "No changes needed; draft aligns with registry facts.")
 
         # Opponent: push for stricter scope; drop any action not in registry
         cons: List[str] = []
@@ -92,12 +149,14 @@ class DebateOrchestrator:
                 cons.append(f"Remove non-registry action {bad} unless compelling justification.")
         if not checker_patches:
             cons.append("Review for wildcard resources and missing policy allow-lists; add if absent.")
+        # Encourage evaluation against NL requirement explicitly
+        cons.append("Evaluate whether changes move policy closer to NL requirement, not just registry alignment.")
         con_case = ("\n".join(cons) or "No further objections.")
 
         # Judge: apply rubric; accept if patches shrink wildcards or add required conditions
-        judge_rationale = "Applying patches that reduce wildcard scope and add allow-lists per rubric."
+        judge_rationale = "Applying patches that improve alignment with NL requirement and rubric (scope/conditions)."
         patched_policy = _apply_patches(policy, patches)
-        summary = "Round: Applied static checker patches; replacements noted for unknown actions."
+        summary = "Round: Proposed and applied patches toward NL goal; registry used as check."
 
         return DebateResult(
             summary=summary,

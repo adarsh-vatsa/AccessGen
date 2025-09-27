@@ -2,6 +2,8 @@ import hashlib
 import json
 from pathlib import Path
 import requests
+import os
+import time
 
 RAW_DIR = Path("data/raw")
 RAW_DIR.mkdir(parents=True, exist_ok=True)
@@ -22,5 +24,16 @@ def fetch_ec2_reference_json(force: bool=False, timeout: int=30) -> dict:
     r = requests.get(EC2_REF_URL, headers=HEADERS, timeout=timeout)
     r.raise_for_status()
     data = r.json()
-    path.write_text(json.dumps(data, indent=2), encoding="utf-8")
+    # Atomic write: write to temp then rename
+    import threading
+    tmp_path = path.with_suffix(path.suffix + f".tmp.{os.getpid()}.{threading.get_ident()}.{time.time_ns()}" )
+    tmp_path.write_text(json.dumps(data, indent=2), encoding="utf-8")
+    try:
+        tmp_path.replace(path)
+    finally:
+        if tmp_path.exists():
+            try:
+                tmp_path.unlink()
+            except Exception:
+                pass
     return data

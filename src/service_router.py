@@ -237,7 +237,7 @@ def main():
     
     parser = argparse.ArgumentParser(description="Test service routing and query expansion")
     parser.add_argument("query", help="Query to route and expand")
-    parser.add_argument("--model", default="models/gemini-2.0-flash-exp", help="Model to use")
+    parser.add_argument("--model", default="models/gemini-2.5-flash", help="Model to use")
     
     args = parser.parse_args()
     

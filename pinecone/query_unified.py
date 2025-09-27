@@ -14,8 +14,7 @@ from pathlib import Path
 import numpy as np
 import pickle
 
-# Third-party imports
-import pinecone
+# Third-party imports (lazy import pinecone in _load_env to avoid deprecated plugin crash)
 from pinecone_text.sparse import BM25Encoder
 from google import genai
 from google.genai import types
@@ -90,7 +89,18 @@ class UnifiedQueryEngine:
             logger.error(f"Missing required environment variables: {missing}")
             sys.exit(1)
 
-        self.pc = pinecone.Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
+        # Import pinecone here to catch deprecated plugin errors and provide a clearer message
+        try:
+            import pinecone as _pinecone  # type: ignore
+        except Exception as e:
+            # Common failure: DeprecatedPluginError from pinecone-plugin-inference
+            msg = (
+                "Pinecone import failed. If you have 'pinecone-plugin-inference' installed, "
+                "please uninstall it: pip uninstall pinecone-plugin-inference"
+            )
+            raise RuntimeError(f"{msg}. Original error: {e}")
+
+        self.pc = _pinecone.Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
         self.genai_client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
         logger.info(f"Using Pinecone hosted reranker ({self.rerank_model})")
     
