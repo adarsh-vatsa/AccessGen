@@ -23,8 +23,8 @@ try:
 except Exception:
     pass  # if python-dotenv isn't installed, we just rely on the environment
 
-# Import the router that sits right next to this file
-from router import ModelRouter, POLICY_SCHEMA, TEST_CONFIG_SCHEMA  # noqa: E402
+# Import helpers from openai_router
+from openai_router import generate_openai_text, generate_openai_json, POLICY_SCHEMA, TEST_CONFIG_SCHEMA  # noqa: E402
 
 
 def main():
@@ -35,11 +35,9 @@ def main():
         print("ERROR: OPENAI_API_KEY is not set (check your .env or environment).")
         return
 
-    r = ModelRouter()
-
     # --- 1) Plain text sanity
     try:
-        txt = r.generate_text("Say 'pong' exactly once.", provider="openai", model=model, max_tokens=16)
+        txt = generate_openai_text("Say 'pong' exactly once.", model=model, max_output_tokens=16)
         print("TEXT OUTPUT:", repr(txt))
         assert isinstance(txt, str) and "pong" in txt.lower()
         print("[OK] generate_text(ping)")
@@ -53,12 +51,12 @@ def main():
             "Produce only a valid AWS IAM policy JSON for: list S3 buckets. "
             "Use Version 2012-10-17 and least privilege. No prose."
         )
-        policy = r.generate_json(
+        policy = generate_openai_json(
             policy_prompt,
-            provider="openai",
             model=model,
             schema=POLICY_SCHEMA,
-            max_tokens=800,
+            max_output_tokens=2000,
+            instructions="Return only JSON",
         )
         print("[OK] generate_json(policy)")
         print(json.dumps(policy, indent=2))
@@ -73,12 +71,12 @@ def main():
             "Produce only a test_config JSON that mirrors the policy statements for listing S3 buckets. "
             "Use service 's3' and default principals ['${PRINCIPAL_PLACEHOLDER}']. No prose."
         )
-        test_cfg = r.generate_json(
+        test_cfg = generate_openai_json(
             test_prompt,
-            provider="openai",
             model=model,
             schema=TEST_CONFIG_SCHEMA,
-            max_tokens=800,
+            max_output_tokens=2000,
+            instructions="Return only JSON",
         )
         print("[OK] generate_json(test_config)")
         print(json.dumps(test_cfg, indent=2))

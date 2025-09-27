@@ -4,34 +4,41 @@ from __future__ import annotations
 import os
 import json
 import sys
+from pathlib import Path
 from typing import List
 
-from src.llm.router import ModelRouter
+REPO_ROOT = Path(__file__).resolve().parents[1]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
+from src.llm.openai_router import generate_openai_text, generate_policy_bundle
 
 
 def main(argv: List[str]) -> int:
     prompt = os.environ.get("ROUTER_TEST_PROMPT", "Say hello in JSON with key 'ok': {\"ok\": true}")
-    routes = [
-        ("google", os.environ.get("GOOGLE_MODEL", "models/gemini-2.5-pro")),
-        ("anthropic", os.environ.get("ANTHROPIC_MODEL", "claude-3-5-sonnet-20240620")),
-        ("openai", os.environ.get("OPENAI_MODEL", "gpt-4o-mini")),
-    ]
-    router = ModelRouter()
-    results = {}
-    for provider, model in routes:
-        try:
-            ok_env = {
-                "google": "GEMINI_API_KEY",
-                "anthropic": "ANTHROPIC_API_KEY",
-                "openai": "OPENAI_API_KEY",
-            }[provider]
-            if not os.getenv(ok_env):
-                results[provider] = {"skipped": True, "reason": f"missing {ok_env}"}
-                continue
-            text = router.generate_text(provider=provider, model=model, prompt=prompt, temperature=0.2, max_tokens=256)
-            results[provider] = {"skipped": False, "ok": bool(text), "sample": (text[:240] if text else "")}
-        except Exception as e:
-            results[provider] = {"skipped": False, "ok": False, "error": str(e)}
+    model = os.environ.get("OPENAI_MODEL", "gpt-5")
+    if not os.getenv("OPENAI_API_KEY"):
+        print(json.dumps({"openai": {"skipped": True, "reason": "missing OPENAI_API_KEY"}}, indent=2))
+        return 0
+
+    results = {"openai": {"skipped": False}}
+    try:
+        text = generate_openai_text(prompt, model=model, max_output_tokens=256)
+        results["openai"]["text_ok"] = bool(text)
+        results["openai"]["sample"] = (text[:240] if text else "")
+    except Exception as e:
+        results["openai"].update({"text_ok": False, "error": str(e)})
+
+    try:
+        bundle = generate_policy_bundle("Allow listing S3 buckets (s3:ListAllMyBuckets).", model=model)
+        results["openai"]["bundle_ok"] = (
+            isinstance(bundle, dict)
+            and isinstance(bundle.get("iam_policy"), dict)
+            and isinstance(bundle.get("test_config"), dict)
+        )
+    except Exception as e:
+        results["openai"].update({"bundle_ok": False, "bundle_error": str(e)})
+
     print(json.dumps(results, indent=2))
     return 0
 

@@ -5,6 +5,11 @@ import json
 import types
 import importlib
 
+# Ensure repository root is on sys.path so that `src` package is importable
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
 
 def install_module(name: str, module: types.ModuleType):
     parts = name.split('.')
@@ -30,191 +35,86 @@ def clear_modules(prefixes):
             sys.modules.pop(k, None)
 
 
-def fresh_router_module():
-    # Reload to ensure clean state between tests
-    if 'src.llm.router' in sys.modules:
-        importlib.reload(sys.modules['src.llm.router'])
-        return sys.modules['src.llm.router']
-    return importlib.import_module('src.llm.router')
+def fresh_openai_module():
+    if 'src.llm.openai_router' in sys.modules:
+        importlib.reload(sys.modules['src.llm.openai_router'])
+        return sys.modules['src.llm.openai_router']
+    return importlib.import_module('src.llm.openai_router')
 
 
-def test_google_legacy_generate_text(monkeypatch):
-    clear_modules(['google'])
-
-    # Fake legacy google.generativeai
-    genai_legacy = types.ModuleType('google.generativeai')
-
-    class GenerationConfig:
-        def __init__(self, **kwargs):
-            pass
-
-    class Resp:
-        def __init__(self, text):
-            self.text = text
-
-    class GenerativeModel:
-        def __init__(self, model):
-            self.model = model
-        def generate_content(self, prompt, generation_config=None):
-            return Resp('ok-legacy')
-
-    def configure(api_key=None):
-        return None
-
-    genai_legacy.GenerationConfig = GenerationConfig
-    genai_legacy.GenerativeModel = GenerativeModel
-    genai_legacy.configure = configure
-
-    install_module('google.generativeai', genai_legacy)
-
-    # Env
-    monkeypatch.setenv('GENAI_FORCE_LEGACY', '1')
-    monkeypatch.setenv('GEMINI_API_KEY', 'test-key')
-
-    router_mod = fresh_router_module()
-    router = router_mod.ModelRouter()
-    out = router.generate_text('hello', provider='google', model='models/gemini-2.5-pro', temperature=0.0, max_tokens=8)
-    assert out == 'ok-legacy'
-
-
-def test_google_new_generate_text(monkeypatch):
-    clear_modules(['google'])
-
-    # Fake new google.genai and google.genai.types
-    genai_pkg = types.ModuleType('google.genai')
-    types_pkg = types.ModuleType('google.genai.types')
-
-    class GenerateContentConfig:
-        def __init__(self, **kwargs):
-            pass
-
-    class Part:
-        def __init__(self, text):
-            self.text = text
-
-    class Content:
-        def __init__(self, parts):
-            self.parts = parts
-
-    class Candidate:
-        def __init__(self, content):
-            self.content = content
-
-    class Resp:
-        def __init__(self, text):
-            # Provide via candidates/parts for extractor path
-            self.candidates = [Candidate(Content([Part(text)]))]
-
-    class Models:
-        def generate_content(self, model, contents, config=None):
-            return Resp('ok-new')
-
-    class Client:
-        def __init__(self, api_key=None):
-            self.models = Models()
-
-    genai_pkg.Client = Client
-    types_pkg.GenerateContentConfig = GenerateContentConfig
-
-    install_module('google.genai', genai_pkg)
-    install_module('google.genai.types', types_pkg)
-
-    monkeypatch.setenv('GENAI_FORCE_LEGACY', '0')
-    monkeypatch.setenv('GEMINI_API_KEY', 'test-key')
-
-    router_mod = fresh_router_module()
-    router = router_mod.ModelRouter()
-    out = router.generate_text('hello', provider='google', model='models/gemini-2.5-pro', temperature=0.0, max_tokens=8)
-    assert out == 'ok-new'
-
-
-def test_anthropic_generate_text(monkeypatch):
-    clear_modules(['anthropic'])
-
-    anth = types.ModuleType('anthropic')
-
-    class Block:
-        def __init__(self, text):
-            self.text = text
-
-    class Resp:
-        def __init__(self):
-            self.content = [Block('ok-claude')]
-
-    class Messages:
-        def create(self, **kwargs):
-            return Resp()
-
-    class Anthropic:
-        def __init__(self, api_key=None):
-            self.messages = Messages()
-
-    anth.Anthropic = Anthropic
-    install_module('anthropic', anth)
-
-    monkeypatch.setenv('ANTHROPIC_API_KEY', 'test-key')
-
-    router_mod = fresh_router_module()
-    router = router_mod.ModelRouter()
-    out = router.generate_text('hello', provider='anthropic', model='claude-3-5-sonnet', temperature=0.0, max_tokens=8)
-    assert out == 'ok-claude'
-
-
-def test_openai_generate_text_and_json(monkeypatch):
+def test_generate_openai_text(monkeypatch):
     clear_modules(['openai'])
 
-    oai = types.ModuleType('openai')
+    # Install our script module so requests.getmodule finds it
+    install_module('openai_router', types.ModuleType('openai_router'))
 
-    class RespText:
+    class FakeResp:
         def __init__(self, text):
             self.output_text = text
 
-    class Responses:
-        def create(self, **kwargs):
-            # If JSON mode requested, return JSON string
-            text_cfg = kwargs.get('text')
-            if text_cfg is not None:
-                return RespText(json.dumps({"ok": True}))
-            return RespText('ok-openai')
-
-    class OpenAI:
+    class FakeResponses:
         def __init__(self):
-            self.responses = Responses()
+            self.calls = []
+        def create(self, **kwargs):
+            self.calls.append(kwargs)
+            return FakeResp('ok-openai')
 
-    # Expose OpenAI class at top level
-    oai.OpenAI = OpenAI
-    install_module('openai', oai)
+    class FakeOpenAI:
+        def __init__(self):
+            self.responses = FakeResponses()
 
-    # Types for JSON mode imports
-    json_obj_mod = types.ModuleType('openai.types.shared_params.response_format_json_object')
-    class ResponseFormatJSONObject:
-        def __init__(self, type=None):
-            self.type = type
-    json_obj_mod.ResponseFormatJSONObject = ResponseFormatJSONObject
-    install_module('openai.types.shared_params.response_format_json_object', json_obj_mod)
+    fake_request_mod = types.ModuleType('requests')
 
-    json_schema_mod = types.ModuleType('openai.types.responses.response_format_text_json_schema_config_param')
-    class ResponseFormatTextJSONSchemaConfigParam:
-        def __init__(self, type=None, name=None, schema=None, strict=None):
-            self.type = type
-            self.name = name
-            self.schema = schema
-            self.strict = strict
-    json_schema_mod.ResponseFormatTextJSONSchemaConfigParam = ResponseFormatTextJSONSchemaConfigParam
-    install_module('openai.types.responses.response_format_text_json_schema_config_param', json_schema_mod)
+    def fake_post(url, headers=None, data=None, timeout=None):
+        payload = json.loads(data)
+        assert payload["model"] == 'gpt-5'
+        fake_openai_module = types.ModuleType('openai')
+        fake_openai_module.OpenAI = FakeOpenAI
+        install_module('openai', fake_openai_module)
+        resp = FakeResp('ok-openai')
+        resp.json = lambda: {"output_text": 'ok-openai'}
+        resp.status_code = 200
+        return resp
+
+    fake_request_mod.post = fake_post
+    install_module('requests', fake_request_mod)
 
     monkeypatch.setenv('OPENAI_API_KEY', 'test-key')
 
-    router_mod = fresh_router_module()
-    router = router_mod.ModelRouter()
+    mod = fresh_openai_module()
+    out = mod.generate_openai_text('hello', model='gpt-5', max_output_tokens=8)
+    assert out == 'ok-openai'
 
-    # Text path
-    t = router.generate_text('hello', provider='openai', model='gpt-4o-mini', temperature=0.0, max_tokens=8)
-    assert t == 'ok-openai'
 
-    # JSON path
-    j = router.generate_json('{"ping":true}', provider='openai', model='gpt-4o-mini', schema={"title": "s"})
-    assert j == {"ok": True}
+def test_generate_openai_json(monkeypatch):
+    clear_modules(['openai'])
+    install_module('openai_router', types.ModuleType('openai_router'))
+
+    def fake_json_response():
+        return {
+            "output": [],
+            "output_text": json.dumps({"ok": True}),
+        }
+
+    class FakeResp:
+        def __init__(self):
+            self.status_code = 200
+        def json(self):
+            return fake_json_response()
+
+    fake_request_mod = types.ModuleType('requests')
+
+    def fake_post(url, headers=None, data=None, timeout=None):
+        return FakeResp()
+
+    fake_request_mod.post = fake_post
+    install_module('requests', fake_request_mod)
+
+    monkeypatch.setenv('OPENAI_API_KEY', 'test-key')
+
+    mod = fresh_openai_module()
+    out = mod.generate_openai_json('ping', model='gpt-5', schema={"title": "s"}, max_output_tokens=32)
+    assert out == {"ok": True}
 # Ensure repository root is on sys.path so that `src` package is importable
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
