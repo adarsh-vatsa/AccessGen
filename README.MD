@@ -1,6 +1,6 @@
-# Wisteria (Vermillion): IAM Policy Generation with Vector Search and Adversarial “Pro Mode”
+IAM Policy Generation with Vector Search and Adversarial “Pro Mode”
 
-Wisteria/Vermillion turns natural language into minimal, provenance-backed AWS IAM policies and matching test configurations. It combines a deterministic registry builder, a hybrid retrieval engine, and three generation modes — including an adversarial DSPy-inspired “Pro Mode” — plus a simple web UI.
+We turn natural language into minimal, provenance-backed AWS IAM policies and also provide test configurations to test the policies. It combines a deterministic registry builder, a hybrid retrieval engine, and three generation modes — including an adversarial DSPy-inspired “Pro Mode” — plus a simple web UI.
 
 ## Highlights
 
